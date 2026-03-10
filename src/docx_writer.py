@@ -210,11 +210,24 @@ def _render_article_block(doc: Document, block: ArticleBlock) -> None:
         table = doc.add_table(rows=0, cols=cols)
         table.style = "Table Grid"
         table.alignment = WD_TABLE_ALIGNMENT.CENTER
-        for row_data in block.rows:
+        for row_idx, row_data in enumerate(block.rows):
             row = table.add_row()
             for idx in range(cols):
                 value = row_data[idx] if idx < len(row_data) else ""
-                _format_cell(row.cells[idx], value)
+                status = None
+                if block.cell_statuses and row_idx < len(block.cell_statuses) and idx < len(block.cell_statuses[row_idx]):
+                    status = block.cell_statuses[row_idx][idx]
+                _format_cell(
+                    row.cells[idx],
+                    value,
+                    bold=row_idx == 0,
+                    color=COLOR_WARNING if status == "suppressed_uncertain" else None,
+                )
+        if block.note:
+            note_para = doc.add_paragraph()
+            note_run = note_para.add_run(block.note)
+            note_run.font.size = SMALL_SIZE
+            note_run.font.color.rgb = COLOR_WARNING
         return
 
     paragraph = doc.add_paragraph()

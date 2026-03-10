@@ -14,6 +14,7 @@ from typing import Callable
 from .article_normalizer import (
     DEFAULT_ARTICLE_NORMALIZATION_MODEL,
     NormalizedArticleResult,
+    build_article_draft,
     normalize_article,
     save_article_normalization_audit,
     save_article_normalization_diff,
@@ -475,11 +476,18 @@ def _normalize_articles(
                 "pdf": filename,
                 "madde_no": article.madde_no,
                 "source_mode": result.source_mode,
-                "needs_llm": use_llm_normalization,
+                "llm_requested": use_llm_normalization,
+                "llm_needed_by_draft": build_article_draft(article).needs_llm,
                 "verification_status": result.verification_status,
                 "change_flags": result.change_flags,
                 "uncertain_spans": result.uncertain_spans,
                 "llm_model": normalization_model if use_llm_normalization else None,
+                "llm_attempted": result.llm_attempted,
+                "llm_blocks_accepted": result.llm_blocks_accepted,
+                "llm_blocks_rejected": result.llm_blocks_rejected,
+                "table_cells_published": result.table_cells_published,
+                "table_cells_suppressed": result.table_cells_suppressed,
+                "publish_mode": result.publish_mode,
             }
         )
         artifacts.article_normalization_diff.append(
@@ -489,8 +497,28 @@ def _normalize_articles(
                 "raw_excerpt": article.icerik[:300],
                 "normalized_excerpt": _normalized_excerpt(result),
                 "source_mode": result.source_mode,
+                "publish_mode": result.publish_mode,
             }
         )
+        for decision in result.decision_entries:
+            artifacts.review_queue.append(
+                ReviewQueueEntry(
+                    pdf=filename,
+                    section_type="esas_sozlesme",
+                    identifier=f"madde_{article.madde_no}",
+                    page=None,
+                    primary_ocr=str(decision.get("raw_value", ""))[:500],
+                    secondary_ocr=(secondary_article_map.get(article.madde_no) or "")[:500],
+                    reason=decision.get("decision_reason") or "publish_decision",
+                    recommended_action="manual_review" if decision.get("suppressed") else "audit_primary_only",
+                    auto_corrected=decision.get("auto_corrected"),
+                    published_value=decision.get("published_value"),
+                    suppressed=decision.get("suppressed"),
+                    decision_reason=decision.get("decision_reason"),
+                    row_index=decision.get("row_index"),
+                    column_name=decision.get("column_name"),
+                )
+            )
 
 
 def _persist_early_exit_artifacts(output_dir: Path, artifacts: PipelineArtifacts, *, emit_review_queue: bool) -> None:

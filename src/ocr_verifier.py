@@ -83,6 +83,12 @@ class ReviewQueueEntry:
     secondary_ocr: str
     reason: str
     recommended_action: str  # "vision_reocr" | "manual_review"
+    auto_corrected: bool | None = None
+    published_value: str | None = None
+    suppressed: bool | None = None
+    decision_reason: str | None = None
+    row_index: int | None = None
+    column_name: str | None = None
 
 
 @dataclass

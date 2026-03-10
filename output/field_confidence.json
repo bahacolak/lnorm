@@ -7,20 +7,20 @@
   },
   "page_2": {
     "status": "disputed",
-    "disagreement_score": 0.0929,
-    "evidence": "Fark skoru 9.29%. Kelime farkları: 'eylül' ↔ 'eylul'; 'ti̇caret si̇ci̇li̇ gazetesi̇ sayfa: 445' ↔ 'ticar'; '444,' ↔ '444'; 'tebelliğini ve internet' ↔ 'tebellüğü ve intemet'; 'c)' ↔ 'e)'",
+    "disagreement_score": 0.0921,
+    "evidence": "Fark skoru 9.21%. Kelime farkları: 'eylül' ↔ 'eylul'; 'ti̇caret si̇ci̇li̇ gazetesi̇ sayfa: 445' ↔ 'ticar'; '444,' ↔ '444'; 'tebelliği ve internet' ↔ 'tebellüğü ve intemet'; 'c)' ↔ 'e)'",
     "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf"
   },
   "page_3": {
     "status": "disputed",
-    "disagreement_score": 0.2875,
-    "evidence": "Fark skoru 28.75%. Kelime farkları: 'sayfa: 510' ↔ 'sayfa :510'; 'ticaret si̇ci̇li̇ gazetesi̇ 21 hazi̇ran 2023 sayi: 10857 (başarafı 509 sayfada)' ↔ 'ti̇caret (baştarafı 509.sayfada)'; silindi: '#'; '-(1)' ↔ '(1)'; '(2) genel' ↔ '(2)genel'",
+    "disagreement_score": 0.2726,
+    "evidence": "Fark skoru 27.26%. Kelime farkları: 'sayfa: 510' ↔ 'sayfa :510'; 'ticaret si̇ci̇li̇ gazetesi̇ 21 hazi̇ran 2023 sayi: 10857 (başarafı 509 sayfada)' ↔ 'ti̇caret (baştarafı 509.sayfada)'; silindi: '#'; '-(1)' ↔ '(1)'; '(2) genel' ↔ '(2)genel'",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_1": {
     "status": "unverified",
-    "disagreement_score": 1.0,
-    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "disagreement_score": 0.9763,
+    "evidence": "Yüksek fark skoru (97.63%), metin güvenilir değil",
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   "madde_2": {
@@ -31,8 +31,8 @@
   },
   "madde_3": {
     "status": "unverified",
-    "disagreement_score": 0.6483,
-    "evidence": "Yüksek fark skoru (64.83%), metin güvenilir değil",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_4": {
@@ -48,15 +48,15 @@
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   "madde_6": {
-    "status": "unverified",
-    "disagreement_score": 1.0,
-    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "status": "disputed",
+    "disagreement_score": 0.0312,
+    "evidence": "Hukuki terim anomalileri bulundu: mihabeti ç",
     "pdf": "4) 29-12-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_7": {
     "status": "unverified",
-    "disagreement_score": 0.9761,
-    "evidence": "Yüksek fark skoru (97.61%), metin güvenilir değil",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_8": {
@@ -67,14 +67,14 @@
   },
   "madde_9": {
     "status": "unverified",
-    "disagreement_score": 1.0,
-    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "disagreement_score": 0.8021,
+    "evidence": "Yüksek fark skoru (80.21%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_10": {
     "status": "unverified",
-    "disagreement_score": 0.9036,
-    "evidence": "Yüksek fark skoru (90.36%), metin güvenilir değil",
+    "disagreement_score": 0.8719,
+    "evidence": "Yüksek fark skoru (87.19%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_11": {

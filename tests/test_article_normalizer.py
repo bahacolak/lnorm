@@ -26,6 +26,22 @@ def test_build_article_draft_detects_table_like_content():
     assert any(block.type == "table" for block in draft.blocks)
 
 
+def test_normalize_article_rule_based_keeps_markdown_table_as_table():
+    article = Article(
+        madde_no=1,
+        baslik="Kuruluş",
+        icerik="# 1. Kuruluş\n| Sayı No | Kararı | Adres | Gerak | Kendik No |\n| --- | --- | --- | --- | --- |\n| 1 | ETCİBİN BULGURU ANONİM ŞİRKETİ | DİKVETER MAHALLER | TÜRKİYE | *** |",
+        kaynak_pdf="x.pdf",
+    )
+    result = normalize_article(article, secondary_text="1. Kuruluş\nAAYDEM HOLDİNG", use_llm=False)
+    table = next(block for block in result.blocks if block.type == "table")
+    assert table.rows[0][0] == "Sayı No"
+    assert table.rows[0][3] == "Uyruğu"
+    assert table.rows[1][1] == "Belirsiz unvan"
+    assert table.rows[1][2] == "Belirsiz adres"
+    assert table.rows[1][4] == "—"
+
+
 def test_normalize_article_rule_based_strips_duplicate_heading():
     article = Article(
         madde_no=3,
@@ -49,6 +65,7 @@ def test_normalize_article_with_llm_falls_back_without_key(monkeypatch):
     draft = build_article_draft(article)
     result = normalize_article_with_llm(draft)
     assert result.source_mode == "rule_based"
+    assert result.publish_mode == "rule_based_only"
 
 
 def test_normalize_article_with_llm_accepts_valid_payload(monkeypatch):
@@ -78,6 +95,7 @@ def test_normalize_article_with_llm_accepts_valid_payload(monkeypatch):
     result = normalize_article(article, use_llm=True)
     assert result.source_mode == "llm_normalized"
     assert any(block.type == "bullet_list" for block in result.blocks)
+    assert result.llm_blocks_accepted >= 1
 
 
 def test_normalize_article_with_llm_falls_back_on_large_diff(monkeypatch):
@@ -97,4 +115,43 @@ def test_normalize_article_with_llm_falls_back_on_large_diff(monkeypatch):
         },
     )
     result = normalize_article(article, use_llm=True)
-    assert result.verification_status in {"fallback_rule_based", "fallback_raw"}
+    assert result.verification_status == "fallback_rule_based"
+    assert result.publish_mode in {"hybrid_fallback", "rule_based_only"}
+
+
+def test_normalize_article_suppresses_uncertain_table_cells(monkeypatch):
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test")
+    article = Article(
+        madde_no=1,
+        baslik="Kuruluş",
+        icerik="# 1. Kuruluş\n| Sayı No | Kararı | Adres | Gerak | Kendik No |\n| --- | --- | --- | --- | --- |\n| 1 | ETCİBİN BULGURU ANONİM ŞİRKETİ | DİKVETER MAHALLER | TÜRKİYE | *** |",
+        kaynak_pdf="x.pdf",
+    )
+    from src import article_normalizer as mod
+
+    monkeypatch.setattr(
+        mod,
+        "_call_anthropic_normalizer",
+        lambda draft, model: {
+            "madde_no": draft.madde_no,
+            "title": draft.title,
+            "blocks": [
+                {
+                    "type": "table",
+                    "rows": [
+                        ["Sayı No", "Kararı", "Adres", "Gerak", "Kendik No"],
+                        ["1", "ETCİBİN BULGURU ANONİM ŞİRKETİ", "DİKVETER MAHALLER", "TÜRKİYE", "***"],
+                    ],
+                }
+            ],
+            "uncertain_spans": [],
+            "notes": [],
+        },
+    )
+    result = normalize_article(article, secondary_text="1. Kuruluş\nAAYDEM HOLDİNG", use_llm=True)
+    table = next(block for block in result.blocks if block.type == "table")
+    assert table.rows[0][3] == "Uyruğu"
+    assert table.rows[1][1] == "Belirsiz unvan"
+    assert table.rows[1][2] == "Belirsiz adres"
+    assert table.rows[1][4] == "—"
+    assert result.table_cells_suppressed >= 2

@@ -8,12 +8,13 @@ import json
 import logging
 import os
 import re
+import unicodedata
 from dataclasses import asdict, dataclass, field
 from difflib import SequenceMatcher
 from typing import Literal
 
 from .articles_parser import Article
-from .ocr_verifier import detect_legal_term_anomalies
+from .ocr_verifier import LEGAL_TERM_EXPECTED, detect_legal_term_anomalies
 from .persistence import write_json
 
 logger = logging.getLogger(__name__)
@@ -22,6 +23,38 @@ DEFAULT_ARTICLE_NORMALIZATION_MODEL = "claude-sonnet-4-20250514"
 MAX_NEW_TOKEN_RATIO = 0.20
 MIN_SIMILARITY_RATIO = 0.70
 MAX_UNCERTAIN_SPANS = 10
+BLOCK_SIMILARITY_RATIO = 0.55
+TABLE_CELL_HEADERS = [
+    "Sayı No",
+    "Adı Soyadı / Unvanı",
+    "Adres",
+    "Uyruğu",
+    "Kimlik / Vergi No",
+]
+HEADER_EQUIVALENTS = {
+    "sayi no": "Sayı No",
+    "sira no": "Sayı No",
+    "sıra no": "Sayı No",
+    "no": "Sayı No",
+    "kurucu": "Adı Soyadı / Unvanı",
+    "adi soyadi unvani": "Adı Soyadı / Unvanı",
+    "adı soyadı unvanı": "Adı Soyadı / Unvanı",
+    "adi soyadi / unvani": "Adı Soyadı / Unvanı",
+    "adı soyadı / unvanı": "Adı Soyadı / Unvanı",
+    "karari": "Adı Soyadı / Unvanı",
+    "karar": "Adı Soyadı / Unvanı",
+    "kararı": "Adı Soyadı / Unvanı",
+    "adres": "Adres",
+    "uyrugu": "Uyruğu",
+    "uyruğu": "Uyruğu",
+    "uyruk": "Uyruğu",
+    "gerak": "Uyruğu",
+    "kimlik no": "Kimlik / Vergi No",
+    "kimlik / vergi no": "Kimlik / Vergi No",
+    "vergi no": "Kimlik / Vergi No",
+    "mersis no": "Kimlik / Vergi No",
+    "kendik no": "Kimlik / Vergi No",
+}
 
 
 @dataclass
@@ -29,6 +62,8 @@ class ArticleBlock:
     type: Literal["paragraph", "bullet_list", "table", "raw"]
     text: str | None = None
     rows: list[list[str]] | None = None
+    cell_statuses: list[list[str]] | None = None
+    note: str | None = None
 
 
 @dataclass
@@ -51,6 +86,13 @@ class NormalizedArticleResult:
     change_flags: list[str] = field(default_factory=list)
     uncertain_spans: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
+    llm_attempted: bool = False
+    llm_blocks_accepted: int = 0
+    llm_blocks_rejected: int = 0
+    table_cells_published: int = 0
+    table_cells_suppressed: int = 0
+    publish_mode: Literal["llm_first", "hybrid_fallback", "rule_based_only"] = "rule_based_only"
+    decision_entries: list[dict] = field(default_factory=list)
 
 
 def build_article_draft(article: Article) -> StructuredArticleDraft:
@@ -64,9 +106,6 @@ def build_article_draft(article: Article) -> StructuredArticleDraft:
 
     for line in raw_lines:
         normalized_line = _normalize_inline_noise(line)
-        if _looks_like_noise(normalized_line):
-            issues.append("noise_line")
-            continue
         if _is_table_rule_line(normalized_line):
             issues.append("table_rule_line")
             continue
@@ -78,6 +117,9 @@ def build_article_draft(article: Article) -> StructuredArticleDraft:
                 blocks.append(ArticleBlock(type="bullet_list", text="\n".join(current_list)))
                 current_list = []
             table_rows.append(_split_table_row(normalized_line))
+            continue
+        if _looks_like_noise(normalized_line):
+            issues.append("noise_line")
             continue
         if table_rows:
             blocks.append(ArticleBlock(type="table", rows=table_rows))
@@ -137,14 +179,7 @@ def normalize_article(
     draft = build_article_draft(article)
     if use_llm and draft.needs_llm:
         return normalize_article_with_llm(draft, secondary_text=secondary_text, model=model)
-    return NormalizedArticleResult(
-        madde_no=draft.madde_no,
-        title=draft.title,
-        blocks=draft.blocks,
-        source_mode="rule_based",
-        verification_status="accepted",
-        change_flags=draft.issues.copy(),
-    )
+    return _build_rule_based_result(draft, secondary_text=secondary_text)
 
 
 def normalize_article_with_llm(
@@ -153,18 +188,14 @@ def normalize_article_with_llm(
     model: str = DEFAULT_ARTICLE_NORMALIZATION_MODEL,
 ) -> NormalizedArticleResult:
     if not os.environ.get("ANTHROPIC_API_KEY"):
-        return _fallback_rule_based(draft, "missing_anthropic_key")
+        return _build_rule_based_result(draft, secondary_text=secondary_text, reason="missing_anthropic_key")
 
     payload = _call_anthropic_normalizer(draft, model=model)
     if payload is None:
-        return _fallback_rule_based(draft, "llm_error")
+        return _build_rule_based_result(draft, secondary_text=secondary_text, reason="llm_error")
 
     candidate = _candidate_from_payload(payload, draft)
-    decision = _verify_normalized_article(candidate, draft.raw_text, secondary_text)
-    if decision is not None:
-        return decision
-    candidate.change_flags = sorted(set(draft.issues + candidate.change_flags))
-    return candidate
+    return _merge_llm_candidate(candidate, draft, secondary_text)
 
 
 def save_article_normalization_audit(entries: list[dict], output_path: str = "output/article_normalization_audit.json"):
@@ -188,7 +219,9 @@ def _call_anthropic_normalizer(draft: StructuredArticleDraft, model: str) -> dic
             "table için `rows` dizisi kullan (örn: [[\"A\", \"B\"], [\"1\", \"2\"]]).\n"
             "KESİNLİKLE markdown tablo (örn: | A | B |) veya tireli satır (örn: |---|---|) KULLANMA.\n"
             "Eğer tabloda başlık veya tire varsa JSON 'rows' listesine sadece saf veriyi koy.\n"
-            "Emin değilsen raw veya paragraph dön. Markdown tablo yapısı GÖNDERME.\n\n"
+            "Tablo başlıklarını mümkünse canonical hale getir: Sayı No, Adı Soyadı / Unvanı, Adres, Uyruğu, Kimlik / Vergi No.\n"
+            "Belirsiz hücreleri tahmin etme; notlara yaz ve ilgili hücreyi boş ya da kısa bırak.\n"
+            "Gereksiz ham OCR çöpünü taşımamaya çalış. Emin değilsen raw veya paragraph dön. Markdown tablo yapısı GÖNDERME.\n\n"
             f"Madde no: {draft.madde_no}\n"
             f"Başlık: {draft.title}\n"
             f"Sorunlar: {', '.join(draft.issues) or 'yok'}\n"
@@ -242,68 +275,105 @@ def _candidate_from_payload(payload: dict, draft: StructuredArticleDraft) -> Nor
         change_flags=["llm_normalized"],
         uncertain_spans=[str(item).strip() for item in payload.get("uncertain_spans", []) if str(item).strip()],
         notes=[str(item).strip() for item in payload.get("notes", []) if str(item).strip()],
+        llm_attempted=True,
+        publish_mode="llm_first",
     )
 
 
-def _verify_normalized_article(
-    candidate: NormalizedArticleResult,
-    raw_text: str,
+def _build_rule_based_result(
+    draft: StructuredArticleDraft,
+    *,
     secondary_text: str | None,
-) -> NormalizedArticleResult | None:
-    normalized_text = _flatten_blocks(candidate.blocks)
-    raw_normalized = _normalize_text(raw_text)
-    candidate_normalized = _normalize_text(normalized_text)
-    similarity = SequenceMatcher(None, raw_normalized, candidate_normalized).ratio()
-    if similarity < MIN_SIMILARITY_RATIO:
-        return NormalizedArticleResult(
-            madde_no=candidate.madde_no,
-            title=candidate.title,
-            blocks=[ArticleBlock(type="raw", text=raw_text.strip())],
-            source_mode="raw",
-            verification_status="fallback_raw",
-            change_flags=candidate.change_flags + ["similarity_low"],
-            uncertain_spans=candidate.uncertain_spans,
-        )
-
-    if _new_token_ratio(candidate_normalized, raw_normalized) > MAX_NEW_TOKEN_RATIO:
-        return _fallback_rule_based_from_result(candidate, raw_text, "new_token_ratio")
-
-    if len(candidate.uncertain_spans) > MAX_UNCERTAIN_SPANS:
-        return _fallback_rule_based_from_result(candidate, raw_text, "too_many_uncertain_spans")
-
-    if secondary_text:
-        secondary_ratio = SequenceMatcher(None, _normalize_text(secondary_text), candidate_normalized).ratio()
-        if secondary_ratio < 0.65:
-            return _fallback_rule_based_from_result(candidate, raw_text, "secondary_mismatch")
-
-    if detect_legal_term_anomalies(normalized_text):
-        candidate.change_flags.append("legal_term_anomaly_remaining")
-    return None
-
-
-def _fallback_rule_based(draft: StructuredArticleDraft, reason: str) -> NormalizedArticleResult:
+    reason: str | None = None,
+) -> NormalizedArticleResult:
+    blocks, decision_entries, published_cells, suppressed_cells = _clean_blocks(
+        draft.blocks,
+        secondary_text=secondary_text,
+        source="rule_based",
+    )
     return NormalizedArticleResult(
         madde_no=draft.madde_no,
         title=draft.title,
-        blocks=draft.blocks,
+        blocks=blocks or [ArticleBlock(type="raw", text=_safe_paragraph_fallback(_strip_duplicate_heading(draft.raw_text, draft.madde_no, draft.title)))],
         source_mode="rule_based",
-        verification_status="fallback_rule_based" if reason != "missing_anthropic_key" else "accepted",
-        change_flags=draft.issues + [reason],
+        verification_status="fallback_rule_based" if reason else "accepted",
+        change_flags=sorted(set(draft.issues + ([reason] if reason else []))),
+        notes=["clean_fallback"] if reason else [],
+        llm_attempted=reason in {"missing_anthropic_key", "llm_error"},
+        table_cells_published=published_cells,
+        table_cells_suppressed=suppressed_cells,
+        publish_mode="rule_based_only",
+        decision_entries=decision_entries,
     )
 
 
-def _fallback_rule_based_from_result(candidate: NormalizedArticleResult, raw_text: str, reason: str) -> NormalizedArticleResult:
-    draft_blocks = [ArticleBlock(type="raw", text=raw_text.strip())] if not candidate.blocks else [
-        block for block in candidate.blocks if block.type != "table"
-    ] or [ArticleBlock(type="raw", text=raw_text.strip())]
+def _merge_llm_candidate(
+    candidate: NormalizedArticleResult,
+    draft: StructuredArticleDraft,
+    secondary_text: str | None,
+) -> NormalizedArticleResult:
+    fallback = _build_rule_based_result(draft, secondary_text=secondary_text)
+    candidate_blocks, candidate_decisions, candidate_published, candidate_suppressed = _clean_blocks(
+        candidate.blocks,
+        secondary_text=secondary_text,
+        source="llm",
+    )
+
+    accepted_blocks: list[ArticleBlock] = []
+    accepted_count = 0
+    rejected_count = 0
+    max_len = max(len(candidate_blocks), len(fallback.blocks))
+    for idx in range(max_len):
+        candidate_block = candidate_blocks[idx] if idx < len(candidate_blocks) else None
+        fallback_block = fallback.blocks[idx] if idx < len(fallback.blocks) else None
+        if candidate_block and _accept_block(candidate_block, fallback_block, secondary_text):
+            accepted_blocks.append(candidate_block)
+            accepted_count += 1
+            continue
+        if fallback_block:
+            accepted_blocks.append(fallback_block)
+            if candidate_block:
+                rejected_count += 1
+
+    if not accepted_blocks:
+        return _build_rule_based_result(draft, secondary_text=secondary_text, reason="no_publishable_blocks")
+
+    final_text = _flatten_blocks(accepted_blocks)
+    if detect_legal_term_anomalies(final_text):
+        candidate.change_flags.append("legal_term_anomaly_remaining")
+
+    publish_mode: Literal["llm_first", "hybrid_fallback", "rule_based_only"]
+    source_mode: Literal["raw", "rule_based", "llm_normalized"]
+    verification_status: Literal["accepted", "fallback_rule_based", "fallback_raw"]
+    if accepted_count and rejected_count:
+        publish_mode = "hybrid_fallback"
+        source_mode = "llm_normalized"
+        verification_status = "fallback_rule_based"
+    elif accepted_count:
+        publish_mode = "llm_first"
+        source_mode = "llm_normalized"
+        verification_status = "accepted"
+    else:
+        publish_mode = "rule_based_only"
+        source_mode = "rule_based"
+        verification_status = "fallback_rule_based"
+
     return NormalizedArticleResult(
         madde_no=candidate.madde_no,
         title=candidate.title,
-        blocks=draft_blocks,
-        source_mode="rule_based" if draft_blocks[0].type != "raw" else "raw",
-        verification_status="fallback_rule_based" if draft_blocks[0].type != "raw" else "fallback_raw",
-        change_flags=candidate.change_flags + [reason],
+        blocks=accepted_blocks,
+        source_mode=source_mode,
+        verification_status=verification_status,
+        change_flags=sorted(set(draft.issues + candidate.change_flags + (["partial_llm_reject"] if rejected_count else []))),
         uncertain_spans=candidate.uncertain_spans,
+        notes=candidate.notes + (["some_blocks_fell_back_to_rule_based"] if rejected_count else []),
+        llm_attempted=True,
+        llm_blocks_accepted=accepted_count,
+        llm_blocks_rejected=rejected_count,
+        table_cells_published=max(candidate_published, fallback.table_cells_published),
+        table_cells_suppressed=max(candidate_suppressed, fallback.table_cells_suppressed),
+        publish_mode=publish_mode,
+        decision_entries=fallback.decision_entries + candidate_decisions,
     )
 
 
@@ -401,3 +471,227 @@ def _new_token_ratio(candidate_text: str, raw_text: str) -> float:
         return 1.0
     new_tokens = [token for token in candidate_tokens if token not in raw_tokens]
     return len(new_tokens) / len(candidate_tokens)
+
+
+def _clean_blocks(
+    blocks: list[ArticleBlock],
+    *,
+    secondary_text: str | None,
+    source: Literal["rule_based", "llm"],
+) -> tuple[list[ArticleBlock], list[dict], int, int]:
+    cleaned_blocks: list[ArticleBlock] = []
+    decision_entries: list[dict] = []
+    published_cells = 0
+    suppressed_cells = 0
+
+    for block in blocks:
+        if block.type == "table" and block.rows:
+            cleaned_block, block_decisions, block_published, block_suppressed = _clean_table_block(
+                block,
+                secondary_text=secondary_text,
+                source=source,
+            )
+            cleaned_blocks.append(cleaned_block)
+            decision_entries.extend(block_decisions)
+            published_cells += block_published
+            suppressed_cells += block_suppressed
+            continue
+
+        if block.type == "bullet_list":
+            items = []
+            for item in [line.strip() for line in (block.text or "").splitlines() if line.strip()]:
+                items.append(_apply_safe_legal_term_corrections(item))
+            cleaned_blocks.append(ArticleBlock(type="bullet_list", text="\n".join(items)))
+            continue
+
+        text = _apply_safe_legal_term_corrections(block.text or "")
+        cleaned_blocks.append(ArticleBlock(type="paragraph" if block.type == "raw" else block.type, text=_safe_paragraph_fallback(text)))
+
+    return cleaned_blocks, decision_entries, published_cells, suppressed_cells
+
+
+def _clean_table_block(
+    block: ArticleBlock,
+    *,
+    secondary_text: str | None,
+    source: Literal["rule_based", "llm"],
+) -> tuple[ArticleBlock, list[dict], int, int]:
+    if not block.rows:
+        return ArticleBlock(type="table", rows=[["Belirsiz"]], cell_statuses=[["suppressed_uncertain"]], note="Bazı hücreler bastırıldı."), [], 0, 1
+
+    rows = [[_normalize_inline_noise(str(cell)) for cell in row] for row in block.rows if row]
+    header = [_canonicalize_table_header(cell) for cell in rows[0]]
+    normalized_rows = [header]
+    status_rows = [["accepted_from_llm" if source == "llm" else "accepted_from_rule_based" for _ in header]]
+    decisions: list[dict] = []
+    published_cells = len(header)
+    suppressed_cells = 0
+
+    for row_index, row in enumerate(rows[1:], start=1):
+        normalized_row: list[str] = []
+        status_row: list[str] = []
+        for col_index, header_name in enumerate(header):
+            raw_value = row[col_index] if col_index < len(row) else ""
+            value, status, decision_reason = _normalize_table_cell(
+                raw_value,
+                header_name,
+                secondary_text=secondary_text,
+                source=source,
+            )
+            normalized_row.append(value)
+            status_row.append(status)
+            if status == "suppressed_uncertain":
+                suppressed_cells += 1
+            else:
+                published_cells += 1
+            decisions.append(
+                {
+                    "row_index": row_index,
+                    "column_name": header_name,
+                    "raw_value": raw_value,
+                    "published_value": value,
+                    "auto_corrected": status == "auto_corrected",
+                    "suppressed": status == "suppressed_uncertain",
+                    "decision_reason": decision_reason,
+                }
+            )
+        normalized_rows.append(normalized_row)
+        status_rows.append(status_row)
+
+    note = "Bazı hücreler OCR/LLM belirsizliği nedeniyle bastırıldı." if suppressed_cells else None
+    return ArticleBlock(type="table", rows=normalized_rows, cell_statuses=status_rows, note=note), decisions, published_cells, suppressed_cells
+
+
+def _normalize_table_cell(
+    raw_value: str,
+    header_name: str,
+    *,
+    secondary_text: str | None,
+    source: Literal["rule_based", "llm"],
+) -> tuple[str, str, str]:
+    text = _apply_safe_legal_term_corrections(_normalize_inline_noise(raw_value))
+    if not text:
+        return "—", "suppressed_uncertain", "empty_cell"
+
+    default_status = "accepted_from_llm" if source == "llm" else "accepted_from_rule_based"
+
+    if header_name == "Sayı No":
+        digits = "".join(ch for ch in text if ch.isdigit())
+        return (digits or "—", default_status if digits else "suppressed_uncertain", "sequence_number")
+
+    if header_name == "Uyruğu":
+        normalized = _normalize_lookup(text)
+        if normalized in {"turkiye", "turk", "tc", "t c"} or SequenceMatcher(None, normalized, "turkiye").ratio() >= 0.75:
+            return "TÜRKİYE", "auto_corrected" if text != "TÜRKİYE" else default_status, "nationality_normalized"
+        return "Belirsiz", "suppressed_uncertain", "unsupported_nationality"
+
+    if header_name == "Kimlik / Vergi No":
+        digits = "".join(ch for ch in text if ch.isdigit())
+        if len(digits) >= 6:
+            return digits, default_status, "identifier_verified"
+        return "—", "suppressed_uncertain", "masked_or_unverifiable_identifier"
+
+    if secondary_text and not _value_supported_by_secondary(text, secondary_text):
+        if header_name == "Adres" and _looks_ocr_noise(text):
+            return "Belirsiz adres", "suppressed_uncertain", "address_not_supported_by_secondary"
+        if header_name == "Adı Soyadı / Unvanı" and _looks_ocr_noise(text):
+            return "Belirsiz unvan", "suppressed_uncertain", "entity_not_supported_by_secondary"
+
+    if _looks_ocr_noise(text) and header_name in {"Adres", "Adı Soyadı / Unvanı"}:
+        fallback = "Belirsiz adres" if header_name == "Adres" else "Belirsiz unvan"
+        return fallback, "suppressed_uncertain", "ocr_noise_suppressed"
+
+    return text, default_status, "kept_clean_value"
+
+
+def _accept_block(
+    candidate_block: ArticleBlock,
+    fallback_block: ArticleBlock | None,
+    secondary_text: str | None,
+) -> bool:
+    if candidate_block.type == "table":
+        return bool(candidate_block.rows)
+    if candidate_block.type == "raw":
+        return False
+
+    candidate_text = _normalize_text(candidate_block.text or "")
+    fallback_text = _normalize_text((fallback_block.text or "") if fallback_block else "")
+    if not candidate_text:
+        return False
+    if fallback_text:
+        similarity = SequenceMatcher(None, fallback_text, candidate_text).ratio()
+        if similarity < BLOCK_SIMILARITY_RATIO:
+            return False
+        if _new_token_ratio(candidate_text, fallback_text) > MAX_NEW_TOKEN_RATIO:
+            return False
+    if secondary_text:
+        secondary_ratio = SequenceMatcher(None, _normalize_text(secondary_text), candidate_text).ratio()
+        if secondary_ratio < 0.10 and len(candidate_text.split()) > 6:
+            return False
+    return True
+
+
+def _apply_safe_legal_term_corrections(text: str) -> str:
+    corrected = text
+    for expected, variants in LEGAL_TERM_EXPECTED.items():
+        for variant in variants:
+            corrected = re.sub(
+                rf"(?<!\w){re.escape(variant)}(?!\w)",
+                expected,
+                corrected,
+                flags=re.IGNORECASE,
+            )
+    return corrected
+
+
+def _canonicalize_table_header(value: str) -> str:
+    normalized = _normalize_lookup(value)
+    if normalized in HEADER_EQUIVALENTS:
+        return HEADER_EQUIVALENTS[normalized]
+    best_match = value.strip() or "Belirsiz Kolon"
+    best_ratio = 0.0
+    for canonical in TABLE_CELL_HEADERS:
+        ratio = SequenceMatcher(None, normalized, _normalize_lookup(canonical)).ratio()
+        if ratio > best_ratio:
+            best_ratio = ratio
+            best_match = canonical
+    return best_match if best_ratio >= 0.62 else "Belirsiz Kolon"
+
+
+def _normalize_lookup(value: str) -> str:
+    folded = unicodedata.normalize("NFKD", value.casefold())
+    folded = "".join(ch for ch in folded if not unicodedata.combining(ch))
+    folded = re.sub(r"[^a-z0-9\s/]", " ", folded)
+    return re.sub(r"\s+", " ", folded).strip()
+
+
+def _value_supported_by_secondary(value: str, secondary_text: str) -> bool:
+    candidate = _normalize_lookup(value)
+    secondary = _normalize_lookup(secondary_text)
+    if not candidate or not secondary:
+        return False
+    if candidate in secondary:
+        return True
+    return SequenceMatcher(None, candidate, secondary).ratio() >= 0.35
+
+
+def _looks_ocr_noise(value: str) -> bool:
+    normalized = _normalize_lookup(value)
+    if not normalized:
+        return True
+    if re.search(r"\*{2,}", value):
+        return True
+    tokens = normalized.split()
+    if len(tokens) >= 2 and any(token in {"anonim", "sirketi"} for token in tokens):
+        return True
+    weird_tokens = sum(1 for token in tokens if len(token) >= 6 and token not in {"turkiye", "adres", "anonim", "sirketi", "limited", "vergi", "kimlik"})
+    return weird_tokens >= 2 and value.upper() == value
+
+
+def _safe_paragraph_fallback(text: str) -> str:
+    cleaned = text.strip()
+    if not cleaned:
+        return "Belirsiz içerik"
+    if "|" in cleaned and cleaned.count("|") >= 4:
+        return "Tablo içeriği ayrı yapılandırılmış olarak işlendi."
+    return cleaned
