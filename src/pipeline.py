@@ -374,6 +374,7 @@ def _run_extraction_phase(
             pages=sorted(page_texts),
             artifacts=artifacts,
             disputed_article_pdfs=disputed_article_pdfs,
+            no_llm=no_llm,
             use_llm_normalization=llm_article_normalization,
             normalization_model=article_normalization_model,
         )
@@ -392,6 +393,7 @@ def _process_article_set(
     pages: list[int],
     artifacts: PipelineArtifacts,
     disputed_article_pdfs: list[str],
+    no_llm: bool,
     use_llm_normalization: bool,
     normalization_model: str,
 ) -> list[Article]:
@@ -427,6 +429,7 @@ def _process_article_set(
         secondary_text=secondary_filtered_text,
         disputed_spans=disputed,
         pages=pages,
+        allow_llm=not no_llm,
     )
     if recovered_spans:
         artifacts.verified_spans.extend(recovered_spans)
@@ -605,8 +608,9 @@ def _attempt_reocr_recovery(
     secondary_text: str,
     disputed_spans: list[VerifiedSpan],
     pages: list[int],
+    allow_llm: bool,
 ) -> tuple[list[Article], list[VerifiedSpan], list[ReviewQueueEntry]]:
-    reocr_provider = "vision" if "ANTHROPIC_API_KEY" in os.environ else "tesseract"
+    reocr_provider = "vision" if allow_llm and "ANTHROPIC_API_KEY" in os.environ else "tesseract"
     try:
         reocr_result = reocr_pages(pdf_file, pages=pages, provider=reocr_provider)
     except Exception as exc:
