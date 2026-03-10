@@ -1,0 +1,122 @@
+{
+  "page_0": {
+    "status": "primary_only",
+    "disagreement_score": 1.0,
+    "evidence": "Secondary OCR boş döndü, primary kabul edildi",
+    "pdf": "9) 22-12-2025 Denetçi Değişikliği.pdf"
+  },
+  "page_1": {
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "pdf": "9) 22-12-2025 Denetçi Değişikliği.pdf"
+  },
+  "page_2": {
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf"
+  },
+  "page_3": {
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
+  },
+  "madde_1": {
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  },
+  "madde_2": {
+    "status": "verified",
+    "disagreement_score": 0.0118,
+    "evidence": "Düşük fark skoru (1.18%), iki OCR uyumlu",
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  },
+  "madde_3": {
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
+  },
+  "madde_4": {
+    "status": "verified",
+    "disagreement_score": 0.022,
+    "evidence": "Düşük fark skoru (2.20%), iki OCR uyumlu",
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  },
+  "madde_5": {
+    "status": "verified",
+    "disagreement_score": 0.0112,
+    "evidence": "Düşük fark skoru (1.12%), iki OCR uyumlu",
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  },
+  "madde_6": {
+    "status": "disputed",
+    "disagreement_score": 0.0308,
+    "evidence": "Hukuki terim anomalileri bulundu: ilmihabeti",
+    "pdf": "4) 29-12-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
+  },
+  "madde_7": {
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
+  },
+  "madde_8": {
+    "status": "verified",
+    "disagreement_score": 0.01,
+    "evidence": "Düşük fark skoru (1.00%), iki OCR uyumlu",
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  },
+  "madde_9": {
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
+  },
+  "madde_10": {
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
+  },
+  "madde_11": {
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  },
+  "madde_12": {
+    "status": "verified",
+    "disagreement_score": 0.0041,
+    "evidence": "Düşük fark skoru (0.41%), iki OCR uyumlu",
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  },
+  "madde_13": {
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
+  },
+  "madde_14": {
+    "status": "verified",
+    "disagreement_score": 0.0085,
+    "evidence": "Düşük fark skoru (0.85%), iki OCR uyumlu",
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  },
+  "madde_15": {
+    "status": "unverified",
+    "disagreement_score": 0.7236,
+    "evidence": "Yüksek fark skoru (72.36%), metin güvenilir değil",
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
+  },
+  "madde_16": {
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  }
+}

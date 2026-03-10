@@ -1,0 +1,330 @@
+[
+  {
+    "field_name": "madde_1",
+    "status": "unverified",
+    "disagreement_score": 0.476,
+    "evidence": "Yüksek fark skoru (47.60%), metin güvenilir değil",
+    "primary_text": "# 1. Kuruluş\n\nAşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu tarafından bir Anonim Şirket kurulmuş bulunmaktadır.\n\n| Sayı No | Kararı | Adres | Gerak | Küçük No |\n| --- | --- | --- | --- | --- |\n| 1 | ETCİBİN BULGURU ANONİM ŞİRKETİ | DEVETERE MAHALLEM BÜYÜKSENE CAD. NO: 176101 ",
+    "secondary_text": "1. Kuruluş\nAşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu tarafından bir Anonim\nirket kurulmuş bulunmaktadır.\nAAYDEM HOLDİNG O İESENTEPE MAHALLESİ BÜYÜKDERE CAD. NO:İ net\n\n5 vevineşimken İm şişman e ee vo)eomeye (veee |"
+  },
+  {
+    "field_name": "madde_2",
+    "status": "verified",
+    "disagreement_score": 0.0118,
+    "evidence": "Düşük fark skoru (1.18%), iki OCR uyumlu",
+    "primary_text": "# 2. ŞİRKETİN UNVANI\n\nŞirketin unvanı PARLA ENERJİ YATIRIMLARI ANONİM ŞİRKETİdir.",
+    "secondary_text": "2. ŞİRKETİN UNVANI\nŞirketin unvanı PARLA ENERJİ YATIRIMLARI ANONİM ŞİRKETİdir."
+  },
+  {
+    "field_name": "madde_3",
+    "status": "disputed",
+    "disagreement_score": 0.1055,
+    "evidence": "Fark skoru 10.55%. Kelime farkları: silindi: '#'; silindi: '1)'; '2) elektrik' ↔ '2)elektrik'; '3) eidroelektrik' ↔ '3yhidroelektrik'; 'enerjisi' ↔ 'eneryisi'",
+    "primary_text": "# 3. AMAÇ VE KONU\n\nŞirketin başlıca amaç ve faaliyet konusu enerji sektöründe faaliyet göstermek üzere şirketler kurmak veya bunlara iştirak etmek, iştirak edilen veya yeni kurulan bu şirketlerin yönetimlerini belirlemek ve bu şirketler aracılığıyla yatırımlar yapmak, bu şirketlere veya enerji sektö",
+    "secondary_text": "3. AMAÇ VE KONU\nŞirketin başlıca amaç ve faaliyet konusu enerji sektöründe faaliyet göstermek üzere şirketler\nkurmak veya bunlara iştirak etmek, iştirak edilen veya yeni kurulan bu şirketlerin\nyönetimlerini belirlemek ve bu şirketler aracılığıyla yatırımlar yapmak, bu şirketlere veya\nenerji sektörün"
+  },
+  {
+    "field_name": "madde_4",
+    "status": "verified",
+    "disagreement_score": 0.022,
+    "evidence": "Düşük fark skoru (2.20%), iki OCR uyumlu",
+    "primary_text": "# 4. ŞİRKETİN MERKEZİ\n\nŞirketin merkezi DENİZLİ/ MERKEZEFENDİ/gesi'dir. Adresi ADALET MAH. HASAN GÖNÜLLÜ BUL. NO: 15 İÇ KAPI NO: 1 MERKEZEFENDİ / DENİZLİ dir. Adres değişikliğinde yeni adres, ticaret siciline tescil ve Türkiye Ticaret Sicili Gazetesi'nde ilan ettirilir. Tescil ve ilan edilmiş adrese",
+    "secondary_text": "4. ŞİRKETİN MERKEZİ\nŞirketin merkezi DENİZLİ MERKEZEFENDİİ:lçesi'dir. Adresi ADALET MAH.\nHASAN GÖNÜLLÜ BUL. NO: 15 İÇ KAPI NO: 1 MERKEZEFENDİ /\nDENİZLİ'dir.Adres değişikliğinde yeni adres, ticaret siciline tescil ve Türkiye Ticaret\nSicili Gazetesi'nde ilan ettirilir. Tescil ve ilan edilmiş adrese ya"
+  },
+  {
+    "field_name": "madde_5",
+    "status": "verified",
+    "disagreement_score": 0.0112,
+    "evidence": "Düşük fark skoru (1.12%), iki OCR uyumlu",
+    "primary_text": "# 5. SÜRE\n\nŞirketin süresi, kuruluşundan itibaren sınırsız'dır. Bu süre esas sözleşmesini değiştirmek suretiyle uzatılı kısaltılabilir.",
+    "secondary_text": "5. SÜRE\nŞirketin süresi, kuruluşundan itibaren sınırsız'dır. Bu süre esas sözleşmesini değiştirmek\nsuretiyle uzatılıp kısaltılabilir."
+  },
+  {
+    "field_name": "madde_6",
+    "status": "disputed",
+    "disagreement_score": 0.0467,
+    "evidence": "Hukuki terim anomalileri bulundu: biberi, pay sanatlerini, pay sanatlerini",
+    "primary_text": "# 6. SERMAYE\n\nŞirketin sermayesi, beheri 1,00 Türk Lirası değerinde 100000 paya ayrılmış toplam 100000,00 Türk Lirası değerindedir. Bu payların tamamı nama yazılıdır.\n\n- Beheri 1,00 Türk Lirası değerinde 100000 adet paya karşılık gelen 100000,00 Türk Lirası AYDEM HOLDING ANONİM ŞİRKETİ tarafından na",
+    "secondary_text": "6. SERMAYE\nŞirketin sermayesi, beheri 1,00 Türk Lirası değerinde 100000 paya ayrılmış toplam\n100000,00 Türk Lirası değerindedir.Bu payların tamamı nama yazılıdır.\n-Beheri 1,00 Türk Lirası değerinde 100000 adet paya karşılık gelen 100000,00 Türk Lirası\nAYDEM HOLDİNG ANONİM ŞİRKETİ tarafından nakdi,\no"
+  },
+  {
+    "field_name": "madde_7",
+    "status": "disputed",
+    "disagreement_score": 0.0765,
+    "evidence": "Fark skoru 7.65%. Kelime farkları: silindi: '#'; 'adresi' ↔ 'idaresi'; 'kurumu' ↔ 'kanunu'; 'yıllık aşağıdaki' ↔ 'yıllığına aşağıdakiler'; 'holding' ↔ 'holdi̇ng'",
+    "primary_text": "# 7. YÖNETİM KURULU ve SÜRESİ\n\nŞirketin işleri ve adresi Genel Kurul tarafından Türk Ticaret Kurumu Hükümleri çerçevesinde seçilecek en az 1 üyeden oluşan bir yönetim kurulu tarafından yürütülür. Yönetim Kurulu süresi 1 - 3 yıl arasıdır. İlk Yönetim Kurulu üyesi olarak 1 yıllık aşağıdaki seçilmiştir",
+    "secondary_text": "7. YÖNETİM KURULU ve SÜRESİ\nŞirketin işleri ve idaresi Genel Kurul tarafından Türk Ticaret Kanunu Hükümleri\nçerçevesinde seçilecek en az 1 üyeden oluşan bir yönetim kurulu tarafından yürütülür.\nYönetim Kurulu süresi 1 - 3 yıl arasıdır. İlk Yönetim Kurulu üyesi olarak 1 yıllığına\naşağıdakiler seçilmi"
+  },
+  {
+    "field_name": "madde_8",
+    "status": "verified",
+    "disagreement_score": 0.01,
+    "evidence": "Düşük fark skoru (1.00%), iki OCR uyumlu",
+    "primary_text": "# 8. ŞİRKETİN İDARESİ VE TEMSİLİ\n\nŞirketin Yönetimi ve dışarıya karşı temsil Yönetim Kurulu'na aittir. Şirket tarafından verilecek bütün belgelerin ve yapılacak sözleşmelerin geçerli olabilmesi için, bunların şirket unvanı altına konmuş ve şirketi temsile yetkili kişi veya kişilerin imzasını taşımas",
+    "secondary_text": "8. ŞİRKETİN İDARESİ VE TEMSİLİ\n\nŞirketin Yönetimi ve dışarıya karşı temsili Yönetim Kurulu'na aittir. Şirket tarafından\n\nverilecek bütün belgelerin ve yapılacak sözleşmelerin geçerli olabilmesi için, bunların şirket\n\nunvanı altına konmuş ve şirketi temsile yetkili kişi veya kişilerin imzasını taşıma"
+  },
+  {
+    "field_name": "madde_9",
+    "status": "disputed",
+    "disagreement_score": 0.0293,
+    "evidence": "Hukuki terim anomalileri bulundu: Uşruklu, Uşruklu, ENENTEPE",
+    "primary_text": "# 9. TEMSİLE YETKİLİ OLANLAR, TEMSİL ŞEKLİ VE GÖREV DAĞILIMI\n\n## Temsile Yetkili Olanlar ve Temsil Şekli:\n\nİlk 1 Yıl için ENENTEPE MAHALLESİ BÜYÜKDERE CAD NO: 175/101 ŞİŞLİ/ISTANBUL adresinde yer alan AYDEM HOLDING ANONİM ŞİRKETİ (Yönetim Kurulu Başkanı) Temsile Yetkili olarak seçilmiştir. Tüzel kiş",
+    "secondary_text": "9. TEMSİLE YETKİLİ OLANLAR, TEMSİL ŞEKLİ VE GÖREV DAĞILIMI\n\nTemsile Yetkili Olanlar ve Temsil Şekli:\n\nİlk 1 Yıl için ESENTEPE MAHALLESİ BÜYÜKDERE CAD. NO: 17101\n\nŞİŞL//İSTANBUL adresinde yer alan AYDEM HOLDİNG ANONİM ŞİRKETİ (Yönetim\n\nKurulu Başkanı) Temsile Yetkili olarak seçilmiştir. Tüzel kişi ad"
+  },
+  {
+    "field_name": "madde_10",
+    "status": "disputed",
+    "disagreement_score": 0.1676,
+    "evidence": "Fark skoru 16.76%. Kelime farkları: silindi: '#'; '409'uncu' ↔ '409*uncu'; 'kurumu'nın 416'nın' ↔ 'kanunu'nun 416'ncı'; 'dağıtılmasına' ↔ 'çağırılmasına'; '414'üncü' ↔ '414*üncü'",
+    "primary_text": "# 10. GENEL KURUL\n\nGenel kurullar, TTK'nın 409'uncu maddesi gereği olağan ve olağanüstü toplanırlar. Olağan genel kurul, her faaliyet dönemi sonundan itibaren 3 ay içinde ve senede en az bir defa; olağanüstü genel kurullar ise, Şirket işlerinin gerektirdiği hallerde ve zamanlarda toplanır. Türk Tica",
+    "secondary_text": "10. GENEL KURUL\n\nGenel kurullar, TTK'nın 409*uncu maddesi gereği olağan ve olağanüstü toplanırlar. Olağan\n\ngenel kurul, her faaliyet dönemi sonundan itibaren 3 ay içinde ve senede en az bir defa;\n\nolağanüstü genel kurullar ise, Şirket işlerinin gerektirdiği hallerde ve zamanlarda toplanır.\n\nTürk Tic"
+  },
+  {
+    "field_name": "madde_11",
+    "status": "disputed",
+    "disagreement_score": 0.0344,
+    "evidence": "Hukuki terim anomalileri bulundu: Türk Ticaret Kurumu, dağıtılmasına, dağıtılmasına",
+    "primary_text": "# 11. İLAN\n\nGenel kurulun toplantıya dağıtılmasına ilişkin ilanlar da dahil olmak üzere Şirkete ait ilanlar Türkiye Ticaret Sicili Gazetesinde yapılır. Genel kurulun toplantıya dağıtılmasına ilişkin ilanların Türk Ticaret Kurumu'nın 414'üncü maddesi hükmü gereğince ilan ve toplantı günleri hariç olm",
+    "secondary_text": "11. İLAN\n\nGenel kurulun toplantıya çağrılmasına ilişkin ilanlar da dahil olmak üzere Şirkete ait ilanlar\n\nTürkiye Ticaret Sicili Gazetesinde yapılır. Genel kurulun toplantıya çağrılmasına ilişkin\n\nilanların Türk Ticaret Kanunu'nun 414 üncü maddesi hükmü gereğince ilan ve toplantı\n\ngünleri hariç olma"
+  },
+  {
+    "field_name": "madde_12",
+    "status": "verified",
+    "disagreement_score": 0.0041,
+    "evidence": "Düşük fark skoru (0.41%), iki OCR uyumlu",
+    "primary_text": "# 12. HESAP DÖNEMİ\n\nŞirketin hesap yılı, Ocak ayının 1. gününden başlar ve Aralık ayının 31. günü sona erer. Fakat birinci hesap yılı, Şirketin kesin olarak kurulduğu tarihten itibaren başlar ve o senenin aralık ayının otuz birinci günü sona erer.",
+    "secondary_text": "12. HESAP DÖNEMİ\n\nŞirketin hesap yılı, Ocak ayının 1. gününden başlar ve Aralık ayının 31. günü sona erer.\n\nFakat birinci hesap yılı, Şirketin kesin olarak kurulduğu tarihten itibaren başlar ve o senenin\n\naralık ayının otuz birinci günü sona erer."
+  },
+  {
+    "field_name": "madde_13",
+    "status": "disputed",
+    "disagreement_score": 0.0427,
+    "evidence": "Hukuki terim anomalileri bulundu: dağıtılmasına",
+    "primary_text": "# 13. KARIN TESPİTİ VE DAĞILIMI\n\nŞirketin net dönem kari, yapılmış her çeşit masrafların çıkarılmasından sonra kalan miktardır. Kar miktarı aşağıdaki sıra ve esaslar dahilinde dağıtılır:\n\nBirinci Tertip Kanuni Yedek Akçe\n\na) Net dönem karının %5'i TTK'nın 519'uncu maddesi hükümlerine göre sermayenin",
+    "secondary_text": "13. KARIN TESPİTİ VE DAĞITIMI\n\nŞirketin net dönem karı, yapılmış her çeşit masrafların çıkarılmasından sonra kalan\n\nmiktardır. Kar miktarı aşağıdaki sıra ve esaslar dâhilinde dağıtılır:\n\nBirinci Tertip Kanuni Yedek Akçe\n\na) Net dönen karının 95'i TIK'nın 519'uncu maddesi hükümlerine göre sermayenin\n"
+  },
+  {
+    "field_name": "madde_14",
+    "status": "verified",
+    "disagreement_score": 0.0085,
+    "evidence": "Düşük fark skoru (0.85%), iki OCR uyumlu",
+    "primary_text": "# 14. YEDEK AKÇE\n\nYedek akçelerin ayrılması hususunda Türk Ticaret Kanununun 519 ila 523. maddeleri hükümleri uygulanır.",
+    "secondary_text": "14. YEDEK AKÇE\n\nYedek akçelerin ayrılması hususunda Türk Ticaret Kanununun 519 ila 523. maddeleri\n\nhükümleri uygulanır."
+  },
+  {
+    "field_name": "madde_15",
+    "status": "disputed",
+    "disagreement_score": 0.0594,
+    "evidence": "Fark skoru 5.94%. Kelime farkları: silindi: '#'; 'kanuni' ↔ 'kanuni̇'; 'kurumu' ↔ 'kanını'",
+    "primary_text": "# 15. KANUNI HÜKÜMLER\n\nBu esas sözleşmede bulunmayan hususlar hakkında Türk Ticaret Kurumu hükümleri uygulanır.",
+    "secondary_text": "15. KANUNİ HÜKÜMLER\n\nBu esas sözleşmede bulunmayan hususlar hakkında Türk Ticaret Kanını hükümleri\n\nuygulanır."
+  },
+  {
+    "field_name": "madde_16",
+    "status": "unverified",
+    "disagreement_score": 0.3304,
+    "evidence": "Yüksek fark skoru (33.04%), metin güvenilir değil",
+    "primary_text": "# 16. TOPLANTIDA BAKANLIK TEMSİLCİSİ BULUNMASI\n\nAnonim şirketlerin genel kurul toplantılarının usul ve esasları ile bu toplantılarda bulunacak Ticaret Bakanlığı temsilcileri hakkında yönetmelik hükümlerine tabidir.\n\nKURUCULAR\n\n| Sayı no. | Kararın | Yayın | İmza |\n| --- | --- | --- | --- |\n| | AYDEM",
+    "secondary_text": "16. TOPLANTIDA BAKANLIK TEMSİLCİSİ BULUNMASI\n\nAnonim şirketlerin genel kurul toplantılarının usul ve esasları ile bu toplantılarda bulunacak\n\nTicaret Bakanlığı temsilcileri hakkında yönetmelik hükümlerine tabidir.\n\nKURUCULAR\n\nZESTO Ç\n\n| oo İAYDEM HOLDİNGANONİM ŞİRKETİ (VEKALETEN CEYHANSALDANIDİÜRİYİ"
+  },
+  {
+    "field_name": "madde_1",
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "primary_text": "1. Kuruluş\nAşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu tarafından bir Anonim\nirket kurulmuş bulunmaktadır.\nAAYDEM HOLDİNG O İESENTEPE MAHALLESİ BÜYÜKDERE CAD. NO:İ net\n\n5 vevineşimken İm şişman e ee vo)eomeye (veee |",
+    "secondary_text": "1. Kuruluş\nAşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu tarafından bir Anonim\nirket kurulmuş bulunmaktadır.\nAAYDEM HOLDİNG O İESENTEPE MAHALLESİ BÜYÜKDERE CAD. NO:İ net\n\n5 vevineşimken İm şişman e ee vo)eomeye (veee |"
+  },
+  {
+    "field_name": "madde_3",
+    "status": "unverified",
+    "disagreement_score": 0.5518,
+    "evidence": "Yüksek fark skoru (55.18%), metin güvenilir değil",
+    "primary_text": "3. AMAÇ VE KONU\nŞirketin başlıca amaç ve faaliyet konusu enerji sektöründe faaliyet göstermek üzere şirketler\nkurmak veya bunlara iştirak etmek, iştirak edilen veya yeni kurulan bu şirketlerin\nyönetimlerini belirlemek ve bu şirketler aracılığıyla yatırımlar yapmak, bu şirketlere veya\nenerji sektörün",
+    "secondary_text": "3. AMAÇ VE KONU\nŞirketin başlıca amaç ve faaliyet konusu enerji sektöründe faaliyet göstermek üzere şirketler\nkurmak veya bunlara iştirak etmek, iştirak edilen veya yeni kurulan bu şirketlerin\nyönetimlerini belirlemek ve bu şirketler aracılığıyla yatırımlar yapmak, bu şirketlere veya\nenerji sektörün"
+  },
+  {
+    "field_name": "madde_6",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "6. SERMAYE\nŞirketin sermayesi, beheri 1,00 Türk Lirası değerinde 100000 paya ayrılmış toplam\n100000,00 Türk Lirası değerindedir.Bu payların tamamı nama yazılıdır.\n-Beheri 1,00 Türk Lirası değerinde 100000 adet paya karşılık gelen 100000,00 Türk Lirası\nAYDEM HOLDİNG ANONİM ŞİRKETİ tarafından nakdi,\no"
+  },
+  {
+    "field_name": "madde_7",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "7. YÖNETİM KURULU ve SÜRESİ\nŞirketin işleri ve idaresi Genel Kurul tarafından Türk Ticaret Kanunu Hükümleri\nçerçevesinde seçilecek en az 1 üyeden oluşan bir yönetim kurulu tarafından yürütülür.\nYönetim Kurulu süresi 1 - 3 yıl arasıdır. İlk Yönetim Kurulu üyesi olarak 1 yıllığına\naşağıdakiler seçilmi"
+  },
+  {
+    "field_name": "madde_9",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "9. TEMSİLE YETKİLİ OLANLAR, TEMSİL ŞEKLİ VE GÖREV DAĞILIMI\n\nTemsile Yetkili Olanlar ve Temsil Şekli:\n\nİlk 1 Yıl için ESENTEPE MAHALLESİ BÜYÜKDERE CAD. NO: 17101\n\nŞİŞL//İSTANBUL adresinde yer alan AYDEM HOLDİNG ANONİM ŞİRKETİ (Yönetim\n\nKurulu Başkanı) Temsile Yetkili olarak seçilmiştir. Tüzel kişi ad"
+  },
+  {
+    "field_name": "madde_10",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "10. GENEL KURUL\n\nGenel kurullar, TTK'nın 409*uncu maddesi gereği olağan ve olağanüstü toplanırlar. Olağan\n\ngenel kurul, her faaliyet dönemi sonundan itibaren 3 ay içinde ve senede en az bir defa;\n\nolağanüstü genel kurullar ise, Şirket işlerinin gerektirdiği hallerde ve zamanlarda toplanır.\n\nTürk Tic"
+  },
+  {
+    "field_name": "madde_11",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "11. İLAN\n\nGenel kurulun toplantıya çağrılmasına ilişkin ilanlar da dahil olmak üzere Şirkete ait ilanlar\n\nTürkiye Ticaret Sicili Gazetesinde yapılır. Genel kurulun toplantıya çağrılmasına ilişkin\n\nilanların Türk Ticaret Kanunu'nun 414 üncü maddesi hükmü gereğince ilan ve toplantı\n\ngünleri hariç olma"
+  },
+  {
+    "field_name": "madde_13",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "13. KARIN TESPİTİ VE DAĞITIMI\n\nŞirketin net dönem karı, yapılmış her çeşit masrafların çıkarılmasından sonra kalan\n\nmiktardır. Kar miktarı aşağıdaki sıra ve esaslar dâhilinde dağıtılır:\n\nBirinci Tertip Kanuni Yedek Akçe\n\na) Net dönen karının 95'i TIK'nın 519'uncu maddesi hükümlerine göre sermayenin\n"
+  },
+  {
+    "field_name": "madde_15",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "15. KANUNİ HÜKÜMLER\n\nBu esas sözleşmede bulunmayan hususlar hakkında Türk Ticaret Kanını hükümleri\n\nuygulanır."
+  },
+  {
+    "field_name": "madde_16",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "16. TOPLANTIDA BAKANLIK TEMSİLCİSİ BULUNMASI\n\nAnonim şirketlerin genel kurul toplantılarının usul ve esasları ile bu toplantılarda bulunacak\n\nTicaret Bakanlığı temsilcileri hakkında yönetmelik hükümlerine tabidir.\n\nKURUCULAR\n\nZESTO Ç\n\n| oo İAYDEM HOLDİNGANONİM ŞİRKETİ (VEKALETEN CEYHANSALDANIDİÜRİYİ"
+  },
+  {
+    "field_name": "madde_3",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "MADDE 3-(1) Bu İç Yönergede geçen;\na) Birleşim : Genel kurulun bir günlük toplantısını,\nb) Kanun: 13/1/2011 tarihli ve 6102 sayılı Türk Ticaret Kanununu,\nc)Oturum: Her birleşimin dinlenme, yemek arası ve benzeri nedenlerle kesilen\nbölümlerinden her birini,\nç) Toplantı: Olağan ve olağanüstü genel kur"
+  },
+  {
+    "field_name": "madde_6",
+    "status": "unverified",
+    "disagreement_score": 0.9541,
+    "evidence": "Yüksek fark skoru (95.41%), metin güvenilir değil",
+    "primary_text": "Madde 6-\n\nŞirketin sermayesi 54.885.000,00 Türk Lirası değerindedir. Bu sermaye, her biri 1,00 Türk Lirası (Bir Türk Lirası) değerinde 54.885.000 adet paya ayrılmıştır. 54.885.000 adet paya karşılık 54.885.000,00 Türk Lirası İstanbul Ticaret Sicil Müdürlüğü'nin 194877-5 Sicil no.sunda kayıtlı Aydem ",
+    "secondary_text": "MADDE 6- (1) Toplantı şirket merkezinin bulunduğu yerde (Esas sözleşmede aksine bir\nhüküm varsa bu durum belirtilecektir.), önceden ilan edilmiş zamanda (Kanunun 416 ncı\nmaddesinde belirtilen çağrısız toplantı hükümleri saklıdır) yönetim kurulu başkanı ya da\nbaşkan yardımcısı veya yönetim kurulu üye"
+  },
+  {
+    "field_name": "madde_7",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "MADDE 7-(1) Bu İç Yönergenin 6 ncı maddesi hükmü uyarınca toplantıyı açan kişinin\nyönetiminde öncelikle önerilen adaylar arasından genel kurulun yönetiminden sorumlu\nolacak pay sahibi olma zorunluluğu da bulunmayan bir başkan ve gerek görülürse başkan\nyardımcısı seçilir.\n(2) Başkan tarafından en az "
+  },
+  {
+    "field_name": "madde_9",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "MADDE 9 —(1) Toplantı başkanı, genel kurula toplantı gündemini okur veya okutur.\nBaşkan tarafından gündem maddelerinin görüşülme sırasına ilişkin bir değişiklik önerisi\nolup olmadığı sorulur, eğer bir öneri varsa bu durum genel kurulun onayına sunulur.\nToplantıda hazır bulunan oyların çoğunluğunun k"
+  },
+  {
+    "field_name": "madde_10",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "MADDE 10 -(1) Olağan genel kurul gündeminde aşağıdaki hususların yer alması\nzorunludur:\n\na) Açılış ve toplantı başkanlığının oluşturulması.\n\nb) Yönetim kurulu yıllık faaliyet raporunun, denetime tabi şirketlerde denetçi raporlarının\nve finansal tabloların görüşülmesi.\n\nc) Yönetim kurulu üyeleri ile "
+  },
+  {
+    "field_name": "madde_13",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "MADDE 13- (1) Toplantı başkanınca, pay sahiplerini veya temsilcilerini, bunların sahip\noldukları payları, grupları, sayıları ve itibari değerlerini gösteren hazır bulunanlar listesi\nimzalanır, genel kurulda sorulan soruların ve verilen cevapların özet olarak, alınan\nkararların ve her bir karar için "
+  },
+  {
+    "field_name": "madde_15",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "primary_text": "",
+    "secondary_text": "MADDE 15-(1) Genel kurul toplantısına Kanunun 1527 nci maddesi uyarınca elektronik\nortamda katılma imkânı tanındığı durumda yönetim kurulunca ve toplantı başkanlığınca\nyerine getirilecek işlemler Kanunun 1527 nci maddesi ve ilgili mevzuat dikkate alınarak ifa\nedilir.\n\nSAYFA :510 TÜRKİYE TİCARET\nÜÇÜN"
+  },
+  {
+    "field_name": "madde_3",
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "primary_text": "MADDE 3-(1) Bu İç Yönergede geçen;\na) Birleşim : Genel kurulun bir günlük toplantısını,\nb) Kanun: 13/1/2011 tarihli ve 6102 sayılı Türk Ticaret Kanununu,\nc)Oturum: Her birleşimin dinlenme, yemek arası ve benzeri nedenlerle kesilen\nbölümlerinden her birini,\nç) Toplantı: Olağan ve olağanüstü genel kur",
+    "secondary_text": "MADDE 3-(1) Bu İç Yönergede geçen;\na) Birleşim : Genel kurulun bir günlük toplantısını,\nb) Kanun: 13/1/2011 tarihli ve 6102 sayılı Türk Ticaret Kanununu,\nc)Oturum: Her birleşimin dinlenme, yemek arası ve benzeri nedenlerle kesilen\nbölümlerinden her birini,\nç) Toplantı: Olağan ve olağanüstü genel kur"
+  },
+  {
+    "field_name": "madde_6",
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "primary_text": "MADDE 6- (1) Toplantı şirket merkezinin bulunduğu yerde (Esas sözleşmede aksine bir\nhüküm varsa bu durum belirtilecektir.), önceden ilan edilmiş zamanda (Kanunun 416 ncı\nmaddesinde belirtilen çağrısız toplantı hükümleri saklıdır) yönetim kurulu başkanı ya da\nbaşkan yardımcısı veya yönetim kurulu üye",
+    "secondary_text": "MADDE 6- (1) Toplantı şirket merkezinin bulunduğu yerde (Esas sözleşmede aksine bir\nhüküm varsa bu durum belirtilecektir.), önceden ilan edilmiş zamanda (Kanunun 416 ncı\nmaddesinde belirtilen çağrısız toplantı hükümleri saklıdır) yönetim kurulu başkanı ya da\nbaşkan yardımcısı veya yönetim kurulu üye"
+  },
+  {
+    "field_name": "madde_7",
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "primary_text": "MADDE 7-(1) Bu İç Yönergenin 6 ncı maddesi hükmü uyarınca toplantıyı açan kişinin\nyönetiminde öncelikle önerilen adaylar arasından genel kurulun yönetiminden sorumlu\nolacak pay sahibi olma zorunluluğu da bulunmayan bir başkan ve gerek görülürse başkan\nyardımcısı seçilir.\n(2) Başkan tarafından en az ",
+    "secondary_text": "MADDE 7-(1) Bu İç Yönergenin 6 ncı maddesi hükmü uyarınca toplantıyı açan kişinin\nyönetiminde öncelikle önerilen adaylar arasından genel kurulun yönetiminden sorumlu\nolacak pay sahibi olma zorunluluğu da bulunmayan bir başkan ve gerek görülürse başkan\nyardımcısı seçilir.\n(2) Başkan tarafından en az "
+  },
+  {
+    "field_name": "madde_9",
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "primary_text": "MADDE 9 —(1) Toplantı başkanı, genel kurula toplantı gündemini okur veya okutur.\nBaşkan tarafından gündem maddelerinin görüşülme sırasına ilişkin bir değişiklik önerisi\nolup olmadığı sorulur, eğer bir öneri varsa bu durum genel kurulun onayına sunulur.\nToplantıda hazır bulunan oyların çoğunluğunun k",
+    "secondary_text": "MADDE 9 —(1) Toplantı başkanı, genel kurula toplantı gündemini okur veya okutur.\nBaşkan tarafından gündem maddelerinin görüşülme sırasına ilişkin bir değişiklik önerisi\nolup olmadığı sorulur, eğer bir öneri varsa bu durum genel kurulun onayına sunulur.\nToplantıda hazır bulunan oyların çoğunluğunun k"
+  },
+  {
+    "field_name": "madde_10",
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "primary_text": "MADDE 10 -(1) Olağan genel kurul gündeminde aşağıdaki hususların yer alması\nzorunludur:\n\na) Açılış ve toplantı başkanlığının oluşturulması.\n\nb) Yönetim kurulu yıllık faaliyet raporunun, denetime tabi şirketlerde denetçi raporlarının\nve finansal tabloların görüşülmesi.\n\nc) Yönetim kurulu üyeleri ile ",
+    "secondary_text": "MADDE 10 -(1) Olağan genel kurul gündeminde aşağıdaki hususların yer alması\nzorunludur:\n\na) Açılış ve toplantı başkanlığının oluşturulması.\n\nb) Yönetim kurulu yıllık faaliyet raporunun, denetime tabi şirketlerde denetçi raporlarının\nve finansal tabloların görüşülmesi.\n\nc) Yönetim kurulu üyeleri ile "
+  },
+  {
+    "field_name": "madde_13",
+    "status": "verified",
+    "disagreement_score": 0.0,
+    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "primary_text": "MADDE 13- (1) Toplantı başkanınca, pay sahiplerini veya temsilcilerini, bunların sahip\noldukları payları, grupları, sayıları ve itibari değerlerini gösteren hazır bulunanlar listesi\nimzalanır, genel kurulda sorulan soruların ve verilen cevapların özet olarak, alınan\nkararların ve her bir karar için ",
+    "secondary_text": "MADDE 13- (1) Toplantı başkanınca, pay sahiplerini veya temsilcilerini, bunların sahip\noldukları payları, grupları, sayıları ve itibari değerlerini gösteren hazır bulunanlar listesi\nimzalanır, genel kurulda sorulan soruların ve verilen cevapların özet olarak, alınan\nkararların ve her bir karar için "
+  },
+  {
+    "field_name": "madde_15",
+    "status": "unverified",
+    "disagreement_score": 0.7236,
+    "evidence": "Yüksek fark skoru (72.36%), metin güvenilir değil",
+    "primary_text": "MADDE 15-(1) Genel kurul toplantısına Kanunun 1527 nci maddesi uyarınca elektronik\nortamda katılma imkânı tanındığı durumda yönetim kurulunca ve toplantı başkanlığınca\nyerine getirilecek işlemler Kanunun 1527 nci maddesi ve ilgili mevzuat dikkate alınarak ifa\nedilir.",
+    "secondary_text": "MADDE 15-(1) Genel kurul toplantısına Kanunun 1527 nci maddesi uyarınca elektronik\nortamda katılma imkânı tanındığı durumda yönetim kurulunca ve toplantı başkanlığınca\nyerine getirilecek işlemler Kanunun 1527 nci maddesi ve ilgili mevzuat dikkate alınarak ifa\nedilir.\n\nSAYFA :510 TÜRKİYE TİCARET\nÜÇÜN"
+  },
+  {
+    "field_name": "madde_6",
+    "status": "disputed",
+    "disagreement_score": 0.0308,
+    "evidence": "Hukuki terim anomalileri bulundu: ilmihabeti",
+    "primary_text": "Madde 6-\n\nŞirketin sermayesi 161.852.160,00 Türk Lirası değerindedir. Bu sermaye, her biri 1,00 Türk Lirası (Bir Türk Lirası) değerinde 161.852.160 adet paya ayrılmıştır. 161.852.160 adet paya karşılık 161.852.160,00 Türk Lirası İstanbul Ticaret Sicil Müdürlüğü'nden 194877-5 Sicil no. sonda kayıtlı ",
+    "secondary_text": "Madde 6-\nŞirketin sermayesi 161.852.160,00 Türk Lirası değerindedir. Bu sermaye, her biri 1,00 Türk\nLirası (Bir Türk Lirası) değerinde 161.852.160 adet paya ayrılmıştır. 161.852.160 adet paya\nkarşılık 161.852.160,00 Türk Lirası İstanbul Ticaret Sicil Müdürlüğü? nün 194877-5 Sicil\nno.sunda kayıtlı Ay"
+  }
+]

@@ -1,0 +1,31 @@
+Aşağıda bir Ticaret Sicil Gazetesi (TTSG) ilanının OCR ile çıkarılmış metni verilmiştir.
+Bu metinden şirket bilgilerini çıkarmanız istenmektedir.
+
+KURALLAR:
+1. Yalnızca metinde AÇIKÇA geçen bilgileri çıkarın. Tahmin yapmayın.
+2. Her alan için kaynak metindeki tam ifadeyi "source_snippet" olarak belirtin.
+3. Bulamadığınız alanları null olarak bırakın.
+4. MERSİS numarası tam 16 haneli olmalıdır.
+5. Sermaye değeri "X TL" formatında olmalıdır (noktalı binlik ayırıcı ile).
+6. Tarihler "GG.AA.YYYY" formatında olmalıdır.
+
+ÇIKTI FORMATI (JSON):
+{
+  "ticaret_unvani": "string veya null",
+  "sirket_turu": "Anonim Şirket / Limited Şirket / null",
+  "mersis_no": "string (16 hane) veya null",
+  "ticaret_sicil_mudurlugu": "string veya null",
+  "ticaret_sicil_no": "string veya null",
+  "adres": "string veya null",
+  "sermaye": "string (örn: 50.000 TL) veya null",
+  "kurulus_tarihi": "GG.AA.YYYY veya null",
+  "denetci": "string veya null",
+  "confidence": "high / medium / low",
+  "source_snippets": {
+    "alan_adi": "kaynak metindeki tam ifade"
+  },
+  "source_page": "sayfa numarası (int) veya null"
+}
+
+İLAN METNİ:
+{text}

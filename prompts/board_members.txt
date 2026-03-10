@@ -1,0 +1,30 @@
+Aşağıda bir Ticaret Sicil Gazetesi (TTSG) ilanının OCR ile çıkarılmış metni verilmiştir.
+Bu metinden Yönetim Kurulu (YK) üyelerini çıkarmanız istenmektedir.
+
+KURALLAR:
+1. Yalnızca metinde AÇIKÇA geçen bilgileri çıkarın. Tahmin yapmayın.
+2. "Gerçek kişi" (real_person) ve "tüzel kişi" (legal_entity) ayrımını yapın.
+3. Tüzel kişi ise "representative" alanına adına hareket edecek gerçek kişiyi yazın.
+4. Görev bitiş tarihi metinde geçiyorsa "term_end" olarak belirtin.
+5. Atama/görevden alma (seçildi, atandı, ayrıldı, azledildi, istifa) eylemlerini tespit edin.
+6. Her üye için kaynak metindeki tam ifadeyi "source_snippet" olarak belirtin.
+
+ÇIKTI FORMATI (JSON):
+{
+  "board_members": [
+    {
+      "name": "AD SOYAD veya TÜZEL KİŞİ UNVANI",
+      "role": "Yönetim Kurulu Başkanı / Yönetim Kurulu Üyesi / ...",
+      "entity_type": "real_person / legal_entity",
+      "term_end": "GG.AA.YYYY veya null",
+      "representative": "Gerçek kişi adı (tüzel kişi için) veya null",
+      "action": "atama / görevden_alma / devam / null",
+      "source_snippet": "kaynak metindeki tam ifade"
+    }
+  ],
+  "confidence": "high / medium / low",
+  "source_page": "sayfa numarası (int) veya null"
+}
+
+İLAN METNİ:
+{text}

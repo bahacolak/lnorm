@@ -1,0 +1,275 @@
+[
+  {
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf",
+    "field_name": "ticaret_sicil_mudurlugu",
+    "llm_value": "Denizli Ticaret Sicili Müdürlüğü",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf",
+    "field_name": "sermaye",
+    "llm_value": "100000,00 TL",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf",
+    "field_name": "kurulus_tarihi",
+    "llm_value": "01.12.2022",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf",
+    "field_name": "ticaret_sicil_mudurlugu",
+    "llm_value": "Denizli Ticaret Sicili Müdürlüğü",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf",
+    "field_name": "kurulus_tarihi",
+    "llm_value": "21.06.2023",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "ticaret_sicil_mudurlugu",
+    "llm_value": "Denizli Ticaret Sicili Müdürlüğü",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_name",
+    "llm_value": "AYDEM HOLDING ANONİM ŞİRKETİ",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_name",
+    "llm_value": "AYDEM HOLDING ANONİM ŞİRKETİ",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "4) 29-12-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf",
+    "field_name": "ticaret_sicil_mudurlugu",
+    "llm_value": "Denizli Ticaret Sicili Müdürlüğü",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "5) 13-09-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "ticaret_sicil_mudurlugu",
+    "llm_value": "Denizli Ticaret Sicili Müdürlüğü",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "5) 13-09-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "kurulus_tarihi",
+    "llm_value": "13.09.2024",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "5) 13-09-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "5) 13-09-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "6) 30-10-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "ticaret_sicil_mudurlugu",
+    "llm_value": "Denizli Ticaret Sicili Müdürlüğü",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "6) 30-10-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_name",
+    "llm_value": "AYDEM HOLDING ANONİM ŞİRKETİ",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "6) 30-10-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "6) 30-10-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_name",
+    "llm_value": "AYDEM HOLDING ANONİM ŞİRKETİ",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "6) 30-10-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "7) 05-11-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "ticaret_sicil_mudurlugu",
+    "llm_value": "Denizli Ticaret Sicili Müdürlüğü",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "7) 05-11-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "kurulus_tarihi",
+    "llm_value": "05.11.2024",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "7) 05-11-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_name",
+    "llm_value": "AYDEM HOLDING ANONİM ŞİRKETİ",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "7) 05-11-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "7) 05-11-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_name",
+    "llm_value": "AYDEM HOLDING ANONİM ŞİRKETİ",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "7) 05-11-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "7) 05-11-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "26.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
+    "field_name": "ticaret_sicil_mudurlugu",
+    "llm_value": "Denizli Ticaret Sicili Müdürlüğü",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
+    "field_name": "kurulus_tarihi",
+    "llm_value": "11.09.2025",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "08.09.2028",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "08.09.2028",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "08.09.2028",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "08.09.2028",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "08.09.2028",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
+    "field_name": "board_member_term_end",
+    "llm_value": "08.09.2028",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  },
+  {
+    "pdf": "9) 22-12-2025 Denetçi Değişikliği.pdf",
+    "field_name": "ticaret_sicil_mudurlugu",
+    "llm_value": "Denizli Ticaret Sicili Müdürlüğü",
+    "found_in_source": false,
+    "action": "flagged_unverified"
+  }
+]
