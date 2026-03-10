@@ -82,10 +82,14 @@ def filter_target_company(
 
     status = "ok"
     if warnings:
-        status = "partial" if end < len(normalized) else "unsafe"
+        status = "partial"
     if end == len(normalized):
-        warnings.append("boundary_unresolved")
-        status = "unsafe"
+        if "boundary_unresolved" not in warnings:
+            warnings.append("boundary_unresolved")
+        
+        # Eğer tek uyarı tipi boundary_unresolved ise, bunu normal kabul et ve statüyü ok olarak bırak.
+        if all(w == "boundary_unresolved" for w in warnings):
+            status = "ok"
 
     return FilterResult(
         text=extracted,

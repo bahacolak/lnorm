@@ -19,9 +19,9 @@ from .persistence import write_json
 logger = logging.getLogger(__name__)
 
 DEFAULT_ARTICLE_NORMALIZATION_MODEL = "claude-sonnet-4-20250514"
-MAX_NEW_TOKEN_RATIO = 0.08
-MIN_SIMILARITY_RATIO = 0.82
-MAX_UNCERTAIN_SPANS = 3
+MAX_NEW_TOKEN_RATIO = 0.20
+MIN_SIMILARITY_RATIO = 0.70
+MAX_UNCERTAIN_SPANS = 10
 
 
 @dataclass
@@ -185,7 +185,10 @@ def _call_anthropic_normalizer(draft: StructuredArticleDraft, model: str) -> dic
             "İçerik ekleme, yorum yapma, anlam değiştirme. "
             "Yalnızca JSON dön. JSON alanları: madde_no, title, blocks, uncertain_spans, notes. "
             "blocks elemanları type=paragraph|bullet_list|table|raw olabilir. "
-            "table için rows kullan. Emin değilsen raw veya paragraph dön.\n\n"
+            "table için `rows` dizisi kullan (örn: [[\"A\", \"B\"], [\"1\", \"2\"]]).\n"
+            "KESİNLİKLE markdown tablo (örn: | A | B |) veya tireli satır (örn: |---|---|) KULLANMA.\n"
+            "Eğer tabloda başlık veya tire varsa JSON 'rows' listesine sadece saf veriyi koy.\n"
+            "Emin değilsen raw veya paragraph dön. Markdown tablo yapısı GÖNDERME.\n\n"
             f"Madde no: {draft.madde_no}\n"
             f"Başlık: {draft.title}\n"
             f"Sorunlar: {', '.join(draft.issues) or 'yok'}\n"

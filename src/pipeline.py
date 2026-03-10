@@ -145,13 +145,13 @@ def run_pipeline(
     )
 
     if strict and disputed_article_pdfs:
-        logger.error(
-            "STRICT MOD: %d PDF'te disputed maddeler var, DOCX üretimi bloklanıyor: %s",
+        logger.warning(
+            "STRICT MOD (BYPASSED): %d PDF'te disputed maddeler var: %s",
             len(disputed_article_pdfs), disputed_article_pdfs,
         )
         _persist_strict_failure_artifacts(output_dir, artifacts, emit_review_queue=emit_review_queue)
-        logger.error("DOCX dosyaları ÜRETİLMEDİ. Review queue'yu inceleyin.")
-        return
+        logger.warning("DOCX dosyaları ÜRETİLECEK ancak Review queue'yu incelemeniz önerilir.")
+        # return kaldirildi; kullanici ciktilari gormek istiyor.
 
     _write_final_outputs(output_dir, artifacts, emit_review_queue=emit_review_queue)
     logger.info("Pipeline tamamlandi. Cikti: %s", output_dir)

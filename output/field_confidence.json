@@ -1,32 +1,26 @@
 {
-  "page_0": {
-    "status": "primary_only",
-    "disagreement_score": 1.0,
-    "evidence": "Secondary OCR boş döndü, primary kabul edildi",
-    "pdf": "9) 22-12-2025 Denetçi Değişikliği.pdf"
-  },
   "page_1": {
-    "status": "unverified",
-    "disagreement_score": 1.0,
-    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "status": "disputed",
+    "disagreement_score": 0.1454,
+    "evidence": "Fark skoru 14.54%. Kelime farkları: 'si̇ci̇li̇ gazetesi̇ sayfa: 439 (başiarıfı 438 sayfada)' ↔ '(baştarafı 438.sayfada)'; 'fenağ,' ↔ 'ferağ,'; '5. şirket' ↔ '5.sirket'; 'şeklinde' ↔ 'seklinde'; 'misfariyi' ↔ 'müşteriye'",
     "pdf": "9) 22-12-2025 Denetçi Değişikliği.pdf"
   },
   "page_2": {
-    "status": "unverified",
-    "disagreement_score": 1.0,
-    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "status": "disputed",
+    "disagreement_score": 0.0929,
+    "evidence": "Fark skoru 9.29%. Kelime farkları: 'eylül' ↔ 'eylul'; 'ti̇caret si̇ci̇li̇ gazetesi̇ sayfa: 445' ↔ 'ticar'; '444,' ↔ '444'; 'tebelliğini ve internet' ↔ 'tebellüğü ve intemet'; 'c)' ↔ 'e)'",
     "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf"
   },
   "page_3": {
-    "status": "unverified",
-    "disagreement_score": 1.0,
-    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "status": "disputed",
+    "disagreement_score": 0.2875,
+    "evidence": "Fark skoru 28.75%. Kelime farkları: 'sayfa: 510' ↔ 'sayfa :510'; 'ticaret si̇ci̇li̇ gazetesi̇ 21 hazi̇ran 2023 sayi: 10857 (başarafı 509 sayfada)' ↔ 'ti̇caret (baştarafı 509.sayfada)'; silindi: '#'; '-(1)' ↔ '(1)'; '(2) genel' ↔ '(2)genel'",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_1": {
     "status": "unverified",
-    "disagreement_score": 0.4769,
-    "evidence": "Yüksek fark skoru (47.69%), metin güvenilir değil",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   "madde_2": {
@@ -37,8 +31,8 @@
   },
   "madde_3": {
     "status": "unverified",
-    "disagreement_score": 1.0,
-    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "disagreement_score": 0.6483,
+    "evidence": "Yüksek fark skoru (64.83%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_4": {
@@ -54,15 +48,15 @@
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   "madde_6": {
-    "status": "disputed",
-    "disagreement_score": 0.0308,
-    "evidence": "Hukuki terim anomalileri bulundu: mihabeti ç",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
     "pdf": "4) 29-12-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_7": {
     "status": "unverified",
-    "disagreement_score": 1.0,
-    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "disagreement_score": 0.9761,
+    "evidence": "Yüksek fark skoru (97.61%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_8": {
@@ -79,14 +73,14 @@
   },
   "madde_10": {
     "status": "unverified",
-    "disagreement_score": 1.0,
-    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "disagreement_score": 0.9036,
+    "evidence": "Yüksek fark skoru (90.36%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_11": {
-    "status": "disputed",
-    "disagreement_score": 0.0344,
-    "evidence": "Hukuki terim anomalileri bulundu: ürk Ticaret Kurumu', ağıtılmasına , ağıtılmasına ",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   "madde_12": {
@@ -115,8 +109,8 @@
   },
   "madde_16": {
     "status": "unverified",
-    "disagreement_score": 0.3314,
-    "evidence": "Yüksek fark skoru (33.14%), metin güvenilir değil",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   }
 }

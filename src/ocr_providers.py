@@ -113,9 +113,11 @@ def _parse_mistral_pages(payload: dict[str, Any]) -> list[OCRPageResult]:
                     if block.get("text")
                 )
             p_num = page.get("index")
-            if p_num is None:
+            if p_num is not None:
+                p_num += 1  # API index is 0-based, we need 1-based
+            elif page.get("page") is not None:
                 p_num = page.get("page")
-            if p_num is None:
+            else:
                 p_num = idx
 
             results.append(

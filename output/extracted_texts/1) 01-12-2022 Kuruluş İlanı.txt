@@ -24,7 +24,7 @@ Aşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu t
 
 | Sayı No | Kararı | Adres | Gerak | Kendik No |
 | --- | --- | --- | --- | --- |
-| 1 | ETCİBİN BULGURU ANONİM ŞİRKETİ | DEVETERE MAHALLEM BÜYÜKSENE CAD. NO: 176101 BİLGİYE GÖRECİ | TÜRKİYE | *** |
+| 1 | ETCİBİN BULGURU ANONİM ŞİRKETİ | DİKVETER MAHALLER BÜYÜKSENE CAD. NO: 176101 BİLGİYE SORUZ | TÜRKİYE | *** |
 
 # 2. ŞİRKETİN UNVANI
 
@@ -40,7 +40,7 @@ Aşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu t
 
 2) Elektrik şebekeleri ve elektrik üretim tesisleri de dahil olmak üzere elektrik enerjisi sektörüne yönelik olarak anahtar teslim projeler yürütmek.
 
-3) Eidroelektrik santrali, rüzgar tribünleri, yenilenebilir enerji, güneş enerjisi tesisleri kurmak, almak, satmak, işletmeciliğini yapmak.
+3) Eidroelektrik santrali, rüzgar tribüsleri, yenilenebilir enerji, güneş enerjisi tesisleri kurmak, almak, satmak, işletmeciliğini yapmak.
 
 4) Gerektiğinde TETAŞ, TEDAŞ, TEDAŞ, ETİAŞ veya kendisine benzer nitelikteki diğer elektrik şirketleri ile enerji alışverişi yapmak.
 
@@ -70,11 +70,11 @@ i) Faaliyet konusuna giren menkul ve gayrimenkul malları iktisap etmek, satın 
 
 j) Şirketin alacak ve borçların teminen her cins, şekil ve sırada ipotek ve rehin vermek, ipotek ve rehin almak, bunları tescil, devir ve temlik etmek, mevcut ve tesis adilacık ipotek ve rehinleri fık ve tadil etmek.
 
-k) Şirket ve üçüncü şahıslar lehine kefalet, teminat, garanti vermek veya müşterek borçlu ve mütevellal kefil sıfatı ile taahhütlerde bulunmak.
+k) Şirket ve üçüncü şahıslar lehine kefalet, teminat, garanti vermek veya müşterek borçlu ve müteselid kefil sıfatı ile taahhütlerde bulunmak.
 
 l) Menkul kıymetler aracılık faaliyetinde bulunmamak şartı ile, pay senedi, tahvil, intifa senedi gibi menkul kıymetleri almak, satmak, bunlar üzerinde kefalet vermek, intifa hakları tesis etmek, intifa haklarından yararlanmak ve menkul kıymetler ile ilgili her türlü muamelelere girişmek.
 
-m) Yurt içinde veya yurt dışında patent, lisans, testiyar, ihtiya besin, marka, teknik yardım, ustalık, know-how, kullanım hakları ve diğer fikri ve sınav mükûret haklarını iktisap etmek, bunları kiralamak, devir ve temlik etmek ve üzerlerinde her türlü tasarruflarda bulunmak.
+m) Yurt içinde veya yurt dışında patent, lisans, testiyaç, ihtiya bensi, marka, teknik yardım, ustalık, know-how, kullanım hakları ve diğer fikri ve sınav mükûret haklarını iktisap etmek, bunları kiralamak, devir ve temlik etmek ve üzerlerinde her türlü tasarruflarda bulunmak.
 
 n) Türk ve/veya yabancı bankalardan ve/veya diğer finans kuruluşlarından veya şirketlerinden kredi temin etmek, kullanmak.
 
@@ -110,7 +110,7 @@ AYDEM HOLDING ANONİM ŞİRKETİ Yönetim Kurulu Üyesi olarak seçilmiştir.
 
 Adres: ENENTEPE MAHALLESİ BÜYÜKDERE CAD NO: 175/101 ŞİŞLİ/ISTANBUL
 
-Tüzel kişi adına: Türkiye Uşruklu 234***62 Kimlik No'lu, İSTANBUL / BEŞIKTAŞ adresinde ikamet eden İDRİS KÜPELİ hareket edecektir.
+Tüzel kişi adına: Türkiye Uşruklu 234***62 Kimlik No'lu, ISTANBUL / BEŞIKTAŞ adresinde ikamet eden İDRİS KÜPELİ hareket edecektir.
 
 Türkiye Uşruklu 270***46 Kimlik No'lu, DENİZLİ / MERKEZEFENDİ adresinde ikamet eden, MEHMET GÖKAY ÜSTÜN Yönetim Kurulu Üyesi olarak seçilmiştir.
 
@@ -122,13 +122,13 @@ Türkiye Uşruklu 270***46 Kimlik No'lu, DENİZLİ / MERKEZEFENDİ adresinde ika
 
 ## Temsile Yetkili Olanlar ve Temsil Şekli:
 
-İlk 1 Yıl için ENENTEPE MAHALLESİ BÜYÜKDERE CAD NO: 175/101 ŞİŞLİ/ISTANBUL adresinde yer alan AYDEM HOLDING ANONİM ŞİRKETİ (Yönetim Kurulu Başkanı) Temsile Yetkili olarak seçilmiştir. Tüzel kişi adına; Türkiye Uşruklu 234***62 Kimlik No'lu, İSTANBUL / BEŞIKTAŞ adresinde ikamet eden İDRİS KÜPELİ hareket edecektir. Yetki Şekli: Münferiden Temsile Yetkilidir.
+İlk 1 Yıl için ENENTEPE MAHALLESİ BÜYÜKDERE CAD NO: 175/101 ŞİŞLİ/ISTANBUL adresinde yer alan AYDEM HOLDING ANONİM ŞİRKETİ (Yönetim Kurulu Başkanı) Temsile Yetkili olarak seçilmiştir. Tüzel kişi adına; Türkiye Uşruklu 234***62 Kimlik No'lu, ISTANBUL / BEŞIKTAŞ adresinde ikamet eden İDRİS KÜPELİ hareket edecektir. Yetki Şekli: Münferden Temsile Yetkilidir.
 
-İlk 1 Yıl için Türkiye Uşruklu 270***66 Kimlik No'lu, DENİZLİ / MERKEZEFENDİ adresinde ikamet eden, MEHMET GÖKAY ÜSTÜN (Yönetim Kurulu Başkanı Yardımcısı) Temsile Yetkili olarak seçilmiştir. Yetki Şekli: Münferiden Temsile Yetkilidir.
+İlk 1 Yıl için Türkiye Uşruklu 270***66 Kimlik No'lu, DENİZLİ / MERKEZEFENDİ adresinde ikamet eden, MEHMET GÖKAY ÜSTÜN (Yönetim Kurulu Başkanı Yardımcısı) Temsile Yetkili olarak seçilmiştir. Yetki Şekli: Münferden Temsile Yetkilidir.
 
 # 10. GENEL KURUL
 
-Genel kurullar, TTK'nın 409'uncu maddesi gereği olağan ve olağanüstü toplanırlar. Olağan genel kurul, her faaliyet dönemi sonundan itibaren 3 ay içinde ve senede en az bir defa; olağanüstü genel kurullar ise, Şirket işlerinin gerektirdiği hallerde ve zamanlarda toplanır. Türk Ticaret Kurumu'nın 416'nın hükmü saklı kalmak kaydıyla, genel kurulun toplantıya dağıtılmasına ait ilanların TTK'nın 414'üncü maddesi hükmü gereğince ilan ve toplantı günleri hariç olmak üzere en az iki hafta önce Ticaret Sicil Gazetesinde de yapılması zorunludur. Genel kurul toplantılarında, her pay sahibinin oy hakkı, sahip olduğu payların itibari değerleri toplumun, şirket sermayesinin itibari değerinin toplamına oranlanmasıyla hesaplanır. Pay sahibi genel kurul toplantılarına kendisi katılabileceği gibi pay sahibi olan veya olmayan bir temsilci de yollayabilir. Vekiletmanelerin Ticaret Bakanlığı düzenlemelerinde belirlenen esaslara göre düzenlenmesi şarttır. Şirketin olağan genel kurul toplantılarında, TTK'nın 409'uncu maddesinde yazılı hususlar müzakere adilerek gerekli kararlar alınır. Genel kurul toplantıları ve bu toplantılardaki karar orada, TTK hükümlerine sahib, Şirketin genel kurul toplantılarına katılma hakkı bulunan hak sahipleri bu toplantılara, TTK'nın 1527'nci maddesi uyarınca elektronik ortamda da katılabilir. Şirket, kasısının Şirketlerde Elektronik Ortamda Yapılacak Genel Kurullara İlişkin Yönetmelik hükümleri uyarınca hak sahiplerinin genel kurul toplantılarına elektronik ortamda katılmalarına, görüş açıklamalarına, öneride bulunmalarına ve oy kullanmalarına imkân tanıyacak elektronik genel kurul sistemini kurabileceği gibi bu amaç için oluşturulmuş sistemlerden de hizmet satın alabilir. Genel kurul, şirketin merkez adresinde veya ülke sınırları içerisinde yönetim kurulunca uygun görülen elverişli bir yerde toplanır.
+Genel kurullar, TTK'nın 409'uncu maddesi gereği olağan ve olağanüstü toplanırlar. Olağan genel kurul, her faaliyet dönemi sonundan itibaren 3 ay içinde ve senede en az bir defa; olağanüstü genel kurullar ise, Şirket işlerinin gerektirdiği hallerde ve zamanlarda toplanır. Türk Ticaret Kurumu'nın 416'nın hükmü saklı kalmak kaydıyla, genel kurulun toplantıya dağıtılmasına ait ilanların TTK'nın 414'üncü maddesi hükmü gereğince ilan ve toplantı günleri hariç olmak üzere en az iki hafta önce Ticaret Sicil Gazetesinde de yapılması zorunludur. Genel kurul toplantılarında, her pay sahibinin oy hakkı, sahip olduğu payların itibari değerleri toplumun, şirket sermayesinin itibari değerinin toplamına oranlanmasıyla hesaplanır. Pay sahibi genel kurul toplantılarına kendisi katılabileceği gibi pay sahibi olan veya olmayan bir temsilci de yollayabilir. Vekiletmaneler Ticaret Bakanlığı düzenlemelerinde belirlenen esaslara göre düzenlenmesi şarttır. Şirketin olağan genel kurul toplantılarında, TTK'nın 409'uncu maddesinde yazılı hususlar müzakere adilerek gerekli kararlar alınır. Genel kurul toplantıları ve bu toplantılardaki karar orada, TTK hükümlerine sahib, Şirketin genel kurul toplantılarına katılma hakkı bulunan hak sahipleri bu toplantılara, TTK'nın 1527'nci maddesi uyarınca elektronik ortamda da katılabilir. Şirket, kasısının Şirketlerde Elektronik Ortamda Yapılacak Genel Kurullara İlişkin Yönetmelik hükümleri uyarınca hak sahiplerinin genel kurul toplantılarına elektronik ortamda katılmalarına, görüş açıklamalarına, öneride bulunmalarına ve oy kullanmalarına imkân tanıyacak elektronik genel kurul sistemini kurabileceği gibi bu amaç için oluşturulmuş sistemlerden de hizmet satın alabilir. Genel kurul, şirketin merkez adresinde veya ülke sınırları içerisinde yönetim kurulunca uygun görülen elverişli bir yerde toplanır.
 
 # 11. İLAN
 
@@ -142,9 +142,9 @@ Genel kurulun toplantıya dağıtılmasına ilişkin ilanlar da dahil olmak üze
 
 Şirketin net dönem kari, yapılmış her çeşit masrafların çıkarılmasından sonra kalan miktardır. Kar miktarı aşağıdaki sıra ve esaslar dahilinde dağıtılır:
 
-Birinci Tertip Kanunu Yedek Akçe
+Birinci Tertip Kanuni Yedek Akçe
 
-a) Net dönem karının %5'i TTK'nın 519'uncu maddesi hükümlerine göre sermayenin yüzde yirminine ulaşmaya kadar genel kanuni yedek akçeye ayrılır.
+a) Net dönem karının %5'i TTK'nın 519'uncu maddesi hükümlerine göre sermayenin yüzde yirmesine ulaşmaya kadar genel kanuni yedek akçeye ayrılır.
 
 Birinci Kar Payı
 
@@ -152,9 +152,9 @@ b) Bakiye Karın %5'i pay sahiplerine kar payı olarak dağıtılır.
 
 İkinci Kar Payı
 
-c) Net dönem karının geri kalan kısmı, genel kurulun tespit edeceği şekil ve surette dağıtılır. İkinci Tertip Kanunu Yedek Akçe
+c) Net dönem karının geri kalan kısmı, genel kurulun tespit edeceği şekil ve surette dağıtılır. İkinci Tertip Kanuni Yedek Akçe
 
-d) TTK'nın 519'uncu maddesinin 2'nci fikrini (c) bendi gereğince, pay sahiplerine ve karı iştirak eden diğer kimselere dağıtılması kararlaştırılmış olan kısmı, sermayenin %5'i oranında kar payı ödenlikten sonra bulunan tutarın onda biri, ikinci tertip kanuni yedek akçe olarak ayrılır.
+d) TTK'nın 519'uncu maddesinin 2'nci fikresi (c) bendi gereğince, pay sahiplerine ve karı iştirak eden diğer kimselere dağıtılması kararlaştırılmış olan kısmı, sermayenin %5'i oranında kar payı ödenlikten sonra bulunan tutarın onda biri, ikinci tertip kanuni yedek akçe olarak ayrılır.
 
 Şirket, ilgili mevzuatta öngörülen koşullara uygun olarak kar payı avansı dağıtılmasına karar verebilir.
 
@@ -174,6 +174,6 @@ Anonim şirketlerin genel kurul toplantılarının usul ve esasları ile bu topl
 
 KURUCULAR
 
-| Sayı no. | Kurucu | Yayıntı | İmza |
+| Sayı no. | Kararın | Yayın | İmza |
 | --- | --- | --- | --- |
 | | AYDEM HOLDING ANONİM ŞİRKETİ (YOLAÇETES CETHAN NAÇDAYLI) | TÜRKİYE | |
