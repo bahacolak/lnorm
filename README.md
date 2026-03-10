@@ -26,6 +26,11 @@ brew install tesseract tesseract-lang poppler
 ## Ortam Değişkenleri
 
 Değişkenleri sistem ortamına ekleyebilir veya proje kök dizininde bir `.env` dosyası oluşturarak tanımlayabilirsiniz (otomatik yüklenir).
+Repo gerçek API anahtarı içermez. Başlamak için `.env.example` dosyasını kopyalayıp kendi anahtarlarınızı ekleyin:
+
+```bash
+cp .env.example .env
+```
 
 - `MISTRAL_API_KEY`: Mistral OCR erişimi için
 - `MISTRAL_OCR_URL`: opsiyonel özel endpoint override
