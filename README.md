@@ -1,13 +1,13 @@
-# LexNorm - Ticaret Sicil Gazetesi Analiz Pipeline
+# LexNorm - Ticaret Sicil Gazetesi Analiz Pipeline (Case Study)
 
-Bu proje, Parla Enerji Yatırımları A.Ş. için ticaret sicil gazetesi ilanlarını okuyup güncel şirket bilgisini, yönetim kurulunu ve esas sözleşmeyi daha güvenli şekilde üretmek için hazırlandı.
+Bu case study, karmaşık yapıdaki Ticaret Sicil Gazetesi (TTSG) ilanlarından güvenilir veri çıkarma problemini ele almaktadır. Örnek senaryo olarak "Parla Enerji Yatırımları A.Ş." seçilmiş olup, gazete ilanlarından güncel şirket bilgisi, yönetim kurulu ve esas sözleşme metinlerinin otomatik olarak üretilmesi hedeflenmiştir.
 
-Buradaki hedef sadece PDF içinden metin çekmek değil. Asıl amaç:
+Çalışmanın temel odak noktaları şunlardır:
 
-- hedef şirkete ait ilan kısmını doğru ayıklamak
-- birden fazla ilanı tarih sırasına koyup güncel durumu oluşturmak
-- her çıktının kaynağını görünür tutmak
-- emin olunmayan alanları zorla doğruymuş gibi publish etmemek
+- PDF içerisinden sadece hedef şirkete ait ilanların izole edilmesi
+- Farklı tarihlerdeki çoklu ilanların tarihsel bir perspektifle konsolide edilmesi
+- Veri kaynağı izlenebilirliğinin sağlanması (hangi veri, hangi tarihteki hangi ilandan geldi?)
+- Halüsinasyon riskini minimize ederek, doğruluğundan emin olunmayan verilerin güvenli bir şekilde işaretlenmesi
 
 ## Genel Yaklaşım
 
@@ -18,31 +18,31 @@ Buradaki hedef sadece PDF içinden metin çekmek değil. Asıl amaç:
 - Sistem emin olmadığı alanları review queue'ya bırakabiliyor veya belirsiz olarak işaretleyebiliyor.
 - LLM opsiyonel. İstenirse daha zor maddelerde ve normalize etmede devreye giriyor; istenirse tamamen kapatılabiliyor.
 
-## Değerlendirme Kriterlerine Göre Ne Yaptık?
+## Problem Çözüm Yaklaşımımız (Case Study Analizi)
 
-### Doğru Filtreleme
+### 1. Veri İzolasyonu ve Filtreleme
+**Problem:** Aynı gazete sayfasında birden fazla şirkete ait ilanlar bulunabilmektedir. Geleneksel OCR yaklaşımları tüm metni düzleştirerek veri kirliliğine yol açar.
+**Çözüm:** Hedef şirket adını kullanarak ilanın başlangıç ve bitiş sınırlarını (boundary) tespit eden bir filtreleme mekanizması geliştirildi. Böylece sadece ilgili şirketin verisi işleme alındı.
 
-İlanların tamamını körlemesine işlemiyoruz. Önce hedef şirkete ait bölümün sınırlarını bulup sadece ilgili parçayı alıyoruz. Böylece aynı belgede geçen başka şirketlerin bilgileri yanlışlıkla sonuca karışmıyor.
+### 2. Tarihsel Konsolidasyon
+**Problem:** Şirket bilgileri zaman içinde değişir (örneğin sermaye artırımı, adres değişikliği). Tekil belgelerin analizi bütünü yansıtmaz.
+**Çözüm:** İlanlar tarih sırasına dizilerek, birbiri üzerine yazılan (overwrite) güncel bir yapı kurgulandı. Sistem, olayların kronolojik bir özetini çıkarmak yerine, mevcut durumun fotoğrafını (snapshot) oluşturmayı başardı.
 
-### Güncel Bilgiyi Konsolide Etme
+### 3. Kaynak İzlenebilirliği (Data Lineage)
+**Problem:** Üretilen çıktıların doğruluğunun teyit edilmesi zordur.
+**Çözüm:** Çıkarılan her bir veri parçasına, hangi ilandan (dosya adı) ve hangi tarihten geldiği bilgisi eklendi. Bu sayede üretilen DOCX raporlarında, kullanıcının verinin kaynağına kolayca dönüp kontrol edebilmesi sağlandı.
 
-Belgeleri tarih sırasına koyup şirketin son halini çıkarmaya çalışıyoruz. Amaç tek tek belgeleri listelemek değil, şirket bilgileri, yönetim kurulu ve esas sözleşme için güncel durumu üretmek.
+### 4. Halüsinasyon Kontrolü ve Güvenlik
+**Problem:** LLM'ler ve OCR sistemleri eksik veya bozuk okumalarda "uydurma" (hallucination) eğilimindedir.
+**Çözüm:** Sistem "emin değilse uydurma" prensibiyle tasarlandı. Farklı OCR kaynakları (Mistral ve Tesseract) çapraz kontrole tabi tutuldu. Çelişen veya yapısal olarak bozuk veriler `review_queue`'ya aktarılarak insan onayına bırakıldı.
 
-### Kaynak İzlenebilirliği
+### 5. Maliyet ve Optimizasyon (LLM Kullanım Stratejisi)
+**Problem:** Her işlem aşamasında LLM kullanmak maliyetli, yavaş ve kontrol edilemez sonuçlar doğurabilir.
+**Çözüm:** Kural tabanlı (rule-based) yaklaşım önceliklendirildi. LLM opsiyonel bir kalite katmanı olarak konumlandırıldı ve sadece karmaşık madde normalizasyonlarında veya yapısal olarak çok bozuk metinlerde (fallback olarak) devreye girmesi sağlandı.
 
-Çıktılarda hangi bilginin hangi ilan ve hangi tarih üzerinden geldiği görülebiliyor. Yani sistem sadece sonuç vermiyor, o sonucun nereden geldiğini de görünür bırakıyor.
-
-### Halüsinasyon Kontrolü
-
-Sistem bir şeyi emin değilse uydurmuyor. OCR kaynakları birbiriyle çelişiyorsa veya içerik güven vermiyorsa bunu review queue'ya alıyor ya da belirsiz olarak işaretliyor. Amaç, yanlış bilgiyi temiz görünse bile kullanıcıya vermemek.
-
-### Token Maliyeti Optimizasyonu
-
-Her şeyi LLM'e bırakmıyoruz. Önce kural tabanlı ve daha ucuz yöntemlerle çözmeye çalışıyoruz. LLM daha çok zor, bozuk ya da yapısal olarak problemli alanlarda opsiyonel bir kalite katmanı olarak devreye giriyor.
-
-### Mimari Tasarım Kalitesi
-
-OCR, filtreleme, doğrulama, extraction, konsolidasyon ve çıktı üretimi ayrı katmanlar halinde ilerliyor. Bu sayede bir sorun olduğunda hangi aşamada çıktığını görmek ve sistemi parça parça geliştirmek daha kolay oluyor.
+### 6. Modüler Mimari
+**Problem:** Monolitik sistemlerde hata ayıklamak ve hangi katmanda sorun olduğunu tespit etmek zordur.
+**Çözüm:** Süreç; OCR, filtreleme, doğrulama, extraction, konsolidasyon ve çıktı üretimi olarak bağımsız modüllere ayrıldı. Bu sayede sistemin her bir adımı test edilebilir ve iyileştirilebilir hale getirildi.
 
 ## Kurulum
 
