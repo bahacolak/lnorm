@@ -6,10 +6,18 @@ from __future__ import annotations
 
 import logging
 import os
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Callable
 
+from .article_normalizer import (
+    DEFAULT_ARTICLE_NORMALIZATION_MODEL,
+    NormalizedArticleResult,
+    normalize_article,
+    save_article_normalization_audit,
+    save_article_normalization_diff,
+)
 from .articles_parser import Article, parse_articles, parse_changed_articles, save_ocr_qa_log
 from .consolidator import (
     consolidate_articles,
@@ -47,6 +55,9 @@ class PipelineArtifacts:
     company_infos: list[tuple[str, object]] = field(default_factory=list)
     board_members: list[tuple[str, object, list[object]]] = field(default_factory=list)
     articles: list[tuple[str, object, list[Article]]] = field(default_factory=list)
+    normalized_articles: list[NormalizedArticleResult] = field(default_factory=list)
+    article_normalization_audit: list[dict] = field(default_factory=list)
+    article_normalization_diff: list[dict] = field(default_factory=list)
     qa_issues: list[object] = field(default_factory=list)
     hallucination_issues: list[object] = field(default_factory=list)
     review_queue: list[ReviewQueueEntry] = field(default_factory=list)
@@ -85,6 +96,8 @@ def run_pipeline(
     emit_review_queue: bool = False,
     verification_ocr_provider: str = "tesseract",
     verify_critical_only: bool = False,
+    llm_article_normalization: bool = False,
+    article_normalization_model: str = DEFAULT_ARTICLE_NORMALIZATION_MODEL,
 ) -> None:
     setup_logging(verbose)
     output_dir = Path(output_path)
@@ -127,6 +140,8 @@ def run_pipeline(
         sorted_pdfs=sorted_pdfs,
         artifacts=artifacts,
         no_llm=no_llm,
+        llm_article_normalization=llm_article_normalization,
+        article_normalization_model=article_normalization_model,
     )
 
     if strict and disputed_article_pdfs:
@@ -306,6 +321,8 @@ def _run_extraction_phase(
     sorted_pdfs: list[tuple[str, object, str]],
     artifacts: PipelineArtifacts,
     no_llm: bool,
+    llm_article_normalization: bool,
+    article_normalization_model: str,
 ) -> list[str]:
     disputed_article_pdfs: list[str] = []
 
@@ -356,6 +373,8 @@ def _run_extraction_phase(
             pages=sorted(page_texts),
             artifacts=artifacts,
             disputed_article_pdfs=disputed_article_pdfs,
+            use_llm_normalization=llm_article_normalization,
+            normalization_model=article_normalization_model,
         )
         artifacts.articles.append((filename, date, accepted_articles))
 
@@ -372,12 +391,22 @@ def _process_article_set(
     pages: list[int],
     artifacts: PipelineArtifacts,
     disputed_article_pdfs: list[str],
+    use_llm_normalization: bool,
+    normalization_model: str,
 ) -> list[Article]:
     articles, qa = parser(filtered_text, filename)
     artifacts.qa_issues.extend(qa)
     accepted_articles = articles
 
     if not secondary_filtered_text:
+        _normalize_articles(
+            filename=filename,
+            articles=accepted_articles,
+            secondary_filtered_text=None,
+            artifacts=artifacts,
+            use_llm_normalization=use_llm_normalization,
+            normalization_model=normalization_model,
+        )
         return accepted_articles
 
     _, secondary_qa = parser(secondary_filtered_text, filename)
@@ -412,7 +441,56 @@ def _process_article_set(
     if unresolved:
         disputed_article_pdfs.append(filename)
         logger.warning("%s: %d disputed madde (kalite uyarısı, çıktıda mevcut)", filename, len(unresolved))
+    _normalize_articles(
+        filename=filename,
+        articles=accepted_articles,
+        secondary_filtered_text=secondary_filtered_text,
+        artifacts=artifacts,
+        use_llm_normalization=use_llm_normalization,
+        normalization_model=normalization_model,
+    )
     return accepted_articles
+
+
+def _normalize_articles(
+    *,
+    filename: str,
+    articles: list[Article],
+    secondary_filtered_text: str | None,
+    artifacts: PipelineArtifacts,
+    use_llm_normalization: bool,
+    normalization_model: str,
+) -> None:
+    secondary_article_map = _split_articles_by_number(secondary_filtered_text or "")
+    for article in articles:
+        result = normalize_article(
+            article,
+            secondary_text=secondary_article_map.get(article.madde_no),
+            use_llm=use_llm_normalization,
+            model=normalization_model,
+        )
+        artifacts.normalized_articles.append(result)
+        artifacts.article_normalization_audit.append(
+            {
+                "pdf": filename,
+                "madde_no": article.madde_no,
+                "source_mode": result.source_mode,
+                "needs_llm": use_llm_normalization,
+                "verification_status": result.verification_status,
+                "change_flags": result.change_flags,
+                "uncertain_spans": result.uncertain_spans,
+                "llm_model": normalization_model if use_llm_normalization else None,
+            }
+        )
+        artifacts.article_normalization_diff.append(
+            {
+                "pdf": filename,
+                "madde_no": article.madde_no,
+                "raw_excerpt": article.icerik[:300],
+                "normalized_excerpt": _normalized_excerpt(result),
+                "source_mode": result.source_mode,
+            }
+        )
 
 
 def _persist_early_exit_artifacts(output_dir: Path, artifacts: PipelineArtifacts, *, emit_review_queue: bool) -> None:
@@ -448,14 +526,25 @@ def _write_final_outputs(output_dir: Path, artifacts: PipelineArtifacts, *, emit
     consolidated_info = consolidate_company_info(artifacts.company_infos)
     consolidated_board = consolidate_board_members(artifacts.board_members)
     consolidated_articles, article_sources = consolidate_articles(artifacts.articles)
+    article_map = {article.madde_no: article for article in artifacts.normalized_articles}
+    rendered_articles = [article_map.get(article.madde_no, article) for article in consolidated_articles]
 
     write_sirket_bilgileri(consolidated_info, output_path=str(output_dir / "sirket_bilgileri.docx"))
     write_yonetim_kurulu(consolidated_board, output_path=str(output_dir / "yonetim_kurulu.docx"))
-    write_esas_sozlesme(consolidated_articles, article_sources, output_path=str(output_dir / "esas_sozlesme.docx"))
+    write_esas_sozlesme(rendered_articles, article_sources, output_path=str(output_dir / "esas_sozlesme.docx"))
 
     save_ocr_qa_log(artifacts.qa_issues, str(output_dir / "ocr_qa_log.json"))
     if artifacts.hallucination_issues:
         save_hallucination_log(artifacts.hallucination_issues, str(output_dir / "hallucination_log.json"))
+    if artifacts.article_normalization_audit:
+        save_article_normalization_audit(
+            artifacts.article_normalization_audit,
+            str(output_dir / "article_normalization_audit.json"),
+        )
+        save_article_normalization_diff(
+            artifacts.article_normalization_diff,
+            str(output_dir / "article_normalization_diff.json"),
+        )
 
     _save_audit_log(artifacts.audit_entries, output_dir / "extraction_audit.json")
     if emit_review_queue and artifacts.review_queue:
@@ -522,3 +611,27 @@ def _attempt_reocr_recovery(
         and int(span.field_name.split("_")[-1]) in disputed_numbers
     ]
     return recovered_articles, recovered_spans, reocr_review
+
+
+def _split_articles_by_number(text: str) -> dict[int, str]:
+    if not text.strip():
+        return {}
+    matches = list(re.finditer(r"(?:^|\n)\s*(?:#+\s*)?(?:MADDE|Madde|\d+\.)\s*(\d{1,2})", text, re.MULTILINE))
+    if not matches:
+        return {}
+    articles: dict[int, str] = {}
+    for idx, match in enumerate(matches):
+        num = int(match.group(1))
+        end = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
+        articles[num] = text[match.start():end].strip()
+    return articles
+
+
+def _normalized_excerpt(result: NormalizedArticleResult) -> str:
+    parts = []
+    for block in result.blocks:
+        if block.text:
+            parts.append(block.text)
+        elif block.rows:
+            parts.extend(" | ".join(row) for row in block.rows)
+    return "\n".join(parts)[:300]

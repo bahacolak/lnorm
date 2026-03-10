@@ -13,6 +13,7 @@ def test_build_parser_preserves_cli_flags():
             "--emit-review-queue",
             "--verification-ocr-provider",
             "tesseract",
+            "--llm-article-normalization",
         ]
     )
     assert args.input == "input"
@@ -20,3 +21,5 @@ def test_build_parser_preserves_cli_flags():
     assert args.strict is True
     assert args.emit_review_queue is True
     assert args.verification_ocr_provider == "tesseract"
+    assert args.llm_article_normalization is True
+    assert args.article_normalization_model == "claude-sonnet-4-20250514"

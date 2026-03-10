@@ -24,9 +24,9 @@
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_1": {
-    "status": "verified",
-    "disagreement_score": 0.0,
-    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "status": "unverified",
+    "disagreement_score": 0.4769,
+    "evidence": "Yüksek fark skoru (47.69%), metin güvenilir değil",
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   "madde_2": {
@@ -36,9 +36,9 @@
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   "madde_3": {
-    "status": "verified",
-    "disagreement_score": 0.0,
-    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_4": {
@@ -60,9 +60,9 @@
     "pdf": "4) 29-12-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_7": {
-    "status": "verified",
-    "disagreement_score": 0.0,
-    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_8": {
@@ -72,21 +72,21 @@
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   "madde_9": {
-    "status": "verified",
-    "disagreement_score": 0.0,
-    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
-    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
-  },
-  "madde_10": {
-    "status": "verified",
-    "disagreement_score": 0.0,
-    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
-    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
-  },
-  "madde_11": {
     "status": "unverified",
     "disagreement_score": 1.0,
     "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
+  },
+  "madde_10": {
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
+  },
+  "madde_11": {
+    "status": "disputed",
+    "disagreement_score": 0.0344,
+    "evidence": "Hukuki terim anomalileri bulundu: ürk Ticaret Kurumu', ağıtılmasına , ağıtılmasına ",
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   "madde_12": {
@@ -96,9 +96,9 @@
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   "madde_13": {
-    "status": "verified",
-    "disagreement_score": 0.0,
-    "evidence": "Düşük fark skoru (0.00%), iki OCR uyumlu",
+    "status": "unverified",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_14": {
@@ -109,14 +109,14 @@
   },
   "madde_15": {
     "status": "unverified",
-    "disagreement_score": 0.7236,
-    "evidence": "Yüksek fark skoru (72.36%), metin güvenilir değil",
+    "disagreement_score": 1.0,
+    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
     "pdf": "2) 21-06-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   },
   "madde_16": {
     "status": "unverified",
-    "disagreement_score": 1.0,
-    "evidence": "Yüksek fark skoru (100.00%), metin güvenilir değil",
+    "disagreement_score": 0.3314,
+    "evidence": "Yüksek fark skoru (33.14%), metin güvenilir değil",
     "pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   }
 }

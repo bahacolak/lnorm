@@ -13,6 +13,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Pt, RGBColor
 
+from .article_normalizer import ArticleBlock, NormalizedArticleResult
 from .articles_parser import Article
 from .extractor import BoardMember, CompanyInfo
 
@@ -140,7 +141,11 @@ def write_yonetim_kurulu(members: list[BoardMember], output_path: str = "output/
     return _save(doc, output_path)
 
 
-def write_esas_sozlesme(articles: list[Article], sources: dict, output_path: str = "output/esas_sozlesme.docx") -> Path:
+def write_esas_sozlesme(
+    articles: list[Article | NormalizedArticleResult],
+    sources: dict,
+    output_path: str = "output/esas_sozlesme.docx",
+) -> Path:
     doc = Document()
     _apply_base_style(doc)
     _add_title(doc, "Esas Sözleşme (Konsolide)")
@@ -157,10 +162,13 @@ def write_esas_sozlesme(articles: list[Article], sources: dict, output_path: str
         return _save(doc, output_path)
 
     for article in articles:
-        source = sources.get(article.madde_no, {})
-        heading_text = f"MADDE {article.madde_no}"
-        if article.baslik:
-            heading_text += f" — {article.baslik}"
+        article_no = article.madde_no
+        article_title = article.baslik if isinstance(article, Article) else article.title
+        article_source_date = article.kaynak_tarih if isinstance(article, Article) else None
+        source = sources.get(article_no, {})
+        heading_text = f"MADDE {article_no}"
+        if article_title:
+            heading_text += f" — {article_title}"
         if source.get("degistirildi"):
             heading_text += " [DEĞİŞTİRİLDİ]"
 
@@ -170,23 +178,60 @@ def write_esas_sozlesme(articles: list[Article], sources: dict, output_path: str
             if source.get("degistirildi"):
                 run.font.color.rgb = COLOR_CHANGED
 
-        paragraph = doc.add_paragraph()
-        run = paragraph.add_run(article.icerik)
-        run.font.name = FONT_NAME
-        run.font.size = BODY_SIZE
+        blocks = _article_to_blocks(article)
+        for block in blocks:
+            _render_article_block(doc, block)
 
         source_para = doc.add_paragraph()
-        source_text = f"Kaynak: TTSG [{source.get('tarih', article.kaynak_tarih or '—')}]"
+        source_text = f"Kaynak: TTSG [{source.get('tarih', article_source_date or '—')}]"
         if source.get("sayi"):
             source_text += f" Sayı {source['sayi']}"
         if source.get("kaynak_pdf"):
             source_text += f" — {source['kaynak_pdf']}"
+        if isinstance(article, NormalizedArticleResult):
+            source_text += f" | Kaynak modu: {article.source_mode}"
         source_run = source_para.add_run(source_text)
         source_run.font.size = SMALL_SIZE
         source_run.font.color.rgb = COLOR_SOURCE
         source_run.italic = True
 
     return _save(doc, output_path)
+
+
+def _article_to_blocks(article: Article | NormalizedArticleResult) -> list[ArticleBlock]:
+    if isinstance(article, NormalizedArticleResult):
+        return article.blocks
+    return [ArticleBlock(type="paragraph", text=article.icerik)]
+
+
+def _render_article_block(doc: Document, block: ArticleBlock) -> None:
+    if block.type == "table" and block.rows:
+        cols = max(len(row) for row in block.rows)
+        table = doc.add_table(rows=0, cols=cols)
+        table.style = "Table Grid"
+        table.alignment = WD_TABLE_ALIGNMENT.CENTER
+        for row_data in block.rows:
+            row = table.add_row()
+            for idx in range(cols):
+                value = row_data[idx] if idx < len(row_data) else ""
+                _format_cell(row.cells[idx], value)
+        return
+
+    paragraph = doc.add_paragraph()
+    text = block.text or ""
+    if block.type == "bullet_list":
+        for item in [line.strip() for line in text.splitlines() if line.strip()]:
+            para = doc.add_paragraph(style="List Bullet")
+            run = para.add_run(item)
+            run.font.name = FONT_NAME
+            run.font.size = BODY_SIZE
+        return
+
+    run = paragraph.add_run(text)
+    run.font.name = FONT_NAME
+    run.font.size = BODY_SIZE
+    if block.type == "raw":
+        run.font.color.rgb = COLOR_WARNING
 
 
 def _save(doc: Document, output_path: str) -> Path:

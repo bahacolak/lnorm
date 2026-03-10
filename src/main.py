@@ -52,6 +52,16 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Sadece kritik belgelerde (kurulus, esas sozlesme) capraz dogrulama",
     )
+    parser.add_argument(
+        "--llm-article-normalization",
+        action="store_true",
+        help="Esas sozlesme maddeleri icin Anthropic tabanli normalize etme",
+    )
+    parser.add_argument(
+        "--article-normalization-model",
+        default="claude-sonnet-4-20250514",
+        help="Esas sozlesme normalization modeli",
+    )
     return parser
 
 
@@ -70,6 +80,8 @@ def main() -> None:
         emit_review_queue=args.emit_review_queue,
         verification_ocr_provider=args.verification_ocr_provider,
         verify_critical_only=args.verify_critical_fields_only,
+        llm_article_normalization=args.llm_article_normalization,
+        article_normalization_model=args.article_normalization_model,
     )
 
 

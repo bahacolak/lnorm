@@ -78,7 +78,7 @@
   },
   {
     "madde_no": 6,
-    "pozisyon": 1045,
+    "pozisyon": 1046,
     "sorun_tipi": "hukuki_terim_anomali",
     "detay": "'natlerini nama ' → olması gereken: 'pay senetlerini'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
@@ -87,12 +87,12 @@
     "madde_no": 6,
     "pozisyon": 823,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'ar halin' → olması gereken: 'küpürler'",
+    "detay": "'ler halin' → olması gereken: 'küpürler'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 6,
-    "pozisyon": 1147,
+    "pozisyon": 1148,
     "sorun_tipi": "hukuki_terim_anomali",
     "detay": "'beri çıkar' → olması gereken: 'ilmühaberi'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
@@ -179,6 +179,13 @@
     "pozisyon": 178,
     "sorun_tipi": "hukuki_terim_anomali",
     "detay": "'ağıtılmasına ' → olması gereken: 'çağrılmasına'",
+    "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  },
+  {
+    "madde_no": 13,
+    "pozisyon": 638,
+    "sorun_tipi": "hukuki_terim_anomali",
+    "detay": "'ini (c)' → olması gereken: 'fıkrasının'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {

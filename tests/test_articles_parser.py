@@ -49,3 +49,12 @@ MADDE 7-(1) Bu İç Yönergenin 6 ncı maddesi uyarınca açılır.
     assert 6 in madde_nos
     # İç Yönerge MADDE 3 should NOT be in the result
     assert 3 not in madde_nos or all("İç Yönerge" not in a.icerik for a in articles if a.madde_no == 3)
+
+
+def test_parse_articles_keeps_duplicate_heading_for_normalizer_stage():
+    text = """
+# 6. SERMAYE
+Şirketin sermayesi 100.000 TL'dir.
+"""
+    articles, _ = parse_articles(text, "x.pdf", expected_count=-1)
+    assert articles[0].icerik.startswith("# 6. SERMAYE")
