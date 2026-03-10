@@ -70,27 +70,6 @@
     "action": "flagged_unverified"
   },
   {
-    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
-    "field_name": "board_member_name",
-    "llm_value": "AYDEM HOLDING ANONİM ŞİRKETİ",
-    "found_in_source": false,
-    "action": "flagged_unverified"
-  },
-  {
-    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
-    "field_name": "board_member_term_end",
-    "llm_value": "26.09.2025",
-    "found_in_source": false,
-    "action": "flagged_unverified"
-  },
-  {
-    "pdf": "3) 10-10-2023 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
-    "field_name": "board_member_term_end",
-    "llm_value": "26.09.2025",
-    "found_in_source": false,
-    "action": "flagged_unverified"
-  },
-  {
     "pdf": "4) 29-12-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf",
     "field_name": "ticaret_sicil_mudurlugu",
     "llm_value": "Denizli Ticaret Sicili Müdürlüğü",
@@ -176,13 +155,6 @@
   },
   {
     "pdf": "7) 05-11-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
-    "field_name": "board_member_name",
-    "llm_value": "AYDEM HOLDING ANONİM ŞİRKETİ",
-    "found_in_source": false,
-    "action": "flagged_unverified"
-  },
-  {
-    "pdf": "7) 05-11-2024 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması.pdf",
     "field_name": "board_member_term_end",
     "llm_value": "26.09.2025",
     "found_in_source": false,
@@ -220,41 +192,6 @@
     "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
     "field_name": "kurulus_tarihi",
     "llm_value": "11.09.2025",
-    "found_in_source": false,
-    "action": "flagged_unverified"
-  },
-  {
-    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
-    "field_name": "board_member_term_end",
-    "llm_value": "08.09.2028",
-    "found_in_source": false,
-    "action": "flagged_unverified"
-  },
-  {
-    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
-    "field_name": "board_member_term_end",
-    "llm_value": "08.09.2028",
-    "found_in_source": false,
-    "action": "flagged_unverified"
-  },
-  {
-    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
-    "field_name": "board_member_term_end",
-    "llm_value": "08.09.2028",
-    "found_in_source": false,
-    "action": "flagged_unverified"
-  },
-  {
-    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
-    "field_name": "board_member_term_end",
-    "llm_value": "08.09.2028",
-    "found_in_source": false,
-    "action": "flagged_unverified"
-  },
-  {
-    "pdf": "8) 11-09-2025 Yönetim Kurulu Atama Görevden Alma, Temsilci ve Yetkili Kişi Atanması, Yönetim Kurulu İç Yönergesi.pdf",
-    "field_name": "board_member_term_end",
-    "llm_value": "08.09.2028",
     "found_in_source": false,
     "action": "flagged_unverified"
   },

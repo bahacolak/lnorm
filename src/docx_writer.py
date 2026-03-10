@@ -11,10 +11,10 @@ from docx import Document
 from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Inches, Pt, RGBColor
+from docx.shared import Pt, RGBColor
 
-from articles_parser import Article
-from extractor import BoardMember, CompanyInfo
+from .articles_parser import Article
+from .extractor import BoardMember, CompanyInfo
 
 logger = logging.getLogger(__name__)
 
@@ -199,7 +199,11 @@ def _save(doc: Document, output_path: str) -> Path:
 
 def _add_hyperlink(paragraph, text: str, url: str) -> None:
     part = paragraph.part
-    r_id = part.relate_to(url, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink", is_external=True)
+    r_id = part.relate_to(
+        url,
+        "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink",
+        is_external=True,
+    )
 
     hyperlink = OxmlElement("w:hyperlink")
     hyperlink.set(qn("r:id"), r_id)

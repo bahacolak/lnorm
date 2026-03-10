@@ -15,128 +15,135 @@
   },
   {
     "madde_no": 3,
-    "pozisyon": 4136,
+    "pozisyon": 4137,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'sınav mükûret' → olması gereken: 'sınai mülkiyet'",
+    "detay": "'ınav mükûret ' → olması gereken: 'sınai mülkiyet'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 3,
-    "pozisyon": 4136,
+    "pozisyon": 4137,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'sınav' → olması gereken: 'sınai'",
+    "detay": "'ınav ' → olması gereken: 'sınai'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 3,
-    "pozisyon": 4489,
+    "pozisyon": 4490,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'sınav' → olması gereken: 'sınai'",
+    "detay": "'ınav ' → olması gereken: 'sınai'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 3,
-    "pozisyon": 4036,
+    "pozisyon": 4037,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'testiyar' → olması gereken: 'imtiyaz'",
+    "detay": "'estiyar,' → olması gereken: 'imtiyaz'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 3,
-    "pozisyon": 4046,
+    "pozisyon": 4047,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'ihtiya besin' → olması gereken: 'ihtira beratı'",
+    "detay": "'htiya besin,' → olması gereken: 'ihtira beratı'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 3,
     "pozisyon": 3645,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'müteselid' → olması gereken: 'müteselsi̇l'",
+    "detay": "'ütevellal ' → olması gereken: 'müteselsi̇l'",
+    "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
+  },
+  {
+    "madde_no": 3,
+    "pozisyon": 3502,
+    "sorun_tipi": "hukuki_terim_anomali",
+    "detay": "'dilacık ' → olması gereken: 'edilecek'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 6,
-    "pozisyon": 681,
+    "pozisyon": 687,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'biberi' → olması gereken: 'itibari'",
+    "detay": "' değer' → olması gereken: 'itibari'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 6,
-    "pozisyon": 761,
+    "pozisyon": 767,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'pay sanatlerini' → olması gereken: 'pay senetlerini'",
+    "detay": "'natlerini bir v' → olması gereken: 'pay senetlerini'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 6,
-    "pozisyon": 1039,
+    "pozisyon": 1045,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'pay sanatlerini' → olması gereken: 'pay senetlerini'",
+    "detay": "'natlerini nama ' → olması gereken: 'pay senetlerini'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 6,
-    "pozisyon": 817,
+    "pozisyon": 823,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'kuptolar' → olması gereken: 'küpürler'",
+    "detay": "'ar halin' → olması gereken: 'küpürler'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 6,
-    "pozisyon": 1141,
+    "pozisyon": 1147,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'ilmihaberi' → olması gereken: 'ilmühaberi'",
+    "detay": "'beri çıkar' → olması gereken: 'ilmühaberi'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 7,
-    "pozisyon": 80,
+    "pozisyon": 82,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'Türk Ticaret Kurumu' → olması gereken: 'Türk Ticaret Kanunu'",
+    "detay": "'rk Ticaret Kurumu H' → olması gereken: 'Türk Ticaret Kanunu'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 7,
-    "pozisyon": 468,
+    "pozisyon": 477,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'Uşruklu' → olması gereken: 'Uyruklu'",
+    "detay": "'34***62' → olması gereken: 'Uyruklu'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 7,
-    "pozisyon": 582,
+    "pozisyon": 595,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'Uşruklu' → olması gereken: 'Uyruklu'",
+    "detay": "'*46 Kim' → olması gereken: 'Uyruklu'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 7,
-    "pozisyon": 381,
+    "pozisyon": 387,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'ENENTEPE' → olması gereken: 'ESENTEPE'",
+    "detay": "'PE MAHAL' → olması gereken: 'ESENTEPE'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 9,
-    "pozisyon": 317,
+    "pozisyon": 329,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'Uşruklu' → olması gereken: 'Uyruklu'",
+    "detay": "'**62 Ki' → olması gereken: 'Uyruklu'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 9,
-    "pozisyon": 489,
+    "pozisyon": 507,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'Uşruklu' → olması gereken: 'Uyruklu'",
+    "detay": "'Kimlik ' → olması gereken: 'Uyruklu'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 9,
-    "pozisyon": 122,
+    "pozisyon": 128,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'ENENTEPE' → olması gereken: 'ESENTEPE'",
+    "detay": "'PE MAHAL' → olması gereken: 'ESENTEPE'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
@@ -155,30 +162,30 @@
   },
   {
     "madde_no": 11,
-    "pozisyon": 209,
+    "pozisyon": 210,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'Türk Ticaret Kurumu' → olması gereken: 'Türk Ticaret Kanunu'",
+    "detay": "'ürk Ticaret Kurumu'' → olması gereken: 'Türk Ticaret Kanunu'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 11,
-    "pozisyon": 37,
+    "pozisyon": 38,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'dağıtılmasına' → olması gereken: 'çağrılmasına'",
+    "detay": "'ağıtılmasına ' → olması gereken: 'çağrılmasına'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 11,
-    "pozisyon": 177,
+    "pozisyon": 178,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'dağıtılmasına' → olması gereken: 'çağrılmasına'",
+    "detay": "'ağıtılmasına ' → olması gereken: 'çağrılmasına'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
     "madde_no": 13,
-    "pozisyon": 958,
+    "pozisyon": 962,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'dağıtılmasına' → olması gereken: 'çağrılmasına'",
+    "detay": "'tılmasına kar' → olması gereken: 'çağrılmasına'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
@@ -197,9 +204,9 @@
   },
   {
     "madde_no": 13,
-    "pozisyon": 966,
+    "pozisyon": 970,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'dağıtılmasına' → olması gereken: 'çağrılmasına'",
+    "detay": "'tılmasına\n\nka' → olması gereken: 'çağrılmasına'",
     "kaynak_pdf": "1) 01-12-2022 Kuruluş İlanı.pdf"
   },
   {
@@ -218,9 +225,9 @@
   },
   {
     "madde_no": 6,
-    "pozisyon": 1271,
+    "pozisyon": 1273,
     "sorun_tipi": "hukuki_terim_anomali",
-    "detay": "'ilmihabeti' → olması gereken: 'ilmühaberi'",
+    "detay": "'mihabeti ç' → olması gereken: 'ilmühaberi'",
     "kaynak_pdf": "4) 29-12-2023 Esas Sözleşme Değişikliği–Sermaye Artırımı.pdf"
   }
 ]

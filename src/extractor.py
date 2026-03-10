@@ -4,7 +4,6 @@ extractor.py - Rule-based first extraction with optional LLM fallback.
 
 from __future__ import annotations
 
-import json
 import logging
 import os
 import re
@@ -12,7 +11,8 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Optional
 
-from filter import FilterResult
+from .filter import FilterResult
+from .persistence import write_json
 
 logger = logging.getLogger(__name__)
 
@@ -331,16 +331,17 @@ def _parse_board_members_rule_based(text: str, kaynak_pdf: str, source_page: Opt
     members: list[BoardMember] = []
     appointment_date = _extract_ttsg_date_from_filename(kaynak_pdf)
     appointment_no = _extract_group(TTSG_NO_PATTERN, text)
-    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    board_text = _extract_board_member_section(text)
+    lines = _merge_board_lines(board_text)
 
     replacement_pattern = re.compile(
         r"Daha\s+önceden.*?(?:olan\s+)?(?P<old>[A-ZÇĞİÖŞÜ][A-ZÇĞİÖŞÜa-zçğıöşü\s]+?)['‘’]?(?:n?[iıuü]n)\s+önceki\s+üyeliği\s+sona\s+ermiştir\.\s+Yerine.*?(?P<new>[A-ZÇĞİÖŞÜ][A-ZÇĞİÖŞÜa-zçğıöşü\s]+?)\s+(?P<term>\d{1,2}[./]\d{1,2}[./]\d{4})\s+tarihine\s+kadar\s+Yönetim\s+Kurulu\s+Üyesi\s+olarak\s+seçilmiştir",
         re.IGNORECASE | re.DOTALL,
     )
-    for match in replacement_pattern.finditer(text):
+    for match in replacement_pattern.finditer(board_text):
         old_name = _normalize_person_name(match.group("old"))
         new_name = _normalize_person_name(match.group("new"))
-        if old_name:
+        if _is_plausible_member_name(old_name):
             members.append(
                 BoardMember(
                     name=old_name,
@@ -354,7 +355,7 @@ def _parse_board_members_rule_based(text: str, kaynak_pdf: str, source_page: Opt
                     source_pdf_link=f"input/{kaynak_pdf}",
                 )
             )
-        if new_name:
+        if _is_plausible_member_name(new_name):
             members.append(
                 BoardMember(
                     name=new_name,
@@ -371,12 +372,12 @@ def _parse_board_members_rule_based(text: str, kaynak_pdf: str, source_page: Opt
             )
 
     removal_only_pattern = re.compile(
-        r"Daha\s+önceden\s+(?:.*?)Yönetim\s+Kurulu\s+Üyesi\s+olan\s+(?:.*?)(?P<old>[A-ZÇĞİÖŞÜ][A-ZÇĞİÖŞÜa-zçğıöşü\s]+?)['\u2019']?(?:n?[iıuü]n|,)\s+(?:önceki\s+)?(?:üyeliği|üyd[üu][ğg][üu]|işçiliğe|bu\s+görevi)?\s*sona\s+ermiştir",
+        r"Daha\s+önceden\s+(?:.*?)Yönetim\s+Kurulu\s+Üyesi\s+olan\s+(?:.*?)(?P<old>[A-ZÇĞİÖŞÜ][A-ZÇĞİÖŞÜa-zçğıöşü\s]+?)['\u2019']?(?:n?[iıuü]n|,)\s+(?:önceki\s+)?(?:üyeliği|üyd[üu][ğg][üu]|işçiliğe)\s*sona\s+ermiştir",
         re.IGNORECASE | re.DOTALL,
     )
-    for match in removal_only_pattern.finditer(text):
+    for match in removal_only_pattern.finditer(board_text):
         old_name = _normalize_person_name(_extract_member_name(match.group("old")) or match.group("old"))
-        if old_name and not any(m.name == old_name and m.action == "görevden_alma" for m in members):
+        if _is_plausible_member_name(old_name) and not any(m.name == old_name and m.action == "görevden_alma" for m in members):
             members.append(
                 BoardMember(
                     name=old_name,
@@ -393,12 +394,12 @@ def _parse_board_members_rule_based(text: str, kaynak_pdf: str, source_page: Opt
 
     # Broader: \"... {NAME}'ın/in ... sona ermiştir\" anywhere after YÖNETİM KURULU
     broad_removal_pattern = re.compile(
-        r"(?:olan|eden)\s+(?P<old>[A-ZÇĞİÖŞÜ][A-ZÇĞİÖŞÜa-zçğıöşü\s]+?)['\u2019']?(?:n?[iıuü]n|,)\s+.{0,60}?sona\s+ermiştir",
+        r"(?:olan|eden)\s+(?P<old>[A-ZÇĞİÖŞÜ][A-ZÇĞİÖŞÜa-zçğıöşü\s]+?)['\u2019']?(?:n?[iıuü]n|,)\s+.{0,40}?(?:üyeliği|üyd[üu][ğg][üu]|işçiliğe)\s+sona\s+ermiştir",
         re.IGNORECASE | re.DOTALL,
     )
-    for match in broad_removal_pattern.finditer(text):
+    for match in broad_removal_pattern.finditer(board_text):
         old_name = _normalize_person_name(_extract_member_name(match.group("old")) or match.group("old"))
-        if old_name and not any(m.name == old_name and m.action == "görevden_alma" for m in members):
+        if _is_plausible_member_name(old_name) and not any(m.name == old_name and m.action == "görevden_alma" for m in members):
             members.append(
                 BoardMember(
                     name=old_name,
@@ -458,6 +459,8 @@ def _parse_board_members_rule_based(text: str, kaynak_pdf: str, source_page: Opt
         if not name:
             continue
         normalized_name, entity_type, representative = _parse_entity_name(name)
+        if not _is_plausible_member_name(normalized_name):
+            continue
         if entity_type == "legal_entity" and idx + 1 < len(lines) and "hareket edecektir" in lines[idx + 1].casefold():
             rep_inline = re.search(r"ikamet eden[:\s,]*([A-ZÇĞİÖŞÜa-zçğıöşü\s]+?)\s+hareket edecektir", lines[idx + 1], re.IGNORECASE)
             if rep_inline:
@@ -493,11 +496,54 @@ def _parse_board_members_rule_based(text: str, kaynak_pdf: str, source_page: Opt
     return list(deduped.values())
 
 
+def _extract_board_member_section(text: str) -> str:
+    start_markers = ("YÖNETİM KURULU / YETKİLİLER", "YÖNETİM KURULU", "Yonetim Kurulu / Yetkililer")
+    end_markers = (
+        "YENİ ATANAN TEMSİLCİLER",
+        "TEMSİL YETKİSİ SONA ERENLER",
+        "GÖREV DAĞILIMINDAKİ DEĞİŞİKLİK",
+        "MÜŞTEREK LİSTESİNDE DEĞİŞİKLİK",
+        "YENI ATANAN TEMSILCILER",
+    )
+    start = 0
+    for marker in start_markers:
+        pos = text.find(marker)
+        if pos != -1:
+            start = pos
+            break
+    section = text[start:]
+    end = len(section)
+    for marker in end_markers:
+        pos = section.find(marker)
+        if pos != -1:
+            end = min(end, pos)
+    return section[:end]
+
+
+def _merge_board_lines(text: str) -> list[str]:
+    raw_lines = [line.strip() for line in text.splitlines() if line.strip()]
+    merged: list[str] = []
+    for line in raw_lines:
+        if merged and (
+            line.startswith("olarak seçilmiştir")
+            or line.startswith("tarihine kadar")
+            or merged[-1].endswith("Yönetim Kurulu Üyesi")
+            or merged[-1].endswith("Yönetim Kurulu")
+            or merged[-1].endswith("Başkanı)")
+            or merged[-1].endswith("Başkan Yardımcısı)")
+        ):
+            merged[-1] = f"{merged[-1]} {line}"
+        else:
+            merged.append(line)
+    return merged
+
+
 def _extract_member_name(prefix: str) -> Optional[str]:
     prefix = re.sub(r"\s+", " ", prefix).strip(" -,:;.")
     prefix = re.sub(r"(?i)^ilk\s+\d+\s+yıl\s+için\s+", "", prefix)
     prefix = re.sub(r"(?i)^daha\s+önceden\s+", "", prefix)
     prefix = re.sub(r"(?i)^türkiye\s+(cumhuriyeti\s+)?uyr[ıiuü]klu\s+\d+\*+\d+\s+kimlik\s+no['’]lu,\s*", "", prefix)
+    prefix = re.sub(r"(?i)^kimlik\s+no['’]lu,\s*", "", prefix)
     if "ikamet eden" in prefix.casefold():
         parts = re.split(r"(?i)ikamet eden,?", prefix)
         prefix = parts[-1].strip(" -,:;.")
@@ -526,6 +572,41 @@ def _normalize_person_name(name: str) -> str:
     if "AYDEM" in cleaned.upper() and "ANON" in cleaned.upper() and "ŞİRKET" in cleaned.upper():
         return "AYDEM HOLDING ANONİM ŞİRKETİ"
     return cleaned.upper()
+
+
+def _is_plausible_member_name(name: Optional[str]) -> bool:
+    if not name:
+        return False
+    candidate = re.sub(r"\s+", " ", name).strip(" ,.;:").upper()
+    if len(candidate) < 4:
+        return False
+    blocked_exact = {
+        "TARIHINE KADAR",
+        "ADRESINDE IKAMET EDEN",
+        "IKAMET EDEN",
+        "YÖNETİM KURULU ÜYESİ",
+    }
+    blocked_contains = (
+        "TARIHINE KADAR",
+        "YÖNETİM KURULU",
+        "TEMSİLE YETKİLİ",
+        "TEMSILE YETKILI",
+        "IKAMET EDEN",
+        "ADRESINDE",
+        "KIMLIK NO",
+        "YERINE",
+        " EDEN,",
+        "EDEN, ",
+    )
+    if candidate in blocked_exact:
+        return False
+    if any(token in candidate for token in blocked_contains):
+        return False
+    if len(candidate.split()) == 1 and "ŞİRKET" not in candidate and "HOLDING" not in candidate:
+        return False
+    if not re.search(r"[A-ZÇĞİÖŞÜ]", candidate):
+        return False
+    return True
 
 
 def _parse_entity_name(name: str) -> tuple[str, str, Optional[str]]:
@@ -768,9 +849,9 @@ def save_hallucination_log(
     issues: list[HallucinationEntry],
     output_path: str = "output/hallucination_log.json",
 ) -> Path:
-    path = Path(output_path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump([asdict(issue) for issue in issues], f, ensure_ascii=False, indent=2)
-    logger.info("Hallucination log kaydedildi: %s", path)
-    return path
+    return write_json(
+        output_path,
+        [asdict(issue) for issue in issues],
+        logger=logger,
+        message="Hallucination log kaydedildi",
+    )

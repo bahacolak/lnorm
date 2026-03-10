@@ -4,13 +4,12 @@ articles_parser.py - Rule based articles parser with OCR noise cleanup.
 
 from __future__ import annotations
 
-import json
 import logging
 import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Optional
 
+from .persistence import write_json
 logger = logging.getLogger(__name__)
 
 ARTICLE_PATTERN = re.compile(
@@ -234,7 +233,7 @@ def _check_article_quality(article: Article, position: int) -> list[OCRQAEntry]:
 
     # Legal term anomaly detection
     try:
-        from ocr_verifier import detect_legal_term_anomalies
+        from .ocr_verifier import detect_legal_term_anomalies
 
         anomalies = detect_legal_term_anomalies(article.icerik)
         for anomaly in anomalies:
@@ -254,12 +253,12 @@ def _check_article_quality(article: Article, position: int) -> list[OCRQAEntry]:
 
 
 def save_ocr_qa_log(qa_issues: list[OCRQAEntry], output_path: str = "output/ocr_qa_log.json") -> Path:
-    path = Path(output_path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump([asdict(issue) for issue in qa_issues], f, ensure_ascii=False, indent=2)
-    logger.info("OCR QA log kaydedildi: %s", path)
-    return path
+    return write_json(
+        output_path,
+        [asdict(issue) for issue in qa_issues],
+        logger=logger,
+        message="OCR QA log kaydedildi",
+    )
 
 
 if __name__ == "__main__":

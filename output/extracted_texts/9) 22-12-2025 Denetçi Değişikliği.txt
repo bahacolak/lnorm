@@ -23,4 +23,4 @@ Yeni Denetçi
 
 | Kiadlı / Naaşası No / MEK050 No | Uyruk | Adı Sayadı / Firma Adı | Adres | Yalıtım Başlangıç Tarihi | Yalıtım Beliş Tarihi |
 | --- | --- | --- | --- | --- | --- |
-| 0166802248500015 | Türkiye Canshariyeti | PWC BAŞIMAZ MURDITEL YIL KERKEM YETEMLERDE MALİ MÜŞAVİRLİK ANONİM ŞİRKETİ | SEVYASLI BİLKEREY | 11.2025 | 31.12.2025 |
+| 0166802248500015 | Türkiye Canshariyeti | PWC BAŞIMAZ MURDITEL YIL KERKEM YETENKESİN MALİ MÜŞAVİRLİK ANONİM ŞİRKETİ | SEVYASLI BİLKERDE | 1.1.2025 | 31.12.2025 |

@@ -5,3 +5,8 @@
 .DS_Store
 .pytest_cache/
 __pycache__/
+output/
+debug_extraction_audit.txt
+test_mistral_*.txt
+test_mistral_*.json
+test_tesseract_*.txt

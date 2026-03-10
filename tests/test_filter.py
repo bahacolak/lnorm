@@ -1,4 +1,4 @@
-from filter import filter_target_company
+from src.filter import filter_target_company
 
 
 def test_filter_cuts_foreign_registry_tail():

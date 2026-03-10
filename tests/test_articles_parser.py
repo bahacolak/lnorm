@@ -1,4 +1,4 @@
-from articles_parser import clean_article_text, parse_articles, parse_changed_articles
+from src.articles_parser import clean_article_text, parse_articles, parse_changed_articles
 
 
 def test_clean_article_text_removes_noise_headers():

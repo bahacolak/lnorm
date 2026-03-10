@@ -1,5 +1,5 @@
-from extractor import extract_company_info
-from filter import FilterResult
+from src.extractor import extract_company_info
+from src.filter import FilterResult
 
 
 def test_extract_company_info_detects_auditor():

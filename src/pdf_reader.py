@@ -8,7 +8,7 @@ import logging
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from ocr_providers import (
+from .ocr_providers import (
     OCRDocumentResult,
     run_mistral_ocr,
     run_tesseract_ocr,

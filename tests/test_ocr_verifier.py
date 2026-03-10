@@ -1,13 +1,6 @@
-"""
-Tests for ocr_verifier.py — cross-validation and legal term anomaly detection.
-"""
+"""Tests for ocr_verifier.py — cross-validation and legal term anomaly detection."""
 
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-
-from ocr_verifier import (
+from src.ocr_verifier import (
     calculate_disagreement_score,
     cross_validate_articles,
     cross_validate_ocr,

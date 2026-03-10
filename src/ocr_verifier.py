@@ -7,14 +7,14 @@ paragraph/article level. Flags disagreements and produces a review queue.
 
 from __future__ import annotations
 
-import json
 import logging
 import re
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Optional
 
+from .persistence import write_json
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
@@ -291,32 +291,30 @@ def save_review_queue(
     entries: list[ReviewQueueEntry],
     output_path: str = "output/review_queue.json",
 ) -> Path:
-    path = Path(output_path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump([asdict(e) for e in entries], f, ensure_ascii=False, indent=2)
-    logger.info("Review queue kaydedildi: %s (%d entry)", path, len(entries))
-    return path
+    return write_json(
+        output_path,
+        [asdict(entry) for entry in entries],
+        logger=logger,
+        message="Review queue kaydedildi",
+    )
 
 
 def save_field_confidence(
     confidence: dict[str, dict],
     output_path: str = "output/field_confidence.json",
 ) -> Path:
-    path = Path(output_path)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(confidence, f, ensure_ascii=False, indent=2)
-    logger.info("Field confidence kaydedildi: %s", path)
-    return path
+    return write_json(
+        output_path,
+        confidence,
+        logger=logger,
+        message="Field confidence kaydedildi",
+    )
 
 
 def save_article_comparison(
     spans: list[VerifiedSpan],
     output_path: str = "output/article_comparison.json",
 ) -> Path:
-    path = Path(output_path)
-    path.parent.mkdir(parents=True, exist_ok=True)
     data = []
     for s in spans:
         data.append({
@@ -327,10 +325,12 @@ def save_article_comparison(
             "primary_text": s.primary_text[:300],
             "secondary_text": s.secondary_text[:300],
         })
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    logger.info("Article comparison kaydedildi: %s", path)
-    return path
+    return write_json(
+        output_path,
+        data,
+        logger=logger,
+        message="Article comparison kaydedildi",
+    )
 
 
 # ---------------------------------------------------------------------------

@@ -100,7 +100,7 @@ a) Toplantının ilanda gösterilen adreste yapılıp yapılmadığını ve esas
 b) Genel kurulan toplantıya, esas sözleşmeler gösterilen şekilde, internet sitesi açmakla yükümlü olan şirketlerin internet sitesinde ve Türkiye Ticaret Sicili Gazetesinde yayımlanan ilanlar çağrılıp çağrılmadığını, bu çağrının, ilan ve toplantı günleri hariç olmak üzere, toplantı tarihinden en az iki hafta önce yapılıp yapılmadığını, pay dellerinde yazılı pay sahiplerine, önceden şirkete pay sanedi veya pay sahipleri işbirliğini belge vererek adresterin bildiren pay sahiplerine, toplantı günü ile gündem ve ilanın çıktığı veya çıkacağı gazetelerin aslında takibülü mektupla bildirilip bildirilmediğini incelemek ve bu durumu toplantı tutanağına geçirmek.
 c) Toplantı yerine giriş yetkisi olmayanların, toplantıya girip girmediklerini ve toplantı yerine günde ilgili olarak bu İş Yönergenin 5 inci maddesinin ikinci fıkrasında hüküm altına alınan görevlerin yönetim kuruluna yerine getirilip getirilmediğini kontrol etmek.
 ç) Genel kurulan, Kanunun 416 inci maddesi uyarınca çağrısız toplanması halinde pay sahiplerinin veya temsilcilerinin tümünün hazır bulunup bulunmadığını, toplantının bu şekilde yapılmasına itiraz olup olmadığını ve nisabın toplantı sonuna kadar korunup korunmadığını incelemek.
-d) Değişikliğe gidilmiş ise değişiklikleri de içeren esas sözleşmenin, pay dellerinin, yönetim kurulu yıllık faaliyet raporunun, denetçi raporlarının, finansal tabloların, gündemin, gündemde esas sözleşme değişikliği veya yönetim kuruluna hazırlanmış değişiklik tasarısının, esas sözleşme değişikliği (önerik ve Ticaret Bakanlığı'nın iznine tabi olması durumunda ise Bakanlıkta alınan izin yarısı ve eki değişiklik tasarısının, yönetim kurulu tarafından düzenlenmiş hazır bulunanlar listesinin, genel kurul ertelene üzerine toplantıya çağrılmış bir önceki toplantıya ilişkin erteleme tutanağının ve toplantıya ilişkin diğer gerekli belgelerin eksiksiz bir biçimde toplantı yerinde bulunup bulunmadığını tespit etmek ve bu durumu toplantı tutanağında belirtmek.
+d) Değişikliğe gidilmiş ise değişiklikleri de içeren esas sözleşmenin, pay defterinin, yönetim kurulu yıllık faaliyet raporunun, denetçi raporlarının, finansal tabloların, gündemin, gündemde esas sözleşme değişikliği veya yönetim kuruluna hazırlanmış değişiklik tasarısının, esas sözleşme değişikliği (önerik ve Ticaret Bakanlığı'nın iznine tabi olması durumunda ise Bakanlıkta alınan izin yarısı ve eki değişiklik tasarısının, yönetim kurulu tarafından düzenlenmiş hazır bulunanlar listesinin, genel kurul ertelene üzerine toplantıya çağrılmış bir önceki toplantıya ilişkin erteleme tutanağının ve toplantıya ilişkin diğer gerekli belgelerin eksiksiz bir biçimde toplantı yerinde bulunup bulunmadığını tespit etmek ve bu durumu toplantı tutanağında belirtmek.
 e) Hazır bulunanlar listesini incelemek suretiyle asaletten veya temsilci genel kurulu katılanların kimlik kontrolünü itiraz veya hizmet yerine yapmak ve temsil belgelerinin doğruluğunu kontrol etmek.
 f) Murablası üyeler ile en az bir yönetim kurulu üyesinin ve denetime tabi şirketlerde denetçinin toplantı hazır olup olmadığını tespit etmek ve bu durumu toplantı tutanağında belirtmek.
 g) Gündem çerçevesinde genel kurul çalışmalarını yönetmek, Kanunda belirtilen istisnalar haricinde gündem dışına çıkılmasını önlemek, toplantı düzenini sağlamak, bunun için gerekli kalbeleri almak.
@@ -116,17 +116,17 @@ o) Toplantı tutanağın, yönetim kurulu yıllık faaliyet raporunu, denetime t
 
 # Gündemin görüşülmesine geçilmeden önce yapılacak işlemler
 
-MADDE 9 – (1) Toplantı başkanı, genel kurulu toplantı gündemini okur veya okutur. Başkan tarafından gündem maddelerinin görüşülme orasına ilişkin bir değişiklik önerisi olup olmadığı sorulur, ağır bir öneri varsa bu durum genel kuruluna onayına sunulur. Toplantıda hazır bulunan oyların çoğunluğunun kararıyla gündem maddelerinin görüşülme orası değiştirilebilir.
+MADDE 9 – (1) Toplantı başkanı, genel kurula toplantı gündemini okur veya okutur. Başkan tarafından gündem maddelerinin görüşülme orasına ilişkin bir değişiklik önerisi olup olmadığı sorulur, ağır bir öneri varsa bu durum genel kuruluna onayına sunulur. Toplantıda hazır bulunan oyların çoğunluğunun kararıyla gündem maddelerinin görüşülme orası değiştirilebilir.
 
 # Gündem ve gündem maddelerinin görüşülmesi
 
 MADDE 10 – (1) Olağan genel kurul gündeminde aşağıdaki hususların yer alması zorunludur:
 a) Açılış ve toplantı başkanlığının oluşturulması.
 b) Yönetim kurulu yıllık faaliyet raporunun, denetime tabi şirketlerde denetçi raporlarının ve finansal tabloların görüşülmesi.
-c) Yönetim kurulu üyeleri de varsa denetçilerin ifsaları.
+c) Yönetim kurulu üyeleri de varsa denetçilerin ifsaları:
 ç) Süresi dolan yönetim kurulu üyeleri ile denetime tabi şirketlerde denetçinin seçimi.
 d) Yönetim kurulu üyelerinin ücretleri ile huzur hakkı, ikramiye ve prim gibi haklarının belirlenmesi.
-e) Kârin kullanımı şeklinin, dağıtımının ve kazanç payları oranlarının belirlenmesi.
+e) Kârin kullanım şeklinin, dağıtımının ve kazanç payları oranlarının belirlenmesi.
 f) Varsa esas sözleşme değişikliklerinin görüşülmesi.
 g) Gerekli görülen diğer konular.
 (2) Olağanüstü genel kurul toplantısının gündemini, toplantı yapılmasını gerektiren sebepler oluşturur.
@@ -143,26 +143,26 @@ kullanılması gibi haklı sebeplerin varlığı halinde, yönetim kurulu üyele
 
 # Toplantıda söz alma
 
-MADDE 11 – (1) Görüşülmekte olan gündem maddesi üzerinde söz almak isteyen pay sahipleri veya diğer ilgili durumu toplantı başkanlığına bildirilir. Başkanlık söz alacak kişiler genel kurulu açıklar ve bayramı orasına göre bu kişiler söz hakkı verir. Kendisine söz orası gelen kişi, toplantı yerinde bulunmayor ise söz hakkını kaybeder. Konuşmalar, bunun için ayrılan yerden, genel kurulu hitaben yapılır. Kişiler kendi aralarında konuşma sıralarını değiştirebilirler. Konuşma süresinin sınırlandırılması halinde, orası gelip konuşmasını yapan bir kişi, konuşma süresi dolduğu zaman, ancak kendinden sonra konuşacak ilk kişi konuşma hakkını verdiği takdirde konuşmasını, o kişinin konuşma süresi içinde tamamlamak koşuluyla sürdürülebilir. Diğer bir biçimde konuşma süresi uzatılamaz.
+MADDE 11 – (1) Görüşülmekte olan gündem maddesi üzerinde söz almak isteyen pay sahipleri veya diğer ilgili durumu toplantı başkanlığına bildirilir. Başkanlık söz alacak kişiler genel kurula açıklar ve bayramı orasına göre bu kişiler söz hakkı verir. Kendisine söz orası gelen kişi, toplantı yerinde bulunmayor ise söz hakkını kaybeder. Konuşmalar, bunun için ayrılan yerden, genel kurula hitaben yapılır. Kişiler kendi aralarında konuşma sıralarını değiştirebilirler. Konuşma süresinin sınırlandırılması halinde, orası gelip konuşmasını yapan bir kişi, konuşma süresi dolduğu zaman, ancak kendinden sonra konuşacak ilk kişi konuşma hakkını verdiği takdirde konuşmasını, o kişinin konuşma süresi içinde tamamlamak koşuluyla sürdürülebilir. Diğer bir biçimde konuşma süresi uzatılamaz.
 (2) Toplantı başkanınca, görüşülen konular hakkında açıklamada bulunmak isteyen yönetim kurulu üyeleri ile denetçiye sorun bakılmaksızın söz verilebilir.
 (3) Konuşmaların süresi, başkanın veya pay sahiplerinin önerisi üzerine, gündemin yoğunluğu, görüşülmesi gerekli konuların çokluğu, önemi ve söz almak isteyenlerin sayısına göre genel kurulca kararlaydır. Bu gibi durumlarda, genel kurul, önce konuşma süresinin sınırlanmasının gerekiyorsa gerekmeyeceğini ve sonra da sürenin ne olacağı konularında, ayrı ayrı oylama da karar verir.
-(4) Kanunun 1527 inci maddesi uyarınca genel kurulu elektronik ortamda katılan pay sahiplerinin veya temsilcilerinin görüş ve önerilerini ihtimaletine ilişkin olarak anılan madde ve alt düzenlemelerde belirlenmiş usul ve esaslar uygulanır.
+(4) Kanunun 1527 inci maddesi uyarınca genel kurula elektronik ortamda katılan pay sahiplerinin veya temsilcilerinin görüş ve önerilerini ihtimaletine ilişkin olarak anılan madde ve alt düzenlemelerde belirlenmiş usul ve esaslar uygulanır.
 
 # Oylama ve oy kullanma usulü
 
-MADDE 12 – (1) Oylamaya başlamadan önce, toplantı başkanı, oylanacak konuyu genel kurulu açıklar. Bir karar taslağının oylaması yapılacak ise, bu yazılı olarak saptanıp okuduktan sonra, oylamaya geçilir. Oylamaya geçileceği açıklandıktan sonra, ancak usul hakkında söz istenebilir. Bu sırada, talep etmesine rağmen kendisine söz verilmemiş pay sahibi varsa, hatırlatması ve Başkanca doğrulanması koşuluyla konuşma hakkını kullanır. Oylamaya geçildikten sonra söz verilmez.
+MADDE 12 – (1) Oylamaya başlamadan önce, toplantı başkanı, oylanacak konuyu genel kurula açıklar. Bir karar taslağının oylaması yapılacak ise, bu yazılı olarak saptanıp okuduktan sonra, oylamaya geçilir. Oylamaya geçileceği açıklandıktan sonra, ancak usul hakkında söz istenebilir. Bu sırada, talep etmesine rağmen kendisine söz verilmemiş pay sahibi varsa, hatırlatması ve Başkanca doğrulanması koşuluyla konuşma hakkını kullanır. Oylamaya geçildikten sonra söz verilmez.
 (2) Toplantıda görüşülen konuları ilişkin oylar, el kaldırmak veya ayağa kalkmak ya da ayrı ayrı kabul veya ret denilmek suretiyle kullanılır. Bu oylar toplam başkanlığınca sayılır. Gerektiğinde, başkanlık, oy sayımında yardımcı olmak üzere yeter sayıda kişiyi görevlendirebilir. El kaldırmayanlar, ayağa kalkmayanlar veya herhangi bir şekilde boyunda bulunmayanlar "ret" oyu vermiş sayılır ve bu oylar değerlendirmede ilgili kararın aleyhinde verilmiş kabul edilir. (Bu maddede belirtilenler dışında oy kullanma yöntemleri öngörülüyorsa İş Yönergesi belirtilecektir.)
-(3) Kanunun 1527 inci maddesi uyarınca genel kurulu elektronik ortamda katılan pay sahiplerinin veya temsilcilerinin oy kullanmalarına ilişkin olarak anılan madde ve alt düzenlemelerde belirlenmiş usul ve esaslar uygulanır.
+(3) Kanunun 1527 inci maddesi uyarınca genel kurula elektronik ortamda katılan pay sahiplerinin veya temsilcilerinin oy kullanmalarına ilişkin olarak anılan madde ve alt düzenlemelerde belirlenmiş usul ve esaslar uygulanır.
 
 # Toplantı tutanağının düzenlenmesi
 
 MADDE 13 – (1) Toplantı başkanınca, pay sahiplerini veya temsilcilerini, bunların sahip oldukları payları, grupları, sayıları ve itibari değerlerini gösteren hazır bulunanlar listesi imzalanır, genel kurulda sorulan soruların ve verilen cevapların özet olarak, alınan kararların ve her bir karar için kullanılan olumlu ve olumsuz oyların sayılarının tutanakta açık bir şekilde gösterilmesi ile tutanağın Kanun ve ilgili mevzuatta belirtilen esaslara uygun olarak düzenlenmesi sağlanır.
-(2) Genel kurul tutanağı toplantı yerinde ve toplantı sırasında daktilayla, bilgisayarla veya okunakla şekilde mürekkepli kalem kullanılarak suretiyle el yazısıyla düzenlenir. Tutanağın bilgisayarda yazılabilmesi için toplantı yerinde çektiklerin alınmasına imkân sağlayacak bir yarısın olması şarttır.
+(2) Genel kurul tutanağı toplantı yerinde ve toplantı sırasında daktilayla, bilgisayarla veya okunakla şekilde mürekkepli kalem kullanılarak suretiyle el yazısıyla düzenlenir. Tutanağın bilgisayarda yazılabilmesi için toplantı yerinde çektiklerin alınmasına imkân sağlayacak bir yazıcının olması şarttır.
 (3) Tutanak en az iki nüsha halinde düzenlenir ve tutanağın her sayfası, toplantı başkanlığı ile katılmış olması halinde Bakanlık temsilcisi tarafından imzalanır.
-(4) Tutanakta; şirketin ticaret unvanı, toplantı tarihi ve yeri, şirketin paylarının toplam itibari değeri ve pay adedi, toplantıda asaletten ve temsilcen olmak üzere temsil edilen toplam pay adedi, katılmışca Bakanlık temsilcisinin adı ve soyadı ile görevlendirme yarısının tarih ve sayısı, toplantı ilanlı yapılıyorsa davetin ne surette yapıldığı, ilansız yapılıyorsa bunun belirtilmesi zorunludur.
+(4) Tutanakta; şirketin ticaret unvanı, toplantı tarihi ve yeri, şirketin paylarının toplam itibari değeri ve pay adedi, toplantıda asaletten ve temsilcen olmak üzere temsil edilen toplam pay adedi, katılmışca Bakanlık temsilcisinin adı ve soyadı ile görevlendirme yazısının tarih ve sayısı, toplantı ilanlı yapılıyorsa davetin ne surette yapıldığı, ilansız yapılıyorsa bunun belirtilmesi zorunludur.
 (5) Toplantıda alınan kararları ilişkin oy miktarları, hiçbir tereddütte yer vermeyecek şekilde rakamla ve yazıyla tutanakta belirtilir.
 (6) Toplantıda alınan kararları olumsuz oy veren ve bu muhalefetini tutanağa geçirtmek isteyenlerin adı, soyadı ve muhalefet gerekçeleri tutanağa yazılır.
-(7) Muhalefet gerekçesinin yazılı olarak verilmesi halinde, bu yazı tutanağa eklenir. Tutanakta, muhalefetini belirten ortağı veya temsilcisinin adı, soyadı yazılır ve muhalefet yarısının ekte olduğu belirtilir. Tutanağa eklenen muhalefet yarısı toplantı başkanlığı ve katılmışca Bakanlık temsilcisi tarafından imzalanır.
+(7) Muhalefet gerekçesinin yazılı olarak verilmesi halinde, bu yazı tutanağa eklenir. Tutanakta, muhalefetini belirten ortağı veya temsilcisinin adı, soyadı yazılır ve muhalefet yazısının ekte olduğu belirtilir. Tutanağa eklenen muhalefet yazısı toplantı başkanlığı ve katılmışca Bakanlık temsilcisi tarafından imzalanır.
 
 # Toplantı sonunda yapılacak işlemler
 
@@ -173,7 +173,7 @@ MADDE 14 – (1) Toplantı başkanı, toplantı sonunda tutanağının bir nüsh
 
 # Toplantıya elektronik ortamda katılım
 
-MADDE 15 – (1) Genel kurul toplantısına Kanunun 1527 inci maddesi uyarınca elektronik ortamda katılım imkân tanınılığını durumda yönetim kuruluna ve toplantı başkanlığına yerine getirilmek işlemler Kanunun 1527 inci maddesi ve ilgili mevzuat dikkate alınarak ifa edilir.
+MADDE 15 – (1) Genel kurul toplantısına Kanunun 1527 inci maddesi uyarınca elektronik ortamda katılım imkân tanınılığını durumda yönetim kuruluna ve toplantı başkanlığınca yerine getirilmek işlemler Kanunun 1527 inci maddesi ve ilgili mevzuat dikkate alınarak ifa edilir.
 
 ÜÇÜNCÜ BÖLÜM
 
@@ -191,7 +191,7 @@ MADDE 17 –(1) Toplantılarda, bu İç Yönergede öngörülmemiş bir durumla 
 
 # İç Yönergenin kabulü ve değişiklikler
 
-MADDE 18 –(1) Bu İç Yönerge, PARLA ENERJİ YATIRIMLARI ANONİM ŞİRKETİ’nin 14.6.2023 tarihli genel kurul toplantısında kabul edilmiş olup, Türkiye Ticaret Sicili Gazetesinde ilan tarihinde yürürlüğe girer
+MADDE 18 –(1) Bu İç Yönerge, PARLA ENERJİ YATIRIMLARI ANONİM ŞİRKETİ’nin 14.6.2023 tarihli genel kurul toplantısında kabul edilmiş olup, Türkiye Ticaret Sicili Gazetesinde ilanı tarihinde yürürlüğe girer
 
 
 # T.C. İSTANBUL TİCARET SİCİLİ MÜDÜRLÜĞÜ’NDEN

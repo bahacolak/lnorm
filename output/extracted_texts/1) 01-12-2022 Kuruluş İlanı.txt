@@ -24,7 +24,7 @@ Aşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu t
 
 | Sayı No | Kararı | Adres | Gerak | Kendik No |
 | --- | --- | --- | --- | --- |
-| 1 | ETCİBİN BULGURU ANONİM ŞİRKETİ | DEVETERE MAHALLEM BÜYÜKSENE CAD. NO: 176101 BİLGİYE GÖRECİ | TÜRKİYE | *** |
+| 1 | ETCİBİN BULGURU ANONİM ŞİRKETİ | DİKVETER MAHALLER BÜYÜKSENE CAD. NO: 176101 BİLGİYE SORUZ | TÜRKİYE | *** |
 
 # 2. ŞİRKETİN UNVANI
 
@@ -42,7 +42,7 @@ Aşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu t
 
 3) Eidroelektrik santrali, rüzgar tribünleri, yenilenebilir enerji, güneş enerjisi tesisleri kurmak, almak, satmak, işletmeciliğini yapmak.
 
-4) Gerektiğinde TETAŞ, TEDAŞ, TEDAŞ, ETDAŞ veya kendisine benzer nitelikteki diğer elektrik şirketleri ile enerji alışverişi yapmak.
+4) Gerektiğinde TETAŞ, TEDAŞ, TEDAŞ, ETİAŞ veya kendisine benzer nitelikteki diğer elektrik şirketleri ile enerji alışverişi yapmak.
 
 5) Faaliyet konuları ile ilgili personel ve malzeme taşıma hizmetleri vermek ve bu konularda taahhütlere girmek.
 
@@ -52,7 +52,7 @@ Diğer tarafları Şirket, amaç ve faaliyet konuları ile ilgili hususları ger
 
 a) Faaliyet konuları ile ilgili etüt, planlama ve projeleri yapmak, buna bağlı olarak gerekli tesislerin ve sistemlerin kurulmasını sağlamak.
 
-b) Faaliyet konularının gerçekleştirmek üzere yarlı ve yabancı diğer gerçek ve tüzel kişilerle işbirliği ve ortaklıklar yapmak, yurt içi ve yurt dışında şubeler açmak, acente veya mümesellikler kurmak.
+b) Faaliyet konularının gerçekleştirmek üzere yarlı ve yabancı diğer gerçek ve tüzeli kişilerle işbirliği ve ortaklıklar yapmak, yurt içi ve yurt dışında şubeler açmak, acente veya mümesellikler kurmak.
 
 c) Faaliyet konuları ile ilgili malzeme, mal ve hizmetleri yurt içinden ve yurt dışından tedarik etmek.
 
@@ -68,9 +68,9 @@ h) Şirkete ait menkul ve gayrimenkul malları şirket veya şahıslar lehine te
 
 i) Faaliyet konusuna giren menkul ve gayrimenkul malları iktisap etmek, satın almak, satmak, kası veya finansal kiralama yolu ile kiralamak, onlar üzerinde her surette tasarruf etmek, maliki olduğu veya kiraladığı gayrimenkuller üzerinde her türlü bina, tesis ve benzeri inşaatı bizzat yapmak veya yaptırmak.
 
-j) Şirketin alacak ve borçların teminen her cins, şekil ve sırada ipotek ve rehin vermek, ipotek ve rehin almak, bunları tescil, devir ve temlik etmek, mevcut ve tesis adilascık ipotek ve rehinleri fık ve tadil etmek.
+j) Şirketin alacak ve borçların teminen her cins, şekil ve sırada ipotek ve rehin vermek, ipotek ve rehin almak, bunları tescil, devir ve temlik etmek, mevcut ve tesis adilacık ipotek ve rehinleri fık ve tadil etmek.
 
-k) Şirket ve üçüncü şahıslar lehine kefalet, teminat, garanti vermek veya müşterek borçlu ve müteselid kefil sıfatı ile taahhütlerde bulunmak.
+k) Şirket ve üçüncü şahıslar lehine kefalet, teminat, garanti vermek veya müşterek borçlu ve mütevellal kefil sıfatı ile taahhütlerde bulunmak.
 
 l) Menkul kıymetler aracılık faaliyetinde bulunmamak şartı ile, pay senedi, tahvil, intifa senedi gibi menkul kıymetleri almak, satmak, bunlar üzerinde kefalet vermek, intifa hakları tesis etmek, intifa haklarından yararlanmak ve menkul kıymetler ile ilgili her türlü muamelelere girişmek.
 
@@ -84,7 +84,7 @@ p) Faaliyet konularına giren sınav ve ticari yatırımlarda bulunmak.
 
 q) Açılacak resmi ve özel yurt içi ve yurtdışı ihalelere iştirak etmek, ihaleler açmak.
 
-r) Yurt içinde ve yurt dışında mevcut başka gerçek ve tüzel kişilikler ile ortaklıklar kurabileceği gibi mevcut şirketlere ortak sıfatı ile katılmak, birleşmek, bu ortaklıklardan ayrılmak ve bu ortaklıkları fesih ve tasfiye etmek.
+r) Yurt içinde ve yurt dışında mevcut başka gerçek ve tüzeli kişilikler ile ortaklıklar kurabileceği gibi mevcut şirketlere ortak sıfatı ile katılmak, birleşmek, bu ortaklıklardan ayrılmak ve bu ortaklıkları fesih ve tasfiye etmek.
 
 # 4. ŞİRKETİN MERKEZİ
 
@@ -100,7 +100,7 @@ r) Yurt içinde ve yurt dışında mevcut başka gerçek ve tüzel kişilikler i
 
 - Beheri 1,00 Türk Lirası değerinde 100000 adet paya karşılık gelen 100000,00 Türk Lirası AYDEM HOLDING ANONİM ŞİRKETİ tarafından nakdi, olarak taahhüt edilmiştir.
 
-Şirketin sermayesi, beheri 1,00 Türk Lirası değerinde 100000 paya ayrılmış toplam 100000,00 Türk Lirası değerindedir. Bu payların tamamı nama yazılıdır. - Beheri 1,00 Türk Lirası değerinde 100000 adet paya karşılık gelen 100000,00 Türk Lirası AYDEM HOLDING ANONİM ŞİRKETİ tarafından nakdi, olarak taahhüt edilmiştir. Nakden taahhüt edilen payların biberi değerlerinin tamamı şirketin tescilinden önce ödenmiştir. Yönetim kurulu pay sanatlerini bir veya daha fazla hisseyi ihtiya eden kuptürler halinde bastırmaya ve dağıtmaya yetkilidir. Şirketin paylarının tamamı nama yazılıdır. Sermayenin tamamı ödenmelikçe, şirket hamiline yazılı pay senedi çıkaramaz. Sermayenin tamamı ödenlikten sonra yönetim kurulu pay sanatlerini nama olarak bastırılıp dağıtılmaya kadar geçerli olmak üzere nama yazılı muvakkat pay ilmihaberi çıkarabilir ve dağıtabilir. Bu husustaki ilanlar esas sözleşmesini ilan maddesi uyarınca yapılır.
+Şirketin sermayesi, beheri 1,00 Türk Lirası değerinde 100000 paya ayrılmış toplam 100000,00 Türk Lirası değerindedir. Bu payların tamamı nama yazılıdır. - Beheri 1,00 Türk Lirası değerinde 100000 adet paya karşılık gelen 100000,00 Türk Lirası AYDEM HOLDING ANONİM ŞİRKETİ tarafından nakdi, olarak taahhüt edilmiştir. Nakden taahhüt edilen payların biberi değerlerinin tamamı şirketin tescilinden önce ödenmiştir. Yönetim kurulu pay sanatlerini bir veya daha fazla hisseyi ihtiya eden kuptolar halinde bastırmaya ve dağıtmaya yetkilidir. Şirketin paylarının tamamı nama yazılıdır. Sermayenin tamamı ödenmelikçe, şirket hamiline yazılı pay senedi çıkaramaz. Sermayenin tamamı ödenlikten sonra yönetim kurulu pay sanatlerini nama olarak bastırılıp dağıtılmaya kadar geçerli olmak üzere nama yazılı muvakkat pay ilmihaberi çıkarabilir ve dağıtabilir. Bu husustaki ilanlar esas sözleşmesini ilan maddesi uyarınca yapılır.
 
 # 7. YÖNETİM KURULU ve SÜRESİ
 
@@ -110,7 +110,7 @@ AYDEM HOLDING ANONİM ŞİRKETİ Yönetim Kurulu Üyesi olarak seçilmiştir.
 
 Adres: ENENTEPE MAHALLESİ BÜYÜKDERE CAD NO: 175/101 ŞİŞLİ/ISTANBUL
 
-Tüzel kişi adına: Türkiye Uşruklu 234***442 Kimlik No'lu, İSTANBUL / BEŞIKTAŞ adresinde ikamet eden İDRİS KÜPELİ hareket edecektir.
+Tüzel kişi adına: Türkiye Uşruklu 234***62 Kimlik No'lu, İSTANBUL / BEŞIKTAŞ adresinde ikamet eden İDRİS KÜPELİ hareket edecektir.
 
 Türkiye Uşruklu 270***46 Kimlik No'lu, DENİZLİ / MERKEZEFENDİ adresinde ikamet eden, MEHMET GÖKAY ÜSTÜN Yönetim Kurulu Üyesi olarak seçilmiştir.
 
@@ -122,9 +122,9 @@ Türkiye Uşruklu 270***46 Kimlik No'lu, DENİZLİ / MERKEZEFENDİ adresinde ika
 
 ## Temsile Yetkili Olanlar ve Temsil Şekli:
 
-İlk 1 Yıl için ENENTEPE MAHALLESİ BÜYÜKDERE CAD NO: 175/101 ŞİŞLİ/ISTANBUL adresinde yer alan AYDEM HOLDING ANONİM ŞİRKETİ (Yönetim Kurulu Başkanı) Temsile Yetkili olarak seçilmiştir. Tüzel kişi adına; Türkiye Uşruklu 234***42 Kimlik No'lu, İSTANBUL / BEŞIKTAŞ adresinde ikamet eden İDRİS KÜPELİ hareket edecektir. Yetki Şekli: Münferiden Temsile Yetkilidir.
+İlk 1 Yıl için ENENTEPE MAHALLESİ BÜYÜKDERE CAD NO: 175/101 ŞİŞLİ/ISTANBUL adresinde yer alan AYDEM HOLDING ANONİM ŞİRKETİ (Yönetim Kurulu Başkanı) Temsile Yetkili olarak seçilmiştir. Tüzel kişi adına; Türkiye Uşruklu 234***62 Kimlik No'lu, İSTANBUL / BEŞIKTAŞ adresinde ikamet eden İDRİS KÜPELİ hareket edecektir. Yetki Şekli: Münferiden Temsile Yetkilidir.
 
-İlk 1 Yıl için Türkiye Uşruklu 270***46 Kimlik No'lu, DENİZLİ / MERKEZEFENDİ adresinde ikamet eden, MEHMET GÖKAY ÜSTÜN (Yönetim Kurulu Başkanı Yardımcısı) Temsile Yetkili olarak seçilmiştir. Yetki Şekli: Münferiden Temsile Yetkilidir.
+İlk 1 Yıl için Türkiye Uşruklu 270***66 Kimlik No'lu, DENİZLİ / MERKEZEFENDİ adresinde ikamet eden, MEHMET GÖKAY ÜSTÜN (Yönetim Kurulu Başkanı Yardımcısı) Temsile Yetkili olarak seçilmiştir. Yetki Şekli: Münferiden Temsile Yetkilidir.
 
 # 10. GENEL KURUL
 
@@ -144,7 +144,7 @@ Genel kurulun toplantıya dağıtılmasına ilişkin ilanlar da dahil olmak üze
 
 Birinci Tertip Kanuni Yedek Akçe
 
-a) Net dönem karının %5'i TTK'nın 519'uncu maddesi hükümlerine göre sermayenin yüzde yirmesine ulaşmaya kadar genel kanuni yedek akçeye ayrılır.
+a) Net dönem karının %5'i TTK'nın 519'uncu maddesi hükümlerine göre sermayenin yüzde yirmisine ulaşmaya kadar genel kanuni yedek akçeye ayrılır.
 
 Birinci Kar Payı
 
@@ -174,6 +174,6 @@ Anonim şirketlerin genel kurul toplantılarının usul ve esasları ile bu topl
 
 KURUCULAR
 
-| Yerin No | Kurucu | Yürüt | İmza |
+| Sayı no. | Kararın | Yayın | İmza |
 | --- | --- | --- | --- |
 | | AYDEM HOLDING ANONİM ŞİRKETİ (YOLAÇETES CEYHAN NALEANLI) | TÜRKİYE | |

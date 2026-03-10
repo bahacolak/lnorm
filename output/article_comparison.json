@@ -4,7 +4,7 @@
     "status": "unverified",
     "disagreement_score": 0.476,
     "evidence": "Yüksek fark skoru (47.60%), metin güvenilir değil",
-    "primary_text": "# 1. Kuruluş\n\nAşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu tarafından bir Anonim Şirket kurulmuş bulunmaktadır.\n\n| Sayı No | Kararı | Adres | Gerak | Küçük No |\n| --- | --- | --- | --- | --- |\n| 1 | ETCİBİN BULGURU ANONİM ŞİRKETİ | DEVETERE MAHALLEM BÜYÜKSENE CAD. NO: 176101 ",
+    "primary_text": "# 1. Kuruluş\n\nAşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu tarafından bir Anonim Şirket kurulmuş bulunmaktadır.\n\n| Sayı No | Kararı | Adres | Gerak | Kendik No |\n| --- | --- | --- | --- | --- |\n| 1 | ETCİBİN BULGURU ANONİM ŞİRKETİ | DİKVETER MAHALLER BÜYÜKSENE CAD. NO: 176101",
     "secondary_text": "1. Kuruluş\nAşağıdaki adı, soyadı, unvanı, yerleşim yeri ve uyruğu yazılı kurucu tarafından bir Anonim\nirket kurulmuş bulunmaktadır.\nAAYDEM HOLDİNG O İESENTEPE MAHALLESİ BÜYÜKDERE CAD. NO:İ net\n\n5 vevineşimken İm şişman e ee vo)eomeye (veee |"
   },
   {
@@ -18,8 +18,8 @@
   {
     "field_name": "madde_3",
     "status": "disputed",
-    "disagreement_score": 0.1055,
-    "evidence": "Fark skoru 10.55%. Kelime farkları: silindi: '#'; silindi: '1)'; '2) elektrik' ↔ '2)elektrik'; '3) eidroelektrik' ↔ '3yhidroelektrik'; 'enerjisi' ↔ 'eneryisi'",
+    "disagreement_score": 0.1056,
+    "evidence": "Fark skoru 10.56%. Kelime farkları: silindi: '#'; silindi: '1)'; '2) elektrik' ↔ '2)elektrik'; '3) eidroelektrik' ↔ '3yhidroelektrik'; 'enerjisi' ↔ 'eneryisi'",
     "primary_text": "# 3. AMAÇ VE KONU\n\nŞirketin başlıca amaç ve faaliyet konusu enerji sektöründe faaliyet göstermek üzere şirketler kurmak veya bunlara iştirak etmek, iştirak edilen veya yeni kurulan bu şirketlerin yönetimlerini belirlemek ve bu şirketler aracılığıyla yatırımlar yapmak, bu şirketlere veya enerji sektö",
     "secondary_text": "3. AMAÇ VE KONU\nŞirketin başlıca amaç ve faaliyet konusu enerji sektöründe faaliyet göstermek üzere şirketler\nkurmak veya bunlara iştirak etmek, iştirak edilen veya yeni kurulan bu şirketlerin\nyönetimlerini belirlemek ve bu şirketler aracılığıyla yatırımlar yapmak, bu şirketlere veya\nenerji sektörün"
   },
@@ -43,15 +43,15 @@
     "field_name": "madde_6",
     "status": "disputed",
     "disagreement_score": 0.0467,
-    "evidence": "Hukuki terim anomalileri bulundu: biberi, pay sanatlerini, pay sanatlerini",
+    "evidence": "Hukuki terim anomalileri bulundu:  değer, natlerini bir v, natlerini nama ",
     "primary_text": "# 6. SERMAYE\n\nŞirketin sermayesi, beheri 1,00 Türk Lirası değerinde 100000 paya ayrılmış toplam 100000,00 Türk Lirası değerindedir. Bu payların tamamı nama yazılıdır.\n\n- Beheri 1,00 Türk Lirası değerinde 100000 adet paya karşılık gelen 100000,00 Türk Lirası AYDEM HOLDING ANONİM ŞİRKETİ tarafından na",
     "secondary_text": "6. SERMAYE\nŞirketin sermayesi, beheri 1,00 Türk Lirası değerinde 100000 paya ayrılmış toplam\n100000,00 Türk Lirası değerindedir.Bu payların tamamı nama yazılıdır.\n-Beheri 1,00 Türk Lirası değerinde 100000 adet paya karşılık gelen 100000,00 Türk Lirası\nAYDEM HOLDİNG ANONİM ŞİRKETİ tarafından nakdi,\no"
   },
   {
     "field_name": "madde_7",
     "status": "disputed",
-    "disagreement_score": 0.0765,
-    "evidence": "Fark skoru 7.65%. Kelime farkları: silindi: '#'; 'adresi' ↔ 'idaresi'; 'kurumu' ↔ 'kanunu'; 'yıllık aşağıdaki' ↔ 'yıllığına aşağıdakiler'; 'holding' ↔ 'holdi̇ng'",
+    "disagreement_score": 0.0758,
+    "evidence": "Fark skoru 7.58%. Kelime farkları: silindi: '#'; 'adresi' ↔ 'idaresi'; 'kurumu' ↔ 'kanunu'; 'yıllık aşağıdaki' ↔ 'yıllığına aşağıdakiler'; 'holding' ↔ 'holdi̇ng'",
     "primary_text": "# 7. YÖNETİM KURULU ve SÜRESİ\n\nŞirketin işleri ve adresi Genel Kurul tarafından Türk Ticaret Kurumu Hükümleri çerçevesinde seçilecek en az 1 üyeden oluşan bir yönetim kurulu tarafından yürütülür. Yönetim Kurulu süresi 1 - 3 yıl arasıdır. İlk Yönetim Kurulu üyesi olarak 1 yıllık aşağıdaki seçilmiştir",
     "secondary_text": "7. YÖNETİM KURULU ve SÜRESİ\nŞirketin işleri ve idaresi Genel Kurul tarafından Türk Ticaret Kanunu Hükümleri\nçerçevesinde seçilecek en az 1 üyeden oluşan bir yönetim kurulu tarafından yürütülür.\nYönetim Kurulu süresi 1 - 3 yıl arasıdır. İlk Yönetim Kurulu üyesi olarak 1 yıllığına\naşağıdakiler seçilmi"
   },
@@ -66,8 +66,8 @@
   {
     "field_name": "madde_9",
     "status": "disputed",
-    "disagreement_score": 0.0293,
-    "evidence": "Hukuki terim anomalileri bulundu: Uşruklu, Uşruklu, ENENTEPE",
+    "disagreement_score": 0.0271,
+    "evidence": "Hukuki terim anomalileri bulundu: **62 Ki, Kimlik , PE MAHAL",
     "primary_text": "# 9. TEMSİLE YETKİLİ OLANLAR, TEMSİL ŞEKLİ VE GÖREV DAĞILIMI\n\n## Temsile Yetkili Olanlar ve Temsil Şekli:\n\nİlk 1 Yıl için ENENTEPE MAHALLESİ BÜYÜKDERE CAD NO: 175/101 ŞİŞLİ/ISTANBUL adresinde yer alan AYDEM HOLDING ANONİM ŞİRKETİ (Yönetim Kurulu Başkanı) Temsile Yetkili olarak seçilmiştir. Tüzel kiş",
     "secondary_text": "9. TEMSİLE YETKİLİ OLANLAR, TEMSİL ŞEKLİ VE GÖREV DAĞILIMI\n\nTemsile Yetkili Olanlar ve Temsil Şekli:\n\nİlk 1 Yıl için ESENTEPE MAHALLESİ BÜYÜKDERE CAD. NO: 17101\n\nŞİŞL//İSTANBUL adresinde yer alan AYDEM HOLDİNG ANONİM ŞİRKETİ (Yönetim\n\nKurulu Başkanı) Temsile Yetkili olarak seçilmiştir. Tüzel kişi ad"
   },
@@ -83,7 +83,7 @@
     "field_name": "madde_11",
     "status": "disputed",
     "disagreement_score": 0.0344,
-    "evidence": "Hukuki terim anomalileri bulundu: Türk Ticaret Kurumu, dağıtılmasına, dağıtılmasına",
+    "evidence": "Hukuki terim anomalileri bulundu: ürk Ticaret Kurumu', ağıtılmasına , ağıtılmasına ",
     "primary_text": "# 11. İLAN\n\nGenel kurulun toplantıya dağıtılmasına ilişkin ilanlar da dahil olmak üzere Şirkete ait ilanlar Türkiye Ticaret Sicili Gazetesinde yapılır. Genel kurulun toplantıya dağıtılmasına ilişkin ilanların Türk Ticaret Kurumu'nın 414'üncü maddesi hükmü gereğince ilan ve toplantı günleri hariç olm",
     "secondary_text": "11. İLAN\n\nGenel kurulun toplantıya çağrılmasına ilişkin ilanlar da dahil olmak üzere Şirkete ait ilanlar\n\nTürkiye Ticaret Sicili Gazetesinde yapılır. Genel kurulun toplantıya çağrılmasına ilişkin\n\nilanların Türk Ticaret Kanunu'nun 414 üncü maddesi hükmü gereğince ilan ve toplantı\n\ngünleri hariç olma"
   },
@@ -99,7 +99,7 @@
     "field_name": "madde_13",
     "status": "disputed",
     "disagreement_score": 0.0427,
-    "evidence": "Hukuki terim anomalileri bulundu: dağıtılmasına",
+    "evidence": "Hukuki terim anomalileri bulundu: tılmasına kar",
     "primary_text": "# 13. KARIN TESPİTİ VE DAĞILIMI\n\nŞirketin net dönem kari, yapılmış her çeşit masrafların çıkarılmasından sonra kalan miktardır. Kar miktarı aşağıdaki sıra ve esaslar dahilinde dağıtılır:\n\nBirinci Tertip Kanuni Yedek Akçe\n\na) Net dönem karının %5'i TTK'nın 519'uncu maddesi hükümlerine göre sermayenin",
     "secondary_text": "13. KARIN TESPİTİ VE DAĞITIMI\n\nŞirketin net dönem karı, yapılmış her çeşit masrafların çıkarılmasından sonra kalan\n\nmiktardır. Kar miktarı aşağıdaki sıra ve esaslar dâhilinde dağıtılır:\n\nBirinci Tertip Kanuni Yedek Akçe\n\na) Net dönen karının 95'i TIK'nın 519'uncu maddesi hükümlerine göre sermayenin\n"
   },
@@ -121,9 +121,9 @@
   },
   {
     "field_name": "madde_16",
-    "status": "unverified",
-    "disagreement_score": 0.3304,
-    "evidence": "Yüksek fark skoru (33.04%), metin güvenilir değil",
+    "status": "disputed",
+    "disagreement_score": 0.2232,
+    "evidence": "Fark skoru 22.32%. Kelime farkları: silindi: '#'; eklendi: 'zesto ç'; 'sayı no.' ↔ 'oo i̇aydem holdi̇nganoni̇m şi̇rketi̇ (vekaleten ceyhansaldanidi̇üri̇yi̇........,.,,'; silindi: 'kararın | yayın | i̇mza | | --- | --- | --- | --- | | | aydem holding anoni̇m şi̇rketi̇ (yolaçetes ceyhan naleanli) | türki̇ye | |'",
     "primary_text": "# 16. TOPLANTIDA BAKANLIK TEMSİLCİSİ BULUNMASI\n\nAnonim şirketlerin genel kurul toplantılarının usul ve esasları ile bu toplantılarda bulunacak Ticaret Bakanlığı temsilcileri hakkında yönetmelik hükümlerine tabidir.\n\nKURUCULAR\n\n| Sayı no. | Kararın | Yayın | İmza |\n| --- | --- | --- | --- |\n| | AYDEM",
     "secondary_text": "16. TOPLANTIDA BAKANLIK TEMSİLCİSİ BULUNMASI\n\nAnonim şirketlerin genel kurul toplantılarının usul ve esasları ile bu toplantılarda bulunacak\n\nTicaret Bakanlığı temsilcileri hakkında yönetmelik hükümlerine tabidir.\n\nKURUCULAR\n\nZESTO Ç\n\n| oo İAYDEM HOLDİNGANONİM ŞİRKETİ (VEKALETEN CEYHANSALDANIDİÜRİYİ"
   },
@@ -323,7 +323,7 @@
     "field_name": "madde_6",
     "status": "disputed",
     "disagreement_score": 0.0308,
-    "evidence": "Hukuki terim anomalileri bulundu: ilmihabeti",
+    "evidence": "Hukuki terim anomalileri bulundu: mihabeti ç",
     "primary_text": "Madde 6-\n\nŞirketin sermayesi 161.852.160,00 Türk Lirası değerindedir. Bu sermaye, her biri 1,00 Türk Lirası (Bir Türk Lirası) değerinde 161.852.160 adet paya ayrılmıştır. 161.852.160 adet paya karşılık 161.852.160,00 Türk Lirası İstanbul Ticaret Sicil Müdürlüğü'nden 194877-5 Sicil no. sonda kayıtlı ",
     "secondary_text": "Madde 6-\nŞirketin sermayesi 161.852.160,00 Türk Lirası değerindedir. Bu sermaye, her biri 1,00 Türk\nLirası (Bir Türk Lirası) değerinde 161.852.160 adet paya ayrılmıştır. 161.852.160 adet paya\nkarşılık 161.852.160,00 Türk Lirası İstanbul Ticaret Sicil Müdürlüğü? nün 194877-5 Sicil\nno.sunda kayıtlı Ay"
   }

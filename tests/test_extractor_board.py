@@ -1,4 +1,4 @@
-from extractor import extract_board_members
+from src.extractor import extract_board_members
 
 
 def test_extract_board_members_replacement_pattern():
@@ -91,3 +91,56 @@ Daha önceden Yönetim Kurulu Üyesi olan Türkiye Cumhuriyeti Uyruklu 355***10 
     names_actions = {m.name: m.action for m in members}
     assert "ENES ERCANLI" in names_actions
     assert names_actions["ENES ERCANLI"] == "görevden_alma"
+
+
+def test_extract_board_members_ignores_temsil_yetkisi_removals():
+    text = """
+YÖNETİM KURULU / YETKİLİLER
+Türkiye Cumhuriyeti Uyruklu 355******10 Kimlik No'lu, İSTANBUL / BAYRAMPAŞA
+adresinde ikamet eden, ENES ERCANLI 26.9.2025 tarihine kadar Yönetim Kurulu Üyesi
+olarak seçilmiştir.
+AYDEM HOLDİNG ANONİM ŞİRKETİ 26.9.2025 tarihine kadar Yönetim Kurulu Üyesi
+olarak seçilmiştir.
+Tüzel kişi adına, Türkiye Cumhuriyeti Uyruklu 155******26 Kimlik No'lu, DENİZLİ /
+MERKEZEFENDİ adresinde ikamet eden SERDAR MARANGOZ hareket edecektir.
+YENİ ATANAN TEMSİLCİLER
+AYDEM HOLDİNG ANONİM ŞİRKETİ; 26.9.2025 tarihine kadar (Yönetim Kurulu
+Başkanı) Temsile Yetkili olarak seçilmiştir.
+TEMSİL YETKİSİ SONA ERENLER
+Daha önceden (Yönetim Kurulu Başkanı) Temsile Yetkili görevi olan AYDEM HOLDİNG
+ANONİM ŞİRKETİ'in önceki bu görevi sona ermiştir.
+"""
+    members, issues = extract_board_members(
+        text,
+        {1: text},
+        "7) 05-11-2024 Yönetim Kurulu Atama.pdf",
+        allow_llm=False,
+    )
+    names_actions = {(m.name, m.action) for m in members}
+    assert ("ENES ERCANLI", "atama") in names_actions
+    assert ("AYDEM HOLDING ANONİM ŞİRKETİ", "atama") in names_actions
+    assert ("AYDEM HOLDING ANONİM ŞİRKETİ", "görevden_alma") not in names_actions
+    assert all(m.name != "TARIHINE KADAR" for m in members)
+    assert not issues
+
+
+def test_extract_board_members_does_not_emit_fake_name_from_wrapped_line():
+    text = """
+YÖNETİM KURULU / YETKİLİLER
+Daha önceden Yönetim Kurulu Üyesi olan Türkiye Cumhuriyeti Uyruklu 139******44
+Kimlik No'lu İSTANBUL / SARIYER adresinde ikamet eden ENGİN KAVAS'in önceki
+üyeliği sona ermiştir. Yerine Türkiye Cumhuriyeti Uyruklu 355******10 Kimlik No'lu,
+İSTANBUL / BAYRAMPAŞA adresinde ikamet eden, ENES ERCANLI 26.9.2025
+tarihine kadar Yönetim Kurulu Üyesi olarak seçilmiştir.
+"""
+    members, _ = extract_board_members(
+        text,
+        {1: text},
+        "5) 13-09-2024 Yönetim Kurulu Atama.pdf",
+        allow_llm=False,
+    )
+    names = {m.name for m in members}
+    assert "ENGİN KAVAS" in names
+    assert "ENES ERCANLI" in names
+    assert "TARIHINE KADAR" not in names
+    assert not any(name.startswith("EDEN,") for name in names)

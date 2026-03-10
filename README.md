@@ -41,13 +41,13 @@ cp .env.example .env
 
 ```bash
 # Önerilen case study çalıştırması
-python src/main.py --input input/ --output output/ --ocr-provider mistral --verification-ocr-provider tesseract --strict --fail-on-unsafe-filter --emit-review-queue --allow-ocr-fallback
+python -m src.main --input input/ --output output/ --ocr-provider mistral --verification-ocr-provider tesseract --strict --fail-on-unsafe-filter --emit-review-queue --allow-ocr-fallback
 
 # Sadece tesseract kullan
-python src/main.py --input input/ --output output/ --ocr-provider tesseract --no-llm
+python -m src.main --input input/ --output output/ --ocr-provider tesseract --no-llm
 
 # Yalnızca OCR + filtreleme
-python src/main.py --input input/ --output output/ --only-ocr --ocr-provider mistral --allow-ocr-fallback
+python -m src.main --input input/ --output output/ --only-ocr --ocr-provider mistral --allow-ocr-fallback
 ```
 
 ## Çıktılar
@@ -78,6 +78,8 @@ PDF -> Primary OCR -> Secondary OCR -> Verification Gate -> FilterResult -> Extr
 - `src/extractor.py`: şirket bilgileri, denetçi ve YK extraction
 - `src/ocr_verifier.py`: OCR disagreement tespiti, anomaly detection ve review queue
 - `src/consolidator.py`: tarih bazlı konsolidasyon
+- `src/pipeline.py`: pipeline orchestration
+- `src/persistence.py`: ortak artifact persistence yardımcıları
 - `src/docx_writer.py`: Word çıktıları
 - `src/main.py`: CLI
 
@@ -102,7 +104,7 @@ PDF -> Primary OCR -> Secondary OCR -> Verification Gate -> FilterResult -> Extr
 ## Testler
 
 ```bash
-pytest
+python3 -m pytest -q
 ```
 
 Testler sentetik örnekler üzerinden filter, articles parser, extractor ve consolidator davranışını doğrular.

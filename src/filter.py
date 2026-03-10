@@ -188,7 +188,7 @@ def filter_result_to_dict(result: FilterResult) -> dict:
 
 if __name__ == "__main__":
     import sys
-    from pdf_reader import extract_text
+    from .pdf_reader import extract_text
 
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
