@@ -1,6 +1,6 @@
-# LexNorm - Ticaret Sicil Gazetesi Analiz Pipeline (Case Study)
+# Ticaret Sicil Gazetesi Analiz Pipeline
 
-Bu case study, karmaşık yapıdaki Ticaret Sicil Gazetesi (TTSG) ilanlarından güvenilir veri çıkarma problemini ele almaktadır. Örnek senaryo olarak "Parla Enerji Yatırımları A.Ş." seçilmiş olup, gazete ilanlarından güncel şirket bilgisi, yönetim kurulu ve esas sözleşme metinlerinin otomatik olarak üretilmesi hedeflenmiştir.
+Bu proje, karmaşık yapıdaki Ticaret Sicil Gazetesi (TTSG) ilanlarından güvenilir veri çıkarma problemini ele almaktadır. Örnek senaryo olarak "Parla Enerji Yatırımları A.Ş." seçilmiş olup, gazete ilanlarından güncel şirket bilgisi, yönetim kurulu ve esas sözleşme metinlerinin otomatik olarak üretilmesi hedeflenmiştir.
 
 Çalışmanın temel odak noktaları şunlardır:
 
@@ -18,7 +18,7 @@ Bu case study, karmaşık yapıdaki Ticaret Sicil Gazetesi (TTSG) ilanlarından 
 - Sistem emin olmadığı alanları review queue'ya bırakabiliyor veya belirsiz olarak işaretleyebiliyor.
 - LLM opsiyonel. İstenirse daha zor maddelerde ve normalize etmede devreye giriyor; istenirse tamamen kapatılabiliyor.
 
-## Problem Çözüm Yaklaşımımız (Case Study Analizi)
+## Problem Çözüm Yaklaşımımız
 
 ### 1. Veri İzolasyonu ve Filtreleme
 **Problem:** Aynı gazete sayfasında birden fazla şirkete ait ilanlar bulunabilmektedir. Geleneksel OCR yaklaşımları tüm metni düzleştirerek veri kirliliğine yol açar.
@@ -68,7 +68,6 @@ cp .env.example .env
 ## Çalıştırma
 
 ```bash
-# Case study için önerilen temel çalışma
 # Bu modda LLM kullanmadan da sistemin çalıştığı görülebilir.
 python3 -m src.main \
   --input input/ \
@@ -160,7 +159,7 @@ PDF -> Primary OCR -> Secondary OCR -> Verification Gate -> FilterResult -> Extr
 - LLM zorunlu değildir; ister tamamen kapalı çalıştırılabilir, ister zor maddelerde destekleyici olarak kullanılabilir.
 - Filter katmanı `ok`, `partial`, `unsafe`, `not_found` statüsü üretir.
 - Esas sözleşme maddeleri verifier sonucuna göre kabul edilir; disputed içerik review queue'ya düşer.
-- Secondary OCR boşsa `primary_only` statüsü üretilir; bu maddeler case study sürümünde tutulur, production ortamında daha sert gate uygulanmalıdır.
+- Secondary OCR boşsa `primary_only` statüsü üretilir; production ortamında daha sert gate uygulanmalıdır.
 - OCR ve extraction anomalleri `output/extraction_audit.json` ile izlenebilir.
 - Review queue ve field confidence artefact'ları teknik kararları görünür kılar.
 - Doğrulanamayan alanlar final çıktıda bastırılabilir veya belirsiz olarak işaretlenebilir.
